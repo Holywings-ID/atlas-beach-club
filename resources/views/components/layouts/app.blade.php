@@ -11,19 +11,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         .page-transition {
-            transition: filter 1s ease, opacity 1s ease;
-            filter: blur(0px);
-            opacity: 1;
+            transition: filter 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
         }
         .page-leaving {
-            filter: blur(15px);
+            filter: blur(12px);
+            transform: translateY(-100px);
             opacity: 0;
         }
         @keyframes page-enter {
-            from { filter: blur(15px); opacity: 0; }
-            to { filter: blur(0px); opacity: 1; }
+            from { filter: blur(12px); transform: translateY(40px); opacity: 0; }
+            to   { filter: blur(0); transform: translateY(0); opacity: 1; }
         }
-        .page-transition { animation: page-enter 1s ease; }
+        .page-transition { animation: page-enter 0.5s ease; }
     </style>
     @livewireStyles
 </head>
@@ -33,7 +32,7 @@
         leaving: false,
         navigate(url) {
             this.leaving = true;
-            setTimeout(() => window.location.href = url, 400);
+            setTimeout(() => window.location.href = url, 500);
         }
     }"
     x-init="document.addEventListener('click', (e) => {
