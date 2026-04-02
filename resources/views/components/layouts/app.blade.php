@@ -9,20 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        .page-transition {
+            transition: filter 1s ease, opacity 1s ease;
+            filter: blur(0px);
+            opacity: 1;
+        }
+        .page-leaving {
+            filter: blur(15px);
+            opacity: 0;
+        }
+        @keyframes page-enter {
+            from { filter: blur(15px); opacity: 0; }
+            to { filter: blur(0px); opacity: 1; }
+        }
+        .page-transition { animation: page-enter 1s ease; }
+    </style>
     @livewireStyles
 </head>
 
-<body class="font-body antialiased">
+<body class="font-body antialiased"
+    x-data="{
+        leaving: false,
+        navigate(url) {
+            this.leaving = true;
+            setTimeout(() => window.location.href = url, 400);
+        }
+    }"
+    x-init="document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[href]');
+        if (!a || a.target === '_blank' || a.origin !== location.origin) return;
+        e.preventDefault();
+        navigate(a.href);
+    })">
 
-    <x-header />
-    <x-mobile-menu />
+    <div class="page-transition" :class="leaving && 'page-leaving'">
+        <x-header />
+        <x-mobile-menu />
 
-    <div class="relative">
-        {{ $slot }}
+        <div class="relative">
+            {{ $slot }}
+        </div>
+
+        <x-footer />
+        <x-contact />
     </div>
-
-    <x-footer />
-    <x-contact />
 
     @livewireScripts
 </body>
