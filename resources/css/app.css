@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== Fonts ========== */
+@font-face {
+    font-family: 'Parslay';
+    src: url('../fonts/ParslayRegular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Behind The Nineties';
+    src: url('../fonts/Behind-The-Nineties.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ========== Base ========== */
+html, body, header {
+    scroll-behavior: smooth;
+    @apply text-white;
+}
+
+/* ========== Navigation ========== */
+.nav-link {
+    @apply relative px-3 py-2 text-sm uppercase tracking-wider text-white transition-colors hover:text-black;
+}
+
+.nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-1/2 h-0.5 w-0 bg-black transition-all duration-300 -translate-x-1/2;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    @apply w-full;
+}
+
+.nav-link.active {
+    @apply font-semibold text-white;
+}
+
+/* ========== Hero ========== */
+.hero {
+    @apply relative flex min-h-[60vh] items-center justify-center bg-cover bg-center text-white;
+}
+
+.hero::before {
+    content: "";
+    @apply absolute inset-0 bg-black/40;
+}
+
+.hero-content {
+    @apply relative z-10 text-center;
+}
+
+/* ========== Page Section ========== */
+.page-section {
+    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 text-white;
+}
+
+/* ========== Footer ========== */
+.footer-link {
+    @apply text-sm text-gray-400 transition-colors hover:text-white;
+}
