@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,16 +11,20 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="font-body text-gray-800 antialiased">
+
+<body class="font-body antialiased">
 
     <x-header />
     <x-mobile-menu />
 
-    {{ $slot }}
+    <div class="relative">
+        {{ $slot }}
+    </div>
 
     <x-footer />
-    <x-back-to-top />
+    <x-contact />
 
     @livewireScripts
 </body>
+
 </html>

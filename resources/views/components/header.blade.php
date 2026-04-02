@@ -12,7 +12,7 @@
     ];
 @endphp
 
-<header id="header" class="sticky top-0 bg-transparent z-40 backdrop-blur transition-shadow">
+<header id="header" class="sticky top-0 bg-transparent z-[9999] transition-shadow">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
         <a href="{{ route('home') }}" class="text-2xl font-bold tracking-tight">ABC</a>
 

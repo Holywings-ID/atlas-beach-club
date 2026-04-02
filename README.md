@@ -76,7 +76,7 @@ abc-html/
 │       │   ├── footer.blade.php        # 4-column footer with quick links
 │       │   ├── hero.blade.php          # Hero banner with background image, title, optional CTA
 │       │   ├── video.blade.php         # Full-screen video hero (desktop/mobile sources + overlay text)
-│       │   └── back-to-top.blade.php   # Floating scroll-to-top button
+│       │   └── contact.blade.php   # Floating scroll-to-top button
 │       ├── livewire/           # Livewire component templates
 │       │   ├── contact-form.blade.php      # Contact form UI with validation errors + success state
 │       │   ├── reservation-form.blade.php  # Reservation form UI (name, email, phone, date, guests, notes)
@@ -130,7 +130,7 @@ abc-html/
 ## How It Fits Together
 
 1. A request hits `routes/web.php` → `PageController` returns the matching Blade view from `resources/views/pages/`
-2. Each page view uses `<x-layouts.app>` as the master layout, which wraps content with the header, mobile menu, footer, and back-to-top button
+2. Each page view uses `<x-layouts.app>` as the master layout, which wraps content with the header, mobile menu, footer, and contact button
 3. Pages use Blade components (`<x-hero>`, `<x-video>`) for reusable hero sections
 4. Interactive features (contact form, reservation form, FAQ) are Livewire components — server-rendered with real-time validation, no full page reloads
 5. The mobile menu uses Alpine.js for slide-in/out transitions

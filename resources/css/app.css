@@ -4,64 +4,102 @@
 
 /* ========== Fonts ========== */
 @font-face {
-    font-family: 'Parslay';
-    src: url('../fonts/ParslayRegular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Parslay";
+  src: url("../fonts/ParslayRegular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Behind The Nineties';
-    src: url('../fonts/Behind-The-Nineties.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Behind The Nineties";
+  src: url("../fonts/Behind-The-Nineties.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* ========== Base ========== */
-html, body, header {
-    scroll-behavior: smooth;
-    @apply text-white;
+html,
+body,
+header {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  @apply text-white overscroll-contain;
 }
+
+.redNew {
+  @apply text-[#A74423];
+}
+.brownNew {
+  @apply text-[#EBE1D5];
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  @apply mx-auto w-full px-4 sm:w-[540px] md:w-[720px] lg:w-[960px] lg:px-6 xl:w-[1140px] 2xl:w-[1320px];
+}
+
+.marquee-container {
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
 
 /* ========== Navigation ========== */
 .nav-link {
-    @apply relative px-3 py-2 text-sm uppercase tracking-wider text-white transition-colors hover:text-black;
+  @apply relative px-3 py-2 text-sm uppercase tracking-wider text-white transition-colors hover:text-black;
 }
 
 .nav-link::after {
-    content: "";
-    @apply absolute bottom-0 left-1/2 h-0.5 w-0 bg-black transition-all duration-300 -translate-x-1/2;
+  content: "";
+  @apply absolute bottom-0 left-1/2 h-0.5 w-0 bg-black transition-all duration-300 -translate-x-1/2;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
-    @apply w-full;
+  @apply w-full;
 }
 
 .nav-link.active {
-    @apply font-semibold text-white;
+  @apply font-semibold text-white;
 }
 
 /* ========== Hero ========== */
 .hero {
-    @apply relative flex min-h-[60vh] items-center justify-center bg-cover bg-center text-white;
+  @apply relative flex min-h-[60vh] items-center justify-center bg-cover bg-center text-white;
 }
 
 .hero::before {
-    content: "";
-    @apply absolute inset-0 bg-black/40;
+  content: "";
+  @apply absolute inset-0 bg-black/40;
 }
 
 .hero-content {
-    @apply relative z-10 text-center;
+  @apply relative z-10 text-center;
 }
 
 /* ========== Page Section ========== */
 .page-section {
-    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 text-white;
+  @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 text-white;
 }
 
 /* ========== Footer ========== */
 .footer-link {
-    @apply text-sm text-gray-400 transition-colors hover:text-white;
+  @apply text-sm text-gray-400 transition-colors hover:text-white;
 }

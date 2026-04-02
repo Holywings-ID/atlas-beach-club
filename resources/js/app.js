@@ -1,5 +1,5 @@
 /**
- * Global JS — scroll reveal, sticky header, back-to-top
+ * Global JS — scroll reveal, sticky header, contact
  * Alpine.js (bundled with Livewire) handles mobile menu toggle inline.
  */
 
@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Back to top
-    const btn = document.getElementById('back-to-top');
-    if (btn) {
-        window.addEventListener('scroll', () => {
-            btn.classList.toggle('hidden', window.scrollY < 400);
-        });
-        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    }
+    // const btn = document.getElementById('contact');
+    // if (btn) {
+    //     window.addEventListener('scroll', () => {
+    //         btn.classList.toggle('hidden', window.scrollY < 400);
+    //     });
+    //     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    // }
 });
