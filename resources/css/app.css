@@ -54,6 +54,16 @@ header {
   @apply mx-auto w-full px-4 sm:w-[540px] md:w-[720px] lg:w-[960px] lg:px-6 xl:w-[1140px] 2xl:w-[1320px];
 }
 
+/* ========== Floating Image Animation ========== */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--float-rotate, 0deg)); }
+  50% { transform: translateY(-20px) rotate(var(--float-rotate, 0deg)); }
+}
+
+.float-image {
+  animation: float 4s ease-in-out infinite;
+}
+
 .marquee-container {
   overflow: hidden;
 }

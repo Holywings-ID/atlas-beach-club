@@ -158,7 +158,7 @@
                             @foreach ($daybed['images'] as $image)
                             <div class="relative h-72 odd:translate-y-16 shrink-0">
                                 <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-64 h-72 object-cover" />
-                                <p class="absolute -bottom-12 right-0 left-0 text-[#10496E] font-parslay text-lg text-center">{{ $image['subtitle'] }}</p>
+                                <p class="absolute -bottom-8 right-0 left-0 text-[#10496E] font-parslay text-lg text-center">{{ $image['subtitle'] }}</p>
                             </div>
                             @endforeach
                         </div>
@@ -187,6 +187,112 @@
                     </div>
                 </div>
                 @endforeach
+            </div>
+        </section>
+
+        <section>
+            <div class="relative bg-[#A74423] overflow-hidden">
+                <!-- image floating -->
+                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-96 h-72 absolute -top-24 -right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
+                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-32 h-24 absolute top-52 right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" />
+                <img src="{{ asset('assets/image/food2.png') }}" alt="" class="float-image w-72 h-64 absolute top-64 -right-24 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.8s" />
+
+                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-32 h-24 absolute top-8 left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:2s" />
+                <img src="{{ asset('assets/image/food4.png') }}" alt="" class="float-image w-96 h-72 absolute top-12 -left-52 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.5s" />
+                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-72 h-52 absolute top-96 -left-12 object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:1.2s" />
+                <!-- image floating -->
+
+                <div class="container space-y-12 text-center py-8">
+                    <div class="">
+                        <p class="font-nineties text-4xl">No 02</p>
+                        <p class="font-nineties text-4xl">Dining</p>
+                    </div>
+                    <div class="space-y-5">
+                        <p class="font-nineties text-4xl">World Class Dining</p>
+                        <p class="font-parslay ml-32 text-5xl">
+                            <span class="pr-32">Come Hungry</span>
+                            <span class="ml-32"><br />Leave Iconic</span>
+                        </p>
+                        <p class="font-nineties text-2xl">find your taste only at pavilion</p>
+                        <button class="bg-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 redNew flex items-center gap-2 mx-auto">Overview
+                            <span class="group-hover:rotate-90 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="max-w-[800px] mx-auto">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
+                        </p>
+                    </div>
+                    <div class="overflow-auto pt-12">
+                        <div class="flex justify-between">
+                            <button @click="$refs.scrollersec.scrollBy({ left: -300, behavior: 'smooth' })">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#ffffff" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
+                                    <path fill="#ffffff" d="M17 24h17v2H17z" />
+                                </svg>
+                            </button>
+                            <div @click="$refs.scrollersec.scrollBy({ left: 300, behavior: 'smooth' })" class="cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div x-ref="scrollersec" class="w-full flex gap-3 justify-start overflow-x-auto h-[500px]">
+                            @foreach (config('dining') as $image)
+                            <div class="relative h-72 odd:h-96 shrink-0">
+                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-64 h-full object-cover" />
+                                <p class="absolute -bottom-8 right-0 left-0 font-parslay text-lg text-center">{{ $image['subtitle'] }}</p>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="flex gap-24 text-left">
+                        <div class="w-2/5 space-y-3">
+                            <div class="font-nineties text-3xl">Taste the</div>
+                            <div class="font-parslay text-5xl">Extraordinary</div>
+                            <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
+                        </div>
+                        <div class="relative w-3/5">
+                            <img src="{{ asset('assets/image/chef.png') }}" alt="" class="w-full h-[650px] object-top object-cover" />
+                            <img src="{{ asset('assets/image/food2.png') }}" alt="" class="absolute -left-24 top-52 w-auto aspect-square h-[300px] object-cover" />
+                        </div>
+                    </div>
+                    <div class="border-b-2 font-semibold pb-2 flex items-center justify-between">
+                        <div class="flex gap-2">
+                            <p>Atlas Beach Club</p> |
+                            <p>Dining</p>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <a href="" class="items-center flex gap-3">Overview
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                </svg>
+                            </a>
+                            <a href="" class="items-center flex gap-3">Reserve
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
