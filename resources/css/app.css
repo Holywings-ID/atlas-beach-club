@@ -13,6 +13,13 @@
 @font-face {
   font-family: "Behind The Nineties";
   src: url("../fonts/Behind-The-Nineties.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Behind The Nineties";
+  src: url("../fonts/Behind-The-Nineties-Rg.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +31,12 @@ header {
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
   @apply text-white overscroll-contain;
 }
 
@@ -52,14 +65,17 @@ header {
 }
 
 @keyframes marquee-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
 }
-
 
 /* ========== Navigation ========== */
 .nav-link {

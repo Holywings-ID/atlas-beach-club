@@ -20,7 +20,7 @@
                         sub-title="Welcome To"
                         image="{{asset('assets/logo/logo.png')}}" />
 
-                    <section class="relative text-white w-full h-48 text-center bg-[#963D20] overflow-visible">
+                    <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="absolute z-20 inset-0">
                             <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
@@ -35,10 +35,10 @@
                         </div>
                     </section>
                     <section class="relative h-full w-full">
-                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1300px] object-cover object-center" />
-                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#963D20]"></div>
+                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1500px] object-cover object-center" />
+                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
 
-                        <div class="text-white absolute inset-0 h-full w-full pt-[500px]">
+                        <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
                             <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Biggest Beach Club In The World</h3>
                             <h4 class="relative z-20 text-4xl lg:text-6xl font-nineties flex items-center justify-center font-extrabold" data-reveal>
                                 5 HIGHLIGHTS
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <section id="section-two" class="z-[2] relative -mt-[100vh]">
+        <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5]">
 
             <div class="marquee-container">
                 <div class="marquee-content">
@@ -111,7 +111,83 @@
                 </div>
                 <p class="w-full max-w-[600px] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr</p>
             </div>
+            <div class="container pt-24 relative bg-[#EBE1D5 redNew space-y-5" data-reveal>
+                <p class="w-full max-w-[600px] text-center text-lg mx-auto">What’s Included? </p>
+                <div class="flex items-center gap-3 justify-center">
+                    <p class="w-max text-center">Lorem Ipsum </p>
+                    <p class="w-max text-center">Lorem Ipsum </p>
+                    <p class="w-max text-center">Lorem Ipsum </p>
+                </div>
+                <div class="flex items-center gap-16 justify-center">
+                    @foreach (config('daybeds') as $daybed)
+                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#963D20] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
+                        <span class="group-hover:rotate-90 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
+                            </svg>
+                        </span>
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+            <div class="container py-24 space-y-24">
+                @foreach (config('daybeds') as $daybed)
+                <div class="space-y-12" x-data data-reveal>
+                    <div class="flex justify-between gap-12" id="{{ Str::slug($daybed['title']) }}">
+                        <div class="w-1/3 flex flex-col gap-24">
+                            <h3 class="redNew font-parslay text-6xl">{{ $daybed['title'] }}</h3>
+                            <p class="font-nineties redNew w-full lg:w-72 text-2xl">{{ $daybed['description'] }}</p>
+                            <div class="flex justify-end gap-2">
+                                <button @click="$refs.scroller.scrollBy({ left: -300, behavior: 'smooth' })">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                        <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                        <path fill="#A74423" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
+                                        <path fill="#A74423" d="M17 24h17v2H17z" />
+                                    </svg>
+                                </button>
+                                <div @click="$refs.scroller.scrollBy({ left: 300, behavior: 'smooth' })" class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                        <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                        <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                        <path fill="#A74423" d="M16 24h17v2H16z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div x-ref="scroller" class="w-2/3 flex gap-3 justify-start overflow-x-auto">
+                            @foreach ($daybed['images'] as $image)
+                            <div class="relative h-72 odd:translate-y-16 shrink-0">
+                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-64 h-72 object-cover" />
+                                <p class="absolute -bottom-12 right-0 left-0 text-[#10496E] font-parslay text-lg text-center">{{ $image['subtitle'] }}</p>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex items-center justify-between">
+                        <div class="flex gap-2">
+                            <p>Atlas Beach Club</p> |
+                            <p>{{ $daybed['title'] }}</p>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <a href="" class="items-center flex gap-3">Overview
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                </svg>
+                            </a>
+                            <a href="" class="items-center flex gap-3">Reserve
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
         </section>
-
     </main>
 </x-layouts.app>
