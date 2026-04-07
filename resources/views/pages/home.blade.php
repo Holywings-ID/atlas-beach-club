@@ -415,7 +415,7 @@
                     </div>
 
                     <div x-data="{ active: 0 }" class="pt-32">
-                        <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex items-center gap-5">
+                        <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex items-center gap-12">
                             @foreach (config('activity') as $i => $activity)
                             <button @click="active = {{ $i }}" :class="active === {{ $i }} ? 'text-slate-400' : 'hover:text-slate-400'" class="transition">{{ $activity['category'] }}</button>
                             @endforeach
