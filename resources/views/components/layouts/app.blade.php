@@ -13,16 +13,30 @@
         .page-transition {
             transition: filter 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
         }
+
         .page-leaving {
             filter: blur(12px);
             transform: translateY(-100px);
             opacity: 0;
         }
+
         @keyframes page-enter {
-            from { filter: blur(12px); transform: translateY(40px); opacity: 0; }
-            to   { filter: blur(0); transform: translateY(0); opacity: 1; }
+            from {
+                filter: blur(12px);
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                filter: blur(0);
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
-        .page-transition { animation: page-enter 0.5s ease; }
+
+        .page-transition {
+            animation: page-enter 0.5s ease;
+        }
     </style>
     @livewireStyles
 </head>
@@ -46,9 +60,7 @@
         <x-header />
         <x-mobile-menu />
 
-        <div class="relative z-10 bg-white">
-            {{ $slot }}
-        </div>
+        {{ $slot }}
 
         <x-footer />
         <x-contact />

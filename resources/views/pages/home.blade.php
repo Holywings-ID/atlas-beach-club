@@ -190,7 +190,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="relative z-10 ">
             <div class="relative bg-[#A74423] overflow-hidden">
                 <!-- image floating -->
                 <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-96 h-72 absolute -top-24 -right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
@@ -298,8 +298,8 @@
         </section>
         <section>
             <div class="bg-[#EBE1D5] space-y-12 pb-12">
-                <div class="relative text-center" style="clip-path: ellipse(100% 100% at 50% 0%);">
-                    <img src="{{ asset("assets/image/poolbar.png") }}" alt="Poolbar" class="w-full h-[900px] object-cover" />
+                <div class="relative text-center h-[700px]" style="clip-path: ellipse(100% 100% at 50% 0%);">
+                    <img src="{{ asset("assets/image/poolbar.png") }}" alt="Poolbar" class="fixed -z-10 top-0 w-dvw h-dvh object-cover" />
                     <div class="absolute top-5 left-0 right-0 text-center">
                         <p class="font-nineties text-4xl">No 03</p>
                         <p class="font-nineties text-4xl">Poolbar</p>
@@ -313,7 +313,7 @@
                         <p class="text-xl max-w-[700px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div class="container flex redNew gap-12 py-12">
+                <div class="relative z-10 container flex redNew gap-12 py-12">
                     <div class="w-2/5 flex flex-col">
                         <div class="text-4xl font-nineties font-semibold">Special Just For You</div>
                         <div id="accordion" x-data="{ open: null }" class="mt-4 grow">
