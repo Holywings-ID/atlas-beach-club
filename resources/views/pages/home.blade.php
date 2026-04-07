@@ -22,7 +22,7 @@
 
                     <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="absolute z-20 inset-0">
-                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
+                            <h2 class="text-3xl lg:text-5xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
@@ -40,7 +40,7 @@
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
                             <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Biggest Beach Club In The World</h3>
-                            <h4 class="relative z-20 text-4xl lg:text-6xl font-nineties flex items-center justify-center font-extrabold" data-reveal>
+                            <h4 class="relative z-20 text-3xl lg:text-5xl font-nineties flex items-center justify-center font-extrabold" data-reveal>
                                 5 HIGHLIGHTS
                                 <span class="font-parslay font-normal px-5 text-3xl">of</span>
                                 ATLAS BEACH CLUB
@@ -202,19 +202,20 @@
                 <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-72 h-52 absolute top-96 -left-12 object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:1.2s" />
                 <!-- image floating -->
 
-                <div class="container space-y-12 text-center py-8">
+                <div class="container space-y-12 text-center py-8 pb-24">
                     <div class="">
                         <p class="font-nineties text-4xl">No 02</p>
                         <p class="font-nineties text-4xl">Dining</p>
                     </div>
                     <div class="space-y-5">
-                        <p class="font-nineties text-4xl">World Class Dining</p>
-                        <p class="font-parslay ml-32 text-5xl">
+                        <p class="font-nineties text-4xl" data-reveal>World Class Dining</p>
+                        <p class="font-parslay ml-32 text-5xl" data-reveal>
                             <span class="pr-32">Come Hungry</span>
                             <span class="ml-32"><br />Leave Iconic</span>
                         </p>
-                        <p class="font-nineties text-2xl">find your taste only at pavilion</p>
-                        <button class="bg-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 redNew flex items-center gap-2 mx-auto">Overview
+                        <p class="font-nineties text-2xl" data-reveal>find your taste only at pavilion</p>
+                        <button class="bg-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 redNew flex items-center gap-2 mx-auto" data-reveal>
+                            Overview
                             <span class="group-hover:rotate-90 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
@@ -222,7 +223,7 @@
                             </span>
                         </button>
                     </div>
-                    <div class="max-w-[800px] mx-auto">
+                    <div class="max-w-[800px] mx-auto" data-reveal>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -247,17 +248,17 @@
                                 </svg>
                             </div>
                         </div>
-                        <div x-ref="scrollersec" class="w-full flex gap-3 justify-start overflow-x-auto h-[500px]">
+                        <div x-ref="scrollersec" class="w-full flex gap-5 justify-start overflow-x-auto h-[600px]" data-reveal>
                             @foreach (config('dining') as $image)
-                            <div class="relative h-72 odd:h-96 shrink-0">
-                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-64 h-full object-cover" />
+                            <div class="relative h-96 odd:h-[480px] shrink-0">
+                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-80 h-full object-cover" />
                                 <p class="absolute -bottom-8 right-0 left-0 font-parslay text-lg text-center">{{ $image['subtitle'] }}</p>
                             </div>
                             @endforeach
                         </div>
                     </div>
                     <div class="flex gap-24 text-left">
-                        <div class="w-2/5 space-y-3">
+                        <div class="w-2/5 space-y-3" data-reveal>
                             <div class="font-nineties text-3xl">Taste the</div>
                             <div class="font-parslay text-5xl">Extraordinary</div>
                             <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -266,8 +267,8 @@
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
                         </div>
                         <div class="relative w-3/5">
-                            <img src="{{ asset('assets/image/chef.png') }}" alt="" class="w-full h-[650px] object-top object-cover" />
-                            <img src="{{ asset('assets/image/food2.png') }}" alt="" class="absolute -left-24 top-52 w-auto aspect-square h-[300px] object-cover" />
+                            <img src="{{ asset('assets/image/chef.png') }}" alt="" class="w-full h-[650px] object-top object-cover" data-reveal />
+                            <img src="{{ asset('assets/image/food2.png') }}" alt="" class="absolute -left-24 bottom-12 w-auto aspect-square h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
                         </div>
                     </div>
                     <div class="border-b-2 font-semibold pb-2 flex items-center justify-between">
@@ -288,6 +289,189 @@
                                     <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
                                     <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg-[#EBE1D5] space-y-12 pb-12">
+                <div class="relative text-center" style="clip-path: ellipse(100% 100% at 50% 0%);">
+                    <img src="{{ asset("assets/image/poolbar.png") }}" alt="Poolbar" class="w-full h-[900px] object-cover" />
+                    <div class="absolute top-5 left-0 right-0 text-center">
+                        <p class="font-nineties text-4xl">No 03</p>
+                        <p class="font-nineties text-4xl">Poolbar</p>
+                    </div>
+                    <div class="absolute bottom-32 right-44 space-y-5 text-right" data-reveal>
+                        <p class="font-nineties text-4xl font-extrabold">Sip and Relax
+                            <span class="font-parslay text-xl">
+                                by the pool
+                            </span>
+                        </p>
+                        <p class="text-xl max-w-[700px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="container flex redNew gap-12 py-12">
+                    <div class="w-2/5 flex flex-col">
+                        <div class="text-4xl font-nineties font-semibold">Special Just For You</div>
+                        <div id="accordion" x-data="{ open: null }" class="mt-4 grow">
+                            @foreach (['PoolTime', 'Bar by the sea', 'Lorem Ipsum'] as $i => $title)
+                            <div class="border-b border-current">
+                                <button @click="open = open === {{ $i }} ? null : {{ $i }}" class="w-full py-4 flex items-center justify-between text-left text-lg font-semibold">
+                                    {{ $title }}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="shrink-0 transition-transform duration-300" :class="open === {{ $i }} ? 'rotate-180' : ''">
+                                        <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6z" />
+                                    </svg>
+                                </button>
+                                <div x-show="open === {{ $i }}" x-collapse>
+                                    <p class="pb-4 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                        <div class="flex justify-end gap-2">
+                            <button @click="$refs.scrollerPool.scrollBy({ left: -600, behavior: 'smooth' })">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#A74423" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
+                                    <path fill="#A74423" d="M17 24h17v2H17z" />
+                                </svg>
+                            </button>
+                            <div @click="$refs.scrollerPool.scrollBy({ left: 600, behavior: 'smooth' })" class="cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-3/5" data-reveal>
+                        <div x-ref="scrollerPool" class="flex gap-8 justify-start overflow-x-auto h-[600px]">
+                            @foreach (config('daybeds') as $daybed)
+                            <div class="relative h-[600px] shrink-0">
+                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="aspect-square h-[600px] object-cover" />
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <div class="container border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex items-center justify-between">
+                    <div class="flex gap-2">
+                        <p>Atlas Beach Club</p> |
+                        <p>Pool Bar</p>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <a href="" class="items-center flex gap-3">Overview
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                            </svg>
+                        </a>
+                        <a href="" class="items-center flex gap-3">Reserve
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="relative bg-[#EBE1D5] text-[#A74423] overflow-hidden">
+                <!-- image floating -->
+                <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-24 h-32 absolute top-32 right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" />
+                <img src="{{ asset('assets/image/sport1.png') }}" alt="" class="float-image w-64 h-72 absolute top-64 -right-24 object-cover rounded-3xl" style="--float-rotate:-10deg; animation-delay:0.8s" />
+
+                <img src="{{ asset('assets/image/sport2.png') }}" alt="" class="float-image w-24 h-32 absolute top-8 left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-16deg; animation-delay:0.8s" />
+                <img src="{{ asset('assets/image/sport4.png') }}" alt="" class="float-image w-72 h-96 absolute top-32 -left-10 object-cover rounded-3xl" style="--float-rotate:8deg; animation-delay:0.2s" />
+                <!-- image floating -->
+
+                <div class="container space-y-12 text-center py-8 pb-24">
+                    <div class="">
+                        <p class="font-nineties text-4xl">No 04</p>
+                        <p class="font-nineties text-4xl">Activity</p>
+                    </div>
+                    <div class="space-y-5">
+                        <p class="font-nineties text-4xl" data-reveal>Art of Padel</p>
+                        <p class="font-parslay ml-32 text-5xl" data-reveal>
+                            <span class="pr-32">Highter</span>
+                            <span class="ml-32"><br />Standards</span>
+                        </p>
+                        <p class="font-nineties text-2xl" data-reveal>for those who value health</p>
+                        <button class="bg-[#A74423] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2 mx-auto" data-reveal>
+                            Overview
+                            <span class="group-hover:rotate-90 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div x-data="{ active: 0 }" class="pt-32">
+                        <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex items-center gap-5">
+                            @foreach (config('activity') as $i => $activity)
+                            <button @click="active = {{ $i }}" :class="active === {{ $i }} ? 'text-slate-400' : 'hover:text-slate-400'" class="transition">{{ $activity['category'] }}</button>
+                            @endforeach
+                        </div>
+                        @foreach (config('activity') as $i => $activity)
+                        <div x-show="active === {{ $i }}" x-transition class="py-8 text-left space-y-12">
+                            <div class="grid grid-cols-2 gap-4">
+
+                                <img src="{{ asset($activity['images'][0]['img']) }}" alt="{{ $activity['images'][0]['subtitle'] }}" class="w-full aspect-square object-cover" />
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="relative aspect-[3/4]">
+                                        <img src="{{ asset($activity['images'][1]['img']) }}" alt="{{ $activity['images'][1]['subtitle'] }}" class="w-full aspect-[3/4] object-cover" />
+                                        <p class="absolute -bottom-8 right-0 left-0 font-parslay text-lg text-center">{{ $activity['images'][1]['subtitle'] }}</p>
+                                    </div>
+                                    <div class="relative aspect-[3/4]">
+                                        <img src="{{ asset($activity['images'][2]['img']) }}" alt="{{ $activity['images'][2]['subtitle'] }}" class="w-full aspect-[3/4] object-cover" />
+                                        <p class="absolute -bottom-8 right-0 left-0 font-parslay text-lg text-center redNew">{{ $activity['images'][2]['subtitle'] }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex gap-24 text-left">
+                                <div class="w-2/5 space-y-3" data-reveal>
+                                    <div class="font-nineties text-3xl">Courtside is the new</div>
+                                    <div class="font-parslay text-5xl">Social Club</div>
+                                    <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
+                                </div>
+                                <div class="relative w-3/5">
+                                    <img src="{{ asset($activity['images'][3]['img']) }}" alt="" class="w-full h-[650px] object-top object-cover" data-reveal />
+                                    <img src="{{ asset($activity['images'][4]['img']) }}" alt="" class="absolute -left-24 bottom-12 w-auto aspect-square h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <div class="border-[#A74423] border-b-2 font-semibold pb-2 flex items-center justify-between">
+                        <div class="flex gap-2">
+                            <p>Atlas Beach Club</p> |
+                            <p>Activities</p>
+                        </div>
+                        <div class="flex items-center gap-8">
+                            <a href="" class="items-center flex gap-3">Overview
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                </svg>
+                            </a>
+                            <a href="" class="items-center flex gap-3">Reserve
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#A74423" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
                         </div>

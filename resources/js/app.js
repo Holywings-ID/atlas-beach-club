@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             },
-            { threshold: 0.15 }
+            { threshold: 0.4 }
         );
         els.forEach((el) => {
             el.classList.add('opacity-0', 'translate-y-8', 'transition', 'duration-700');
