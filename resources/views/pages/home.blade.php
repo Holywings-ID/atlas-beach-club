@@ -154,10 +154,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div x-ref="scroller" class="w-2/3 flex gap-3 justify-start overflow-x-auto">
+                        <div x-ref="scroller" class="w-2/3 flex gap-3 justify-start overflow-x-auto h-[500px]">
                             @foreach ($daybed['images'] as $image)
-                            <div class="relative h-72 odd:translate-y-16 shrink-0">
-                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-64 h-72 object-cover" />
+                            <div class="relative h-96 odd:translate-y-16 shrink-0">
+                                <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-72 h-96 object-cover" />
                                 <p class="absolute -bottom-8 right-0 left-0 text-[#10496E] font-parslay text-lg text-center">{{ $image['subtitle'] }}</p>
                             </div>
                             @endforeach
@@ -422,8 +422,7 @@
                         </div>
                         @foreach (config('activity') as $i => $activity)
                         <div x-show="active === {{ $i }}" x-transition class="py-8 text-left space-y-12">
-                            <div class="grid grid-cols-2 gap-4">
-
+                            <div class="grid grid-cols-2 gap-4" data-reveal>
                                 <img src="{{ asset($activity['images'][0]['img']) }}" alt="{{ $activity['images'][0]['subtitle'] }}" class="w-full aspect-square object-cover" />
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="relative aspect-[3/4]">

@@ -46,7 +46,7 @@
         <x-header />
         <x-mobile-menu />
 
-        <div class="relative">
+        <div class="relative z-10 bg-white">
             {{ $slot }}
         </div>
 

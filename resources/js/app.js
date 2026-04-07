@@ -5,12 +5,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // Sticky header shadow
-    const header = document.getElementById('header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('shadow-md', window.scrollY > 50);
-        });
-    }
+    // const header = document.getElementById('header');
+    // if (header) {
+    //     window.addEventListener('scroll', () => {
+    //         header.classList.toggle('shadow-md', window.scrollY > 50);
+    //     });
+    // }
 
     // Scroll reveal
     const els = document.querySelectorAll('[data-reveal]');
