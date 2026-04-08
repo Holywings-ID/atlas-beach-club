@@ -20,7 +20,7 @@
                         title="Copacabana"
                         sub-title="Daybeds"
                         image="{{asset('assets/logo/logo.png')}}" />
-                    <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
+                    <section class="relative text-white w-full h-12 text-center bg-[#A74423] overflow-visible">
                         <div class="absolute z-20 inset-0">
                             <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Dusk Different</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
@@ -30,7 +30,7 @@
                     </section>
                     <section class="relative h-full w-full">
                         <img src="{{ asset('assets/image/daybed.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[800px] object-cover object-top" />
-                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#963D20]"></div>
+                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#A74423]"></div>
                     </section>
                 </div>
             </div>

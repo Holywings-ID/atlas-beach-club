@@ -40,6 +40,7 @@ header {
   @apply text-white overscroll-contain;
 }
 
+ /* #EBE1D5, #A74423, #10496E, #333333 */
 .redNew {
   @apply text-[#A74423];
 }
@@ -87,13 +88,18 @@ header {
   animation-play-state: paused;
 }
 
+/* ========== Header ========== */
+.brightness-0 {
+  filter: brightness(0);
+}
+
 /* ========== Navigation ========== */
 .nav-link {
   @apply relative px-4 text-sm uppercase font-semibold tracking-wider text-white transition-colors hover:text-[#A74423];
 }
 
 .nav-link.active {
-  @apply text-[#A74423];
+  @apply text-slate-400;
 }
 
 /* ========== Hero ========== */

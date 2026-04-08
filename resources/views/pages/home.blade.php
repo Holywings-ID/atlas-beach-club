@@ -20,7 +20,7 @@
                         sub-title="Welcome To"
                         image="{{asset('assets/logo/logo.png')}}" />
 
-                    <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
+                    <section class="relative text-white w-full h-12 text-center bg-[#A74423] overflow-visible">
                         <div class="absolute z-20 inset-0">
                             <h2 class="text-3xl lg:text-5xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
@@ -36,7 +36,7 @@
                     </section>
                     <section class="relative h-full w-full">
                         <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1500px] object-cover object-center" />
-                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
+                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#A74423]/30 to-[#A74423]"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
                             <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Biggest Beach Club In The World</h3>
@@ -105,13 +105,13 @@
                     <p>4 Sections</p>
                 </div>
             </div>
-            <div class="container pt-24 relative bg-[#EBE1D5 redNew">
+            <div class="container pt-24 relative bg-[#EBE1D5] redNew">
                 <div class="absolute top-2 left-0 right-0 w-fit mx-auto text-center font-nineties text-4xl redNew">
                     <p>Daybed</p>
                 </div>
                 <p class="w-full max-w-[600px] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr</p>
             </div>
-            <div class="container pt-24 relative bg-[#EBE1D5 redNew space-y-5" data-reveal>
+            <div class="container pt-24 relative redNew space-y-5" data-reveal>
                 <p class="w-full max-w-[600px] text-center text-lg mx-auto">What’s Included? </p>
                 <div class="flex items-center gap-3 justify-center">
                     <p class="w-max text-center">Lorem Ipsum </p>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="flex items-center gap-16 justify-center">
                     @foreach (config('daybeds') as $daybed)
-                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#963D20] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
+                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#A74423] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
                         <span class="group-hover:rotate-90 transition-all duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
@@ -299,7 +299,7 @@
         <section>
             <div class="bg-[#EBE1D5] space-y-12 pb-12">
                 <div class="relative text-center h-[700px]" style="clip-path: ellipse(100% 100% at 50% 0%);">
-                    <img src="{{ asset("assets/image/poolbar.png") }}" alt="Poolbar" class="fixed -z-10 top-0 w-dvw h-dvh object-cover" />
+                    <img src="{{ asset("assets/image/poolbar.png") }}" alt="Poolbar" class="fixed -z-10 top-0 left-0 rig w-dvw h-dvh object-cover" />
                     <div class="absolute top-5 left-0 right-0 text-center">
                         <p class="font-nineties text-4xl">No 03</p>
                         <p class="font-nineties text-4xl">Poolbar</p>

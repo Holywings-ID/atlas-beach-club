@@ -9,7 +9,7 @@
 
         {{-- Reserve Bar --}}
         <a href="{{ route('reserve') }}"
-            class="block bg-[#2B2B2B] hover:bg-[#333333] rounded-sm py-7 text-center mb-12 no-underline transition-colors duration-300">
+            class="block bg-[#2B2B2B] hover:bg-[#333333] rounded-sm py-12 text-center mb-12 no-underline transition-colors duration-300">
             <span class="text-white text-lg tracking-[0.2em] uppercase">Reserve Here</span>
         </a>
 
