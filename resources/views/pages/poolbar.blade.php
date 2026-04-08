@@ -13,7 +13,7 @@
                 Enjoy handcrafted cocktails and light bites right by the pool.
             </p>
 
-            <div class="mt-10 grid gap-6 sm:grid-cols-2">
+            <div class="mt-10 grid gap-6 lg:grid-cols-2">
                 @php
                     $menu = [
                         ['name' => 'Tropical Sunset', 'type' => 'Cocktail', 'price' => '$18'],

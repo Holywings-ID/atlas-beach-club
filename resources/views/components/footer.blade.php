@@ -14,7 +14,7 @@
         </a>
 
         {{-- 3-Column Menu Grid --}}
-        <div class="grid grid-cols-3 gap-10 mb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-14">
 
             {{-- Column 1: Daybeds + Dining + Poolbar --}}
             <div>
@@ -174,7 +174,7 @@
         </div>{{-- /grid --}}
 
         {{-- Footer Bottom Bar --}}
-        <div class="border-t border-white/20 pt-8 flex flex-wrap justify-between items-center gap-6">
+        <div class="border-t border-white/20 pt-8 flex flex-col lg:flex-row flex-wrap justify-between items-center gap-6">
 
             {{-- Social + Tagline --}}
             <div>
@@ -221,7 +221,7 @@
             </div>
 
             {{-- Address --}}
-            <p class="text-white/70 text-xs text-right leading-7 font-light">
+            <p class="text-white/70 text-xs text-center lg:text-right leading-7 font-light">
                 Jalan Pantai Berawa No. 88, Desa Tibubeneng, Kec. Kuta Utara,<br>
                 Kab. Badung, Bali 80361, Indonesia
             </p>

@@ -40,37 +40,37 @@
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
                             <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Biggest Beach Club In The World</h3>
-                            <h4 class="relative z-20 text-3xl lg:text-5xl font-nineties flex items-center justify-center font-extrabold" data-reveal>
+                            <h4 class="relative z-20 text-3xl lg:text-5xl font-nineties flex flex-col lg:flex-row items-center justify-center font-extrabold" data-reveal>
                                 5 HIGHLIGHTS
                                 <span class="font-parslay font-normal px-5 text-3xl">of</span>
                                 ATLAS BEACH CLUB
                             </h4>
-                            <div class="relative z-30 container flex justify-center gap-8 mt-24" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                            <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
                                     <div class="font-nineties font-extrabold text-4xl">Daybeds</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Dining</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Dining</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Poolbar</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Poolbar</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
-                            <div class="relative z-30 container flex justify-center mt-8 gap-8" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                            <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Activity</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Activity</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 05</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Group Bookings</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Group Bookings</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
@@ -113,12 +113,12 @@
             </div>
             <div class="container pt-24 relative redNew space-y-5" data-reveal>
                 <p class="w-full max-w-[600px] text-center text-lg mx-auto">What’s Included? </p>
-                <div class="flex items-center gap-3 justify-center">
+                <div class="flex items-center gap-3 justify-center flex-wrap">
                     <p class="w-max text-center">Lorem Ipsum </p>
                     <p class="w-max text-center">Lorem Ipsum </p>
                     <p class="w-max text-center">Lorem Ipsum </p>
                 </div>
-                <div class="flex items-center gap-16 justify-center">
+                <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-16 justify-center">
                     @foreach (config('daybeds') as $daybed)
                     <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#A74423] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
                         <span class="group-hover:rotate-90 transition-all duration-300">
@@ -133,8 +133,8 @@
             <div class="container py-24 space-y-24">
                 @foreach (config('daybeds') as $daybed)
                 <div class="space-y-12" x-data data-reveal>
-                    <div class="flex justify-between gap-12" id="{{ Str::slug($daybed['title']) }}">
-                        <div class="w-1/3 flex flex-col gap-24">
+                    <div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-12" id="{{ Str::slug($daybed['title']) }}">
+                        <div class="w-full lg:w-1/3 flex flex-col gap-8 lg:gap-24">
                             <h3 class="redNew font-parslay text-6xl">{{ $daybed['title'] }}</h3>
                             <p class="font-nineties redNew w-full lg:w-72 text-2xl">{{ $daybed['description'] }}</p>
                             <div class="flex justify-end gap-2">
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div x-ref="scroller" class="w-2/3 flex gap-3 justify-start overflow-x-auto h-[500px]">
+                        <div x-ref="scroller" class="w-full lg:w-2/3 flex gap-3 justify-start overflow-x-auto h-[400px] lg:h-[500px]">
                             @foreach ($daybed['images'] as $image)
                             <div class="relative h-96 odd:translate-y-16 shrink-0">
                                 <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-72 h-96 object-cover" />
@@ -163,7 +163,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex items-center justify-between">
+                    <div class="border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                         <div class="flex gap-2">
                             <p>Atlas Beach Club</p> |
                             <p>{{ $daybed['title'] }}</p>
@@ -257,8 +257,8 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="flex gap-24 text-left">
-                        <div class="w-2/5 space-y-3" data-reveal>
+                    <div class="flex gap-24 text-left flex-col lg:flex-row">
+                        <div class="w-full lg:w-2/5 space-y-3" data-reveal>
                             <div class="font-nineties text-3xl">Taste the</div>
                             <div class="font-parslay text-5xl">Extraordinary</div>
                             <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -266,17 +266,17 @@
                                 quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
                         </div>
-                        <div class="relative w-3/5">
-                            <img src="{{ asset('assets/image/chef.png') }}" alt="" class="w-full h-[650px] object-top object-cover" data-reveal />
-                            <img src="{{ asset('assets/image/food2.png') }}" alt="" class="absolute -left-24 bottom-12 w-auto aspect-square h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
+                        <div class="relative w-full lg:w-3/5">
+                            <img src="{{ asset('assets/image/chef.png') }}" alt="" class="w-full h-[400px] lg:h-[650px] object-top object-cover" data-reveal />
+                            <img src="{{ asset('assets/image/food2.png') }}" alt="" class="absolute -left-12 lg:-left-24 bottom-12 w-auto aspect-square h-[200px] lg:h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
                         </div>
                     </div>
-                    <div class="border-b-2 font-semibold pb-2 flex items-center justify-between">
+                    <div class="border-b-2 font-semibold pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                         <div class="flex gap-2">
                             <p>Atlas Beach Club</p> |
                             <p>Dining</p>
                         </div>
-                        <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-4 lg:gap-8">
                             <a href="" class="items-center flex gap-3">Overview
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -304,7 +304,7 @@
                         <p class="font-nineties text-4xl">No 03</p>
                         <p class="font-nineties text-4xl">Poolbar</p>
                     </div>
-                    <div class="absolute bottom-32 right-44 space-y-5 text-right" data-reveal>
+                    <div class="absolute bottom-32 right-4 lg:right-44 space-y-5 text-right" data-reveal>
                         <p class="font-nineties text-4xl font-extrabold">Sip and Relax
                             <span class="font-parslay text-xl">
                                 by the pool
@@ -313,8 +313,8 @@
                         <p class="text-xl max-w-[700px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div class="relative z-10 container flex redNew gap-12 py-12">
-                    <div class="w-2/5 flex flex-col">
+                <div class="relative z-10 container flex flex-col lg:flex-row redNew gap-6 lg:gap-12 py-12">
+                    <div class="w-full lg:w-2/5 flex flex-col">
                         <div class="text-4xl font-nineties font-semibold">Special Just For You</div>
                         <div id="accordion" x-data="{ open: null }" class="mt-4 grow">
                             @foreach (['PoolTime', 'Bar by the sea', 'Lorem Ipsum'] as $i => $title)
@@ -348,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-3/5" data-reveal>
+                    <div class="w-full lg:w-3/5" data-reveal>
                         <div x-ref="scrollerPool" class="flex gap-8 justify-start overflow-x-auto h-[600px]">
                             @foreach (config('daybeds') as $daybed)
                             <div class="relative h-[600px] shrink-0">
@@ -358,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex items-center justify-between">
+                <div class="container border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                     <div class="flex gap-2">
                         <p>Atlas Beach Club</p> |
                         <p>Pool Bar</p>
@@ -415,14 +415,14 @@
                     </div>
 
                     <div x-data="{ active: 0 }" class="pt-32">
-                        <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex items-center gap-12">
+                        <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex flex-wrap items-center gap-4 lg:gap-12">
                             @foreach (config('activity') as $i => $activity)
                             <button @click="active = {{ $i }}" :class="active === {{ $i }} ? 'text-slate-400' : 'hover:text-slate-400'" class="transition">{{ $activity['category'] }}</button>
                             @endforeach
                         </div>
                         @foreach (config('activity') as $i => $activity)
                         <div x-show="active === {{ $i }}" x-transition class="py-8 text-left space-y-12">
-                            <div class="grid grid-cols-2 gap-4" data-reveal>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4" data-reveal>
                                 <img src="{{ asset($activity['images'][0]['img']) }}" alt="{{ $activity['images'][0]['subtitle'] }}" class="w-full aspect-square object-cover" />
                                 <div class="grid grid-cols-2 gap-4">
                                     <div class="relative aspect-[3/4]">
@@ -435,8 +435,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex gap-24 text-left">
-                                <div class="w-2/5 space-y-3" data-reveal>
+                            <div class="flex flex-col lg:flex-row gap-8 lg:gap-24 text-left">
+                                <div class="w-full lg:w-2/5 space-y-3" data-reveal>
                                     <div class="font-nineties text-3xl">Courtside is the new</div>
                                     <div class="font-parslay text-5xl">Social Club</div>
                                     <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -444,21 +444,21 @@
                                         quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
                                 </div>
-                                <div class="relative w-3/5">
-                                    <img src="{{ asset($activity['images'][3]['img']) }}" alt="" class="w-full h-[650px] object-top object-cover" data-reveal />
-                                    <img src="{{ asset($activity['images'][4]['img']) }}" alt="" class="absolute -left-24 bottom-12 w-auto aspect-square h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
+                                <div class="relative w-full lg:w-3/5">
+                                    <img src="{{ asset($activity['images'][3]['img']) }}" alt="" class="w-full h-[400px] lg:h-[650px] object-top object-cover" data-reveal />
+                                    <img src="{{ asset($activity['images'][4]['img']) }}" alt="" class="absolute -left-12 lg:-left-24 bottom-12 w-auto aspect-square h-[200px] lg:h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
                                 </div>
                             </div>
                         </div>
                         @endforeach
                     </div>
 
-                    <div class="border-[#A74423] border-b-2 font-semibold pb-2 flex items-center justify-between">
+                    <div class="border-[#A74423] border-b-2 font-semibold pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                         <div class="flex gap-2">
                             <p>Atlas Beach Club</p> |
                             <p>Activities</p>
                         </div>
-                        <div class="flex items-center gap-8">
+                        <div class="flex items-center gap-4 lg:gap-8">
                             <a href="" class="items-center flex gap-3">Overview
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -480,7 +480,7 @@
         </section>
         <section class="relative overflow-hidden bg-white">
             <div class="absolute top-0 left-0 right-0 py-24 bg-[#A74423] rounded-b-[50%] z-20">
-                <div class="relative z-20 text-center">
+                <div class="container relative z-20 text-center">
                     <p class="text-white text-2xl font-nineties uppercase mb-6">Explore Atlas Beach Club</p>
                     <h1 class="text-white text-5xl font-extrabold font-nineties mb-6">Group Bookings</h1>
                     <p class="text-white max-w-2xl mx-auto leading-relaxed mb-6">
@@ -488,7 +488,7 @@
                         magna aliqua. Ut enim ad
                     </p>
                     <a href="{{ route('explore') }}"
-                        class="inline-block bg-white hover:bg-[#EBE1D5] text-[#A74423] font-semibold tracking-widest capitalize px-32 py-3 rounded-full transition-colors duration-200 no-underline">
+                        class="inline-block bg-white hover:bg-[#EBE1D5] text-[#A74423] font-semibold tracking-widest capitalize px-12 lg:px-32 py-3 rounded-full transition-colors duration-200 no-underline">
                         Explore Now
                     </a>
                 </div>

@@ -13,7 +13,7 @@
                 From fine dining to casual bites, explore our curated culinary experiences.
             </p>
 
-            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
                 @php
                     $restaurants = [
                         ['name' => 'The Grand Table', 'cuisine' => 'Fine Dining', 'hours' => '6 PM – 11 PM'],

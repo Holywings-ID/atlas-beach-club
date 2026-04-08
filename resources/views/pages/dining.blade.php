@@ -36,11 +36,11 @@
         </div>
         <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#A74423] overflow-hidden">
             <div class="container py-12">
-                <div class="flex gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-2/5 space-y-3">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
+                    <div class="w-full lg:w-2/5 space-y-3">
                         <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-5xl">Lorem Ipsum</div>
-                        <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
+                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
@@ -53,15 +53,15 @@
                             </span>
                         </button>
                     </div>
-                    <div class="w-3/5">
+                    <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
                     </div>
                 </div>
-                <div class="flex gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-2/5 space-y-3">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
+                    <div class="w-full lg:w-2/5 space-y-3">
                         <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-5xl">Lorem Ipsum</div>
-                        <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
+                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
@@ -74,15 +74,15 @@
                             </span>
                         </button>
                     </div>
-                    <div class="w-3/5">
+                    <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
                     </div>
                 </div>
-                <div class="flex gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-2/5 space-y-3">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
+                    <div class="w-full lg:w-2/5 space-y-3">
                         <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-5xl">Lorem Ipsum</div>
-                        <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
+                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
@@ -95,7 +95,7 @@
                             </span>
                         </button>
                     </div>
-                    <div class="w-3/5">
+                    <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
                     </div>
                 </div>

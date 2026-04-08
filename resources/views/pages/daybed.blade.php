@@ -37,14 +37,14 @@
         <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#A74423] overflow-hidden">
             <div class="container space-y-12 text-center py-12 pb-24">
                 <div x-data="{ active: 0 }">
-                    <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex items-center gap-12">
+                    <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex flex-wrap items-center gap-4 lg:gap-12">
                         @foreach (config('activity') as $i => $activity)
                         <button @click="active = {{ $i }}" :class="active === {{ $i }} ? 'text-slate-400' : 'hover:text-slate-400'" class="transition">{{ $activity['category'] }}</button>
                         @endforeach
                     </div>
                     @foreach (config('activity') as $i => $activity)
                     <div x-show="active === {{ $i }}" x-transition class="py-8 text-left space-y-12">
-                        <div class="grid grid-cols-2 gap-4" data-reveal>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4" data-reveal>
                             <img src="{{ asset($activity['images'][0]['img']) }}" alt="{{ $activity['images'][0]['subtitle'] }}" class="w-full aspect-square object-cover" />
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="relative aspect-[3/4]">
@@ -57,8 +57,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex gap-24 text-left">
-                            <div class="w-2/5 space-y-3" data-reveal>
+                        <div class="flex flex-col lg:flex-row gap-8 lg:gap-24 text-left">
+                            <div class="w-full lg:w-2/5 space-y-3" data-reveal>
                                 <div class="font-nineties text-3xl">Courtside is the new</div>
                                 <div class="font-parslay text-5xl">Social Club</div>
                                 <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -66,21 +66,21 @@
                                     quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                     labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
                             </div>
-                            <div class="relative w-3/5">
-                                <img src="{{ asset($activity['images'][3]['img']) }}" alt="" class="w-full h-[650px] object-top object-cover" data-reveal />
-                                <img src="{{ asset($activity['images'][4]['img']) }}" alt="" class="absolute -left-24 bottom-12 w-auto aspect-square h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
+                            <div class="relative w-full lg:w-3/5">
+                                <img src="{{ asset($activity['images'][3]['img']) }}" alt="" class="w-full h-[400px] lg:h-[650px] object-top object-cover" data-reveal />
+                                <img src="{{ asset($activity['images'][4]['img']) }}" alt="" class="absolute -left-12 lg:-left-24 bottom-12 w-auto aspect-square h-[200px] lg:h-[300px] object-cover" style="animation-delay: 1s;" data-reveal />
                             </div>
                         </div>
                     </div>
                     @endforeach
                 </div>
 
-                <div class="border-[#A74423] border-b-2 font-semibold pb-2 flex items-center justify-between">
+                <div class="border-[#A74423] border-b-2 font-semibold pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                     <div class="flex gap-2">
                         <p>Atlas Beach Club</p> |
                         <p>Activities</p>
                     </div>
-                    <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-4 lg:gap-8">
                         <a href="" class="items-center flex gap-3">Overview
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                 <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />

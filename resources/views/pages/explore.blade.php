@@ -28,31 +28,31 @@
                         </div>
                     </section>
                     <section class="relative h-full w-full">
-                        <img src="{{ asset('assets/image/explore.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1200px] object-cover object-top" />
+                        <img src="{{ asset('assets/image/explore.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1200px] object-cover object-bottom" />
                         <div class="absolute inset-0 h-full w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#A74423]"></div>
 
                         <div class="text-white absolute z-[20] inset-0 h-full w-full pt-[400px]">
-                            <div class="relative z-30 container flex justify-center gap-8 mt-24" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                            <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Family Getaway</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Family Getaway</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Ramontic Bliss</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Romantic Bliss</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
-                            <div class="relative z-30 container flex justify-center mt-8 gap-8" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                            <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Friend Madness</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Friend Madness</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-44 w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Party Anthem</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Party Anthem</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
@@ -65,11 +65,11 @@
         </div>
         <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#A74423] overflow-hidden">
             <div class="container py-12">
-                <div class="flex gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-2/5 space-y-3">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
+                    <div class="w-full lg:w-2/5 space-y-3">
                         <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-5xl">Lorem Ipsum</div>
-                        <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
+                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
@@ -82,15 +82,15 @@
                             </span>
                         </button>
                     </div>
-                    <div class="w-3/5">
+                    <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
                     </div>
                 </div>
-                <div class="flex gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-2/5 space-y-3">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
+                    <div class="w-full lg:w-2/5 space-y-3">
                         <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-5xl">Lorem Ipsum</div>
-                        <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
+                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
@@ -103,15 +103,15 @@
                             </span>
                         </button>
                     </div>
-                    <div class="w-3/5">
+                    <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
                     </div>
                 </div>
-                <div class="flex gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-2/5 space-y-3">
+                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
+                    <div class="w-full lg:w-2/5 space-y-3">
                         <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-5xl">Lorem Ipsum</div>
-                        <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
+                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
@@ -124,7 +124,7 @@
                             </span>
                         </button>
                     </div>
-                    <div class="w-3/5">
+                    <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
                     </div>
                 </div>

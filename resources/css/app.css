@@ -52,7 +52,7 @@ header {
   display: none;
 }
 .container {
-  @apply mx-auto w-full px-4 sm:w-[540px] md:w-[720px] lg:w-[960px] lg:px-6 xl:w-[1140px] 2xl:w-[1320px];
+  @apply mx-auto w-full px-4 lg:w-[1140px] lg:px-6;
 }
 
 /* ========== Floating Image Animation ========== */
@@ -118,7 +118,7 @@ header {
 
 /* ========== Page Section ========== */
 .page-section {
-  @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 text-white;
+  @apply mx-auto max-w-7xl px-4 py-16 lg:px-8 text-white;
 }
 
 /* ========== Footer ========== */

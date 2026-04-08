@@ -13,7 +13,7 @@
                 Take advantage of our limited‑time offers.
             </p>
 
-            <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10 grid gap-6 lg:grid-cols-3">
                 @php
                     $offers = [
                         ['title' => 'Early Bird Special', 'desc' => '20% off bookings made 30 days in advance.', 'badge' => '20% OFF'],
