@@ -231,7 +231,7 @@
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
                         </p>
                     </div>
-                    <div class="overflow-auto pt-12">
+                    <div class="pt-12">
                         <div class="flex justify-between">
                             <button @click="$refs.scrollersec.scrollBy({ left: -300, behavior: 'smooth' })">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
@@ -248,7 +248,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div x-ref="scrollersec" class="w-full flex gap-5 justify-start overflow-x-auto h-[600px]" data-reveal>
+                        <div x-ref="scrollersec" class="w-full flex gap-5 justify-start overflow-x-auto h-[650px]" data-reveal>
                             @foreach (config('dining') as $image)
                             <div class="relative h-96 odd:h-[480px] shrink-0">
                                 <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-80 h-full object-cover" />
@@ -478,5 +478,44 @@
                 </div>
             </div>
         </section>
+        <section class="relative overflow-hidden bg-white">
+            <div class="absolute top-0 left-0 right-0 py-24 bg-[#A74423] rounded-b-[50%] z-20">
+                <div class="relative z-20 text-center">
+                    <p class="text-white text-2xl font-nineties uppercase mb-6">Explore Atlas Beach Club</p>
+                    <h1 class="text-white text-5xl font-extrabold font-nineties mb-6">Group Bookings</h1>
+                    <p class="text-white max-w-2xl mx-auto leading-relaxed mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad
+                    </p>
+                    <a href="{{ route('explore') }}"
+                        class="inline-block bg-white hover:bg-[#EBE1D5] text-[#A74423] font-semibold tracking-widest capitalize px-32 py-3 rounded-full transition-colors duration-200 no-underline">
+                        Explore Now
+                    </a>
+                </div>
+            </div>
+
+            {{-- Image Slider --}}
+            <div class="z-10 h-full w-full" x-data="{
+                ...imageSlider(),
+                slides: [
+                    '{{ asset('assets/image/highlight1.png') }}',
+                    '{{ asset('assets/image/highlight2.png') }}',
+                    '{{ asset('assets/image/highlight3.png') }}',
+                    '{{ asset('assets/image/highlight4.png') }}',
+                ]
+            }">
+                {{-- Slides --}}
+                <div class="relative w-full h-[1300px] overflow-hidden">
+                    <template x-for="(slide, index) in slides" :key="index">
+                        <div class="absolute inset-0 transition-opacity duration-700"
+                            :class="index === current ? 'opacity-100' : 'opacity-0'">
+                            <img :src="slide" alt="Slide image" class="w-full h-full object-cover">
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 </x-layouts.app>
