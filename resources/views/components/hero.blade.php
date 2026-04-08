@@ -1,24 +1,11 @@
-@props([
-    'title',
-    'subtitle' => null,
-    'bg',
-    'ctaLabel' => null,
-    'ctaRoute' => null,
-])
-
-<section class="hero" style="background-image: url('{{ $bg }}')">
-    <div class="hero-content">
-        <h1 class="text-5xl font-bold sm:text-6xl">{{ $title }}</h1>
-
-        @if ($subtitle)
-            <p class="mt-4 text-lg text-gray-200">{{ $subtitle }}</p>
-        @endif
-
-        @if ($ctaLabel && $ctaRoute)
-            <a href="{{ route($ctaRoute) }}"
-               class="mt-8 inline-block rounded-full bg-white px-8 py-3 font-semibold text-gray-900 transition hover:bg-gray-100">
-                {{ $ctaLabel }}
-            </a>
-        @endif
+<div class="relative h-[120vh] min-h-[1100px] -mt-32">
+    <div class="h-full w-full relative">
+        <img src="{{ $background }}" alt="{{ $title }}" class="h-full w-full object-cover" />
     </div>
-</section>
+    <div class="absolute inset-0 h-[120vh] min-h-[1100px] w-dvw z-10 bg-gradient-to-b from-transparent via-transparent to-[#A74423]"></div>
+    <div class="absolute flex flex-col justify-center z-20 w-full inset-0 p-3 text-center text-white sm:mt-5 md:mt-0">
+        <img src="{{ $image }}" alt="{{ $title }}" class="mb-16 h-16 mx-auto object-cover" />
+        <h4 class="text-xl sm:text-2xl font-parslay" data-reveal>{{ $subTitle }}</h4>
+        <h1 class="text-4xl font-extrabold sm:text-6xl font-nineties" data-reveal>{{ $title }}</h1>
+    </div>
+</div>

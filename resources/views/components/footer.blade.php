@@ -1,6 +1,6 @@
 <footer class="bg-[#A74423] relative">
 
-    <div class="container relative z-10 mx-auto px-8 py-12">
+    <div class="container relative z-[90] mx-auto px-8 py-12">
 
         {{-- Logo --}}
         <div class="flex justify-center mb-10">
