@@ -181,7 +181,7 @@
                 <p class="text-white/60 text-[0.7rem] tracking-[0.15em] uppercase mb-4">
                     Discover the Latest Atlas Beach Club Bali
                 </p>
-                <div class="flex gap-3">
+                <div class="flex justify-center lg:justify-normal gap-3">
 
                     {{-- Facebook --}}
                     <a href="#" aria-label="Facebook"
