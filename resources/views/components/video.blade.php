@@ -4,11 +4,11 @@
             <source src="{{ $videoDesktop }}" type="video/mp4">
         </video>
     </div>
-    <div class="lg:hidden">
+    <!-- <div class="lg:hidden">
         <video autoplay muted loop playsinline class="h-full w-full object-cover">
             <source src="{{ $videoMobile }}" type="video/mp4">
         </video>
-    </div>
+    </div> -->
     <div class="absolute inset-0 h-[120vh] min-h-[1100px] w-dvw z-10 bg-gradient-to-b from-transparent via-transparent to-[#A74423]"></div>
     <div class="absolute flex flex-col justify-center z-20 w-full inset-0 p-3 text-center text-white">
         <img src="{{ $image }}" alt="{{ $title }}" class="mb-16 h-12 lg:h-16 mx-auto object-cover" />
