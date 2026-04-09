@@ -1,38 +1,162 @@
-<x-layouts.app title="What's On">
-
-    <x-hero
-        title="What's On"
-        subtitle="Events, entertainment & happenings"
-        bg="https://placehold.co/1920x800/e94560/ffffff?text=Whats+On"
-    />
-
+<x-layouts.app title="Home">
     <main>
-        <section class="page-section" data-reveal>
-            <h2 class="text-3xl font-bold">Upcoming Events</h2>
-            <p class="mt-4 max-w-3xl text-gray-600">
-                Stay up to date with everything happening at ABC.
-            </p>
+        <div id="section-one-wrapper"
+            x-data="{
+                contentH: 0,
+                scrollY: 0,
+                init() {
+                    this.contentH = this.$refs.content.scrollHeight;
+                    window.addEventListener('scroll', () => this.scrollY = window.scrollY, { passive: true });
+                }
+            }"
+            :style="'height:' + (contentH + window.innerHeight) + 'px'"
+            class="relative z-[1] -mt-24">
+            <div id="section-one" x-ref="content" class="sticky top-0 h-screen overflow-hidden">
+                <div :style="'transform:translateY(-' + Math.min(scrollY, Math.max(0, contentH - window.innerHeight)) + 'px)'">
+                    <x-hero
+                        background="{{ asset('assets/image/whatson.png') }}"
+                        title="Meet"
+                        text="the sound"
+                        sub-title="Backyard"
+                        color="black" />
 
-            <div class="mt-10 space-y-6">
-                @php
-                    $events = [
-                        ['title' => 'Live Jazz Night', 'date' => 'Every Friday', 'time' => '7 PM', 'location' => 'Pool Bar'],
-                        ['title' => 'Wine Tasting', 'date' => 'Saturdays', 'time' => '5 PM', 'location' => 'The Grand Table'],
-                        ['title' => 'Beach Yoga', 'date' => 'Daily', 'time' => '7 AM', 'location' => 'Main Beach'],
-                    ];
-                @endphp
+                    <div class="relative text-white w-full h-12 text-center bg-black overflow-visible">
 
-                @foreach ($events as $e)
-                    <div class="flex items-start gap-6 rounded-xl border p-6 transition hover:shadow-md" data-reveal>
-                        <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xl">🎤</div>
-                        <div>
-                            <h3 class="text-lg font-semibold">{{ $e['title'] }}</h3>
-                            <p class="text-sm text-gray-500">{{ $e['date'] }} · {{ $e['time'] }} · {{ $e['location'] }}</p>
-                        </div>
                     </div>
-                @endforeach
+                    <section class="relative h-full w-full">
+                        <img src="{{ asset('assets/image/whatson2.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1000px] object-cover object-center" />
+                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
+
+                        <div class="text-white absolute inset-0 h-full w-full">
+                            <h3 class="relative z-20 text-2xl lg:text-5xl font-nineties mb-4 text-center" data-reveal>Event Highlight</h3>
+                            <div class="relative z-30 container mt-12 lg:mt-24 px-4" data-reveal
+                                x-data="{
+                                    active: 1,
+                                    total: 3,
+                                    dragging: false,
+                                    startX: 0,
+                                    dx: 0,
+                                    go(i) { this.active = Math.max(0, Math.min(this.total - 1, i)); this.dx = 0; },
+                                    onDown(e) { this.dragging = true; this.startX = (e.touches ? e.touches[0] : e).clientX; },
+                                    onMove(e) { if (!this.dragging) return; this.dx = (e.touches ? e.touches[0] : e).clientX - this.startX; },
+                                    onUp() {
+                                        if (!this.dragging) return;
+                                        this.dragging = false;
+                                        if (Math.abs(this.dx) > 50) this.go(this.active + (this.dx < 0 ? 1 : -1));
+                                        this.dx = 0;
+                                    },
+                                    offset() {
+                                        const s = 100 / 3;
+                                        const shift = -(this.active - 1) * s;
+                                        const gapShift = -(this.active - 1) * 16;
+                                        return `translateX(calc(${shift}% + ${gapShift}px + ${this.dragging ? this.dx : 0}px))`;
+                                    }
+                                }">
+                                <div class="flex items-center justify-center gap-4 lg:gap-8">
+                                    <button @click="go(active - 1)" class="shrink-0 cursor-pointer z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                            <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                            <path fill="#ffffff" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
+                                            <path fill="#ffffff" d="M17 24h17v2H17z" />
+                                        </svg>
+                                    </button>
+
+                                    <div id="scrollableEvent-wrapper" class="overflow-hidden w-full"
+                                        @mousedown.prevent="onDown($event)"
+                                        @mousemove.prevent="onMove($event)"
+                                        @mouseup.window="onUp()"
+                                        @mouseleave="onUp()"
+                                        @touchstart.passive="onDown($event)"
+                                        @touchmove.passive="onMove($event)"
+                                        @touchend="onUp()">
+                                        <div class="flex gap-4" :class="dragging ? '' : 'transition-transform duration-500 ease-out'" :style="'transform:' + offset()">
+                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="active === 0 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                                <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                    Reserve
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
+                                                            <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                                            <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                                            <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="active === 1 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event2.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                                <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                    Reserve
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
+                                                            <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                                            <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                                            <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="active === 2 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                                <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                    Reserve
+                                                    <span>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
+                                                            <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                                            <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                                            <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button @click="go(active + 1)" class="shrink-0 cursor-pointer z-10">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                            <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                            <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                            <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5]">
+
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <img src="{{asset('assets/image/dj1.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/dj2.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/dj3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/dj4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    {{-- Duplicate for seamless loop --}}
+                    <img src="{{asset('assets/image/dj1.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/dj2.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/dj3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/dj4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                </div>
+            </div>
+            <div class="relative">
+                <img src="{{asset('assets/image/genre.png')}}" alt="" class="w-screen h-[1300px] object-cover" />
+                <div class="container absolute top-5 left-0 right-0 w-full font-nineties text-white">
+                    <div class="flex gap-8">
+                        <p class="font-extrabold font-nineties text-5xl whitespace-break-spaces text-right">Genre Master</p>
+                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
 </x-layouts.app>

@@ -93,7 +93,11 @@ abc-html/
 │           └── reserve.blade.php   # Reservation form
 │
 ├── routes/
-│   ├── web.php                 # All 9 GET routes → PageController methods
+│   ├── web.php                 # All 9 GET routes <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                            </svg> PageController methods
 │   └── console.php             # Artisan console commands
 │
 ├── storage/                    # App-generated files (logs, cache, sessions)
@@ -129,7 +133,11 @@ abc-html/
 
 ## How It Fits Together
 
-1. A request hits `routes/web.php` → `PageController` returns the matching Blade view from `resources/views/pages/`
+1. A request hits `routes/web.php` <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                            </svg> `PageController` returns the matching Blade view from `resources/views/pages/`
 2. Each page view uses `<x-layouts.app>` as the master layout, which wraps content with the header, mobile menu, footer, and contact button
 3. Pages use Blade components (`<x-hero>`, `<x-video>`) for reusable hero sections
 4. Interactive features (contact form, reservation form, FAQ) are Livewire components — server-rendered with real-time validation, no full page reloads

@@ -9,7 +9,7 @@ return [
                 'id' => 1,
                 'name' => 'Left Side A',
                 'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
-                'image' => ['img:', asset('assets/image/daybed.png'), 'img:', asset('assets/image/daybed.png')],
+                'image' => ['img:', asset('assets/image/daybed.png'), 'img:', asset('assets/image/highlight1.png')],
                 'checkIn' => '08:00',
                 'checkout' => '21:00',
                 'Occupancy' => 'maximum 4',

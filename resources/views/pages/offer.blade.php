@@ -27,7 +27,11 @@
                         <span class="absolute right-4 top-4 rounded-full bg-black px-3 py-1 text-xs font-bold text-white">{{ $o['badge'] }}</span>
                         <h3 class="mt-4 text-xl font-semibold">{{ $o['title'] }}</h3>
                         <p class="mt-2 text-sm text-gray-500">{{ $o['desc'] }}</p>
-                        <a href="{{ route('reserve') }}" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">Book This Offer →</a>
+                        <a href="{{ route('reserve') }}" class="mt-4 inline-block text-sm font-medium text-blue-600 hover:underline">Book This Offer <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                            </svg></a>
                     </div>
                 @endforeach
             </div>
