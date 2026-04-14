@@ -1,4 +1,4 @@
-<x-layouts.app title="Home">
+<x-layouts.app title="What's On">
     <main>
         <div id="section-one-wrapper"
             x-data="{
@@ -227,6 +227,28 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section>
+            <div class="relative bg-[#333333] py-24">
+                <p class="absolute font-nineties text-5xl left-0 right-0 text-center -top-24 z-10">Activity Highlight</p>
+                <div class="container text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr</p>
+                </div>
+            </div>
+            <x-feature-card
+                color="#333333"
+                title="Live BBQ Grill"
+                subtitle="Fired Up Flavor"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
+                image="assets/image/cardAct.png"
+                link="/dining" />
+            <x-feature-card
+                color="#333333"
+                title="Bar Takeover"
+                subtitle="Raised by Spirits"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
+                image="assets/image/cardAct.png"
+                link="/dining" />
         </section>
     </main>
 </x-layouts.app>

@@ -1,4 +1,4 @@
-<x-layouts.app title="Daybed">
+<x-layouts.app title="Explore">
 
     <main>
         <div id="section-one-wrapper"
