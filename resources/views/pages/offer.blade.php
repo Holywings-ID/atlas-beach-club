@@ -11,7 +11,7 @@
 
     <main>
         <section class="bg-[#EBE1D5] text-[#963D20] py-24">
-            <div class="container flex gap-12">
+            <div class="container flex lg:flex-row flex-col gap-12">
                 <!-- category -->
                 <div class="flex flex-col gap-4">
                     <button class="text-left font-semibold pb-2 text-xl border-[#963D20] border-b">
@@ -31,9 +31,9 @@
 
                 <!-- content -->
                 <div class="space-y-12">
-                    <div class="grid grid-cols-5 gap-8" data-reveal>
-                        <img src="{{ asset('assets/image/highlight2.png') }}" alt="Cerita Rasa Nuansa Bali" class="h-full w-full col-span-2 object-cover" />
-                        <div class="flex flex-col col-span-3">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8" data-reveal>
+                        <img src="{{ asset('assets/image/highlight2.png') }}" alt="Cerita Rasa Nuansa Bali" class="h-full w-full lg:col-span-2 object-cover" />
+                        <div class="flex flex-col lg:col-span-3">
                             <div class="grow space-y-4">
                                 <p class="font-nineties text-5xl">Cerita Rasa Nuansa Bali</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -63,41 +63,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-5 gap-8" data-reveal>
-                        <img src="{{ asset('assets/image/highlight2.png') }}" alt="Cerita Rasa Nuansa Bali" class="h-full w-full col-span-2 object-cover" />
-                        <div class="flex flex-col col-span-3">
-                            <div class="grow space-y-4">
-                                <p class="font-nineties text-5xl">Cerita Rasa Nuansa Bali</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <div class="font-semibold">
-                                    <p>Voucher Code</p>
-                                    <p>ACR108</p>
-                                </div>
-                            </div>
-
-                            <div class="">
-                                <div class="grid grid-cols-2 border-b border-[#963D20] py-3">
-                                    <div class="text-black">Categories</div>
-                                    <div>Daybed Booking</div>
-                                </div>
-                                <div class="grid grid-cols-2 border-b border-[#963D20] py-3">
-                                    <div class="text-black">Terms & Conditions</div>
-                                    <ul class="list-disc">
-                                        <li>Valid on regular days</li>
-                                        <li>Maximum 2 person</li>
-                                        <li>Minimum purchase IDR 500.000</li>
-                                    </ul>
-                                </div>
-                                <div class="grid grid-cols-2 py-3">
-                                    <div class="text-black">Valid</div>
-                                    <div>1-31 October 2026</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-5 gap-8" data-reveal>
-                        <img src="{{ asset('assets/image/highlight2.png') }}" alt="Cerita Rasa Nuansa Bali" class="h-full w-full col-span-2 object-cover" />
-                        <div class="flex flex-col col-span-3">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8" data-reveal>
+                        <img src="{{ asset('assets/image/highlight2.png') }}" alt="Cerita Rasa Nuansa Bali" class="h-full w-full lg:col-span-2 object-cover" />
+                        <div class="flex flex-col lg:col-span-3">
                             <div class="grow space-y-4">
                                 <p class="font-nineties text-5xl">Cerita Rasa Nuansa Bali</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

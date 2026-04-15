@@ -11,7 +11,7 @@
 
     <main>
         <section class="bg-[#EBE1D5] text-[#963D20] py-24">
-            <div class="container flex gap-12" x-data="{ selected: 'food' }">
+            <div class="container flex lg:flex-row flex-col gap-12" x-data="{ selected: 'food' }">
                 <!-- category -->
                 <div class="flex flex-col gap-4">
                     <button @click="selected = 'food'" :class="selected === 'food' ? 'text-black' : 'text-[#963D20]'" class="text-left font-semibold pb-2 whitespace-nowrap text-xl border-[#963D20] border-b">

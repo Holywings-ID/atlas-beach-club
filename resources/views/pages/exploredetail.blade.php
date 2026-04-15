@@ -1,6 +1,6 @@
 <x-layouts.app title="Explore Detail">
     <main class="bg-[#EBE1D5] -mt-24 text-[#963D20] antialiased">
-        <div class="container mx-auto pt-40 pb-6 text-center">
+        <div class="container mx-auto pt-40 pb-6 text-center overflow-hidden">
 
             <h1 class=" text-5xl md:text-6xl font-extrabold font-nineties text-[#963D20] mb-5 tracking-tight">
                 Family Getaway
@@ -29,27 +29,27 @@
                 </div>
 
                 {{-- Thumb top-left --}}
-                <div class="absolute float-image top-[4%] -left-12 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:0s">
+                <div class="absolute float-image top-[4%] hidden lg:block -left-12 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:0s">
                     <img src="{{ asset('assets/image/family2.png') }}" alt="" class="w-56 h-64 object-cover">
                 </div>
 
                 {{-- Thumb mid-left --}}
-                <div class="absolute float-image top-[38%] -left-44 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:1.5s">
+                <div class="absolute float-image top-[38%] hidden lg:block -left-44 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:1.5s">
                     <img src="{{ asset('assets/image/family3.png') }}" alt="" class="w-56 h-32 object-cover">
                 </div>
 
                 {{-- Thumb bottom-left --}}
-                <div class="absolute float-image -bottom-8 -left-24 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:0.8s">
+                <div class="absolute float-image -bottom-8 hidden lg:block -left-24 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:0.8s">
                     <img src="{{ asset('assets/image/family4.png') }}" alt="" class="w-56 h-44 object-cover">
                 </div>
 
                 {{-- Thumb top-right --}}
-                <div class="absolute float-image top-[16%] -right-16 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:2s">
+                <div class="absolute float-image top-[16%] hidden lg:block -right-16 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:2s">
                     <img src="{{ asset('assets/image/family5.png') }}" alt="" class="w-32 h-44 object-cover">
                 </div>
 
                 {{-- Thumb bottom-right --}}
-                <div class="absolute float-image bottom-[4%] -right-32 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:0.5s">
+                <div class="absolute float-image bottom-[4%] hidden lg:block -right-32 overflow-hidden border-4 border-[#10496E] shadow-lg" style="--float-rotate:0deg; animation-delay:0.5s">
                     <img src="{{ asset('assets/image/family6.png') }}" alt="" class="w-56 h-64 object-cover">
                 </div>
 
@@ -66,15 +66,15 @@
         </div>
 
         <div class="container mx-auto px-6 py-8">
-            <div class="flex gap-8">
+            <div class="flex lg:flex-row flex-col gap-8">
 
-                <div class="w-1/5">
+                <div class="lg:w-1/5">
                     <p class="font-semibold uppercase text-[#963D20]">
                         Choose your<br>daybed
                     </p>
                 </div>
 
-                <div class="w-4/5 grid grid-cols-2 gap-4 flex-1">
+                <div class="lg:w-4/5 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-4 flex-1">
 
                     @php
                     $daybeds = [
@@ -91,7 +91,7 @@
                             <img src="{{ asset($daybed["img"]) }}" alt="{{ $daybed['name'] }}"
                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
-                        <div class="flex items-center justify-between gap-2">
+                        <div class="flex lg:flex-row flex-col lg:items-center justify-between gap-2">
                             <div>
                                 <p class="font-parslay text-[#963D20] text-2xl mb-0.5">
                                     {{ $daybed['name'] }}
@@ -99,7 +99,7 @@
                                 <p class="">Capacity : 3000 pax</p>
                             </div>
                             <a href="#"
-                                class="shrink-0 inline-flex items-center gap-2 bg-[#963D20] hover:brightness-110 text-sm text-white uppercase px-3.5 py-2 rounded-full transition-colors whitespace-nowrap">
+                                class="shrink-0 inline-flex w-fit items-center gap-2 bg-[#963D20] hover:brightness-110 text-sm text-white uppercase px-3.5 py-2 rounded-full transition-colors whitespace-nowrap">
                                 I'm Interested
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none"
                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -116,18 +116,18 @@
         </div>
 
         <div class="container mx-auto pt-6 pb-16">
-            <div class="flex gap-8">
+            <div class="flex lg:flex-row flex-col gap-8">
 
-                <div class="w-1/5">
+                <div class="lg:w-1/5">
                     <p class="font-semibold uppercase text-[#963D20]">
                         Location<br>Guide
                     </p>
-                    <h2 class="mt-44 font-extrabold font-nineties text-[#963D20] text-5xl">
+                    <h2 class="mt-12 lg:mt-44 font-extrabold font-nineties text-[#963D20] text-5xl">
                         Ocean<br>Beach<br>Pool
                     </h2>
                 </div>
 
-                <div class="w-4/5 flex-1">
+                <div class="lg:w-4/5 flex-1">
 
                     <div class="relative -lg overflow-hidden aspect-[4/3] mb-4">
                         <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=900&q=80"

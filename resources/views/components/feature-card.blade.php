@@ -9,8 +9,8 @@
         <div class="flex gap-8">
             <div class="w-1/5 h-auto border-l" style="border-color: {{ $text }}"></div>
             <div class="w-4/5 space-y-8 border-b pb-4" style="border-color: {{ $text }}">
-                <div><img src="{{ asset($image) }}" alt="{{ $title }}" class="w-full h-[500px] object-cover" /></div>
-                <div class="flex gap-24 justify-between">
+                <div><img src="{{ asset($image) }}" alt="{{ $title }}" class="w-full h-[300px] lg:h-[500px] object-cover" /></div>
+                <div class="flex lg:flex-row flex-col gap-8 lg:gap-24 justify-between">
                     <p style="color: {{ $text }}">{{ $description }}</p>
                     <a href="{{ $link }}" class="items-center font-semibold flex gap-3" style="color: {{ $text }}">Overview
                         <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">

@@ -35,7 +35,7 @@
                         </div>
                     </section>
                     <section class="relative h-full w-full">
-                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1500px] object-cover object-center" />
+                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[2000px] lg:h-[1500px] object-cover object-center" />
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
@@ -48,7 +48,7 @@
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
                                 <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
-                                    <div class="font-nineties font-extrabold text-4xl">Daybeds</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Daybeds</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                                 <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
@@ -118,7 +118,7 @@
                     <p class="w-max text-center">Lorem Ipsum </p>
                     <p class="w-max text-center">Lorem Ipsum </p>
                 </div>
-                <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-16 justify-center">
+                <div class="grid lg:grid-cols-4 grid-cols-2 items-center gap-4 lg:gap-16 justify-center">
                     @foreach (config('daybeds') as $daybed)
                     <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#963D20] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
                         <span class="group-hover:rotate-90 transition-all duration-300">
@@ -154,7 +154,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div x-ref="scroller" class="w-full lg:w-2/3 flex gap-3 justify-start overflow-x-auto h-[400px] lg:h-[500px]">
+                        <div x-ref="scroller" class="w-full lg:w-2/3 flex gap-3 justify-start overflow-x-auto h-[600px] lg:h-[500px]">
                             @foreach ($daybed['images'] as $image)
                             <div class="relative h-96 odd:translate-y-16 shrink-0">
                                 <img src="{{ asset($image['img']) }}" alt="{{ $image['subtitle'] }}" class="w-72 h-96 object-cover" />
@@ -193,13 +193,13 @@
         <section class="relative z-10 ">
             <div class="relative bg-[#963D20] overflow-hidden">
                 <!-- image floating -->
-                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-96 h-72 absolute -top-24 -right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
-                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-32 h-24 absolute top-52 right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" />
-                <img src="{{ asset('assets/image/food2.png') }}" alt="" class="float-image w-72 h-64 absolute top-64 -right-24 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.8s" />
+                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute -top-12 lg:-top-24 -right-6 lg:-right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
+                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-20 h-16 lg:w-32 lg:h-24 absolute top-36 lg:top-52 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" />
+                <img src="{{ asset('assets/image/food2.png') }}" alt="" class="float-image w-40 h-36 lg:w-72 lg:h-64 absolute top-48 lg:top-64 -right-12 lg:-right-24 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.8s" />
 
-                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-32 h-24 absolute top-8 left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:2s" />
-                <img src="{{ asset('assets/image/food4.png') }}" alt="" class="float-image w-96 h-72 absolute top-12 -left-52 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.5s" />
-                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-72 h-52 absolute top-96 -left-12 object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:1.2s" />
+                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-20 h-16 lg:w-32 lg:h-24 absolute top-4 lg:top-8 left-24 lg:left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:2s" />
+                <img src="{{ asset('assets/image/food4.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute top-6 lg:top-12 -left-24 lg:-left-52 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.5s" />
+                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-40 h-28 lg:w-72 lg:h-52 absolute top-72 lg:top-96 -left-6 lg:-left-12 object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:1.2s" />
                 <!-- image floating -->
 
                 <div class="container space-y-12 text-center py-8 pb-24">
@@ -209,9 +209,9 @@
                     </div>
                     <div class="space-y-5">
                         <p class="font-nineties text-4xl" data-reveal>World Class Dining</p>
-                        <p class="font-parslay ml-32 text-5xl" data-reveal>
-                            <span class="pr-32">Come Hungry</span>
-                            <span class="ml-32"><br />Leave Iconic</span>
+                        <p class="font-parslay lg:ml-32 text-5xl" data-reveal>
+                            <span class="lg:pr-32">Come Hungry</span>
+                            <span class="lg:ml-32"><br />Leave Iconic</span>
                         </p>
                         <p class="font-nineties text-2xl" data-reveal>find your taste only at pavilion</p>
                         <button class="bg-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 redNew flex items-center gap-2 mx-auto" data-reveal>
@@ -385,23 +385,23 @@
         <section>
             <div class="relative bg-[#EBE1D5] text-[#963D20] overflow-hidden">
                 <!-- image floating -->
-                <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-24 h-32 absolute top-32 right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" />
-                <img src="{{ asset('assets/image/sport1.png') }}" alt="" class="float-image w-64 h-72 absolute top-64 -right-24 object-cover rounded-3xl" style="--float-rotate:-10deg; animation-delay:0.8s" />
+                <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-20 lg:top-32 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" />
+                <img src="{{ asset('assets/image/sport1.png') }}" alt="" class="float-image w-36 h-40 lg:w-64 lg:h-72 absolute top-48 lg:top-64 -right-12 lg:-right-24 object-cover rounded-3xl" style="--float-rotate:-10deg; animation-delay:0.8s" />
 
-                <img src="{{ asset('assets/image/sport2.png') }}" alt="" class="float-image w-24 h-32 absolute top-8 left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-16deg; animation-delay:0.8s" />
-                <img src="{{ asset('assets/image/sport4.png') }}" alt="" class="float-image w-72 h-96 absolute top-32 -left-10 object-cover rounded-3xl" style="--float-rotate:8deg; animation-delay:0.2s" />
+                <img src="{{ asset('assets/image/sport2.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-4 lg:top-8 left-24 lg:left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-16deg; animation-delay:0.8s" />
+                <img src="{{ asset('assets/image/sport4.png') }}" alt="" class="float-image w-40 h-52 lg:w-72 lg:h-96 absolute top-20 lg:top-32 -left-5 lg:-left-10 object-cover rounded-3xl" style="--float-rotate:8deg; animation-delay:0.2s" />
                 <!-- image floating -->
 
-                <div class="container space-y-12 text-center py-8 pb-24">
+                <div class="relative z-10 container space-y-12 text-center py-8 pb-24">
                     <div class="">
                         <p class="font-nineties text-4xl">No 04</p>
                         <p class="font-nineties text-4xl">Activity</p>
                     </div>
                     <div class="space-y-5">
                         <p class="font-nineties text-4xl" data-reveal>Art of Padel</p>
-                        <p class="font-parslay ml-32 text-5xl" data-reveal>
-                            <span class="pr-32">Highter</span>
-                            <span class="ml-32"><br />Standards</span>
+                        <p class="font-parslay lg:ml-32 text-5xl" data-reveal>
+                            <span class="lg:pr-32">Highter</span>
+                            <span class="lg:ml-32"><br />Standards</span>
                         </p>
                         <p class="font-nineties text-2xl" data-reveal>for those who value health</p>
                         <button class="bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2 mx-auto" data-reveal>
@@ -479,7 +479,7 @@
             </div>
         </section>
         <section class="relative overflow-hidden bg-white">
-            <div class="absolute top-0 left-0 right-0 py-24 bg-[#963D20] rounded-b-[50%] z-20">
+            <div class="absolute top-0 left-0 right-0 py-12 lg:py-24 bg-[#963D20] rounded-b-[50%] z-20">
                 <div class="container relative z-20 text-center">
                     <p class="text-white text-2xl font-nineties uppercase mb-6">Explore Atlas Beach Club</p>
                     <h1 class="text-white text-5xl font-extrabold font-nineties mb-6">Group Bookings</h1>
@@ -505,7 +505,7 @@
                 ]
             }">
                 {{-- Slides --}}
-                <div class="relative w-full h-[1300px] overflow-hidden">
+                <div class="relative w-full lg:h-[1300px] h-[700px]  overflow-hidden">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div class="absolute inset-0 transition-opacity duration-700"
                             :class="index === current ? 'opacity-100' : 'opacity-0'">
