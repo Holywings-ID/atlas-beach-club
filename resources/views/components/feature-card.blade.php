@@ -1,7 +1,7 @@
 @props(['color' => '#333333', 'text' => '#ffffff', 'title', 'subtitle', 'description', 'image', 'link' => '#'])
 
 <div style="background-color: {{ $color }}">
-    <div class="container space-y-8 py-12">
+    <div class="container space-y-8 py-12" data-reveal>
         <div class="flex gap-8">
             <div class="w-1/5 font-semibold" style="color: {{ $text }}">{{ $title }}</div>
             <div class="w-4/5 text-4xl font-nineties" style="color: {{ $text }}">{{ $subtitle }}</div>

@@ -202,25 +202,25 @@
                         <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
                     </div>
                 </div>
-                <div class="absolute top-96 left-56">
+                <div class="absolute top-96 left-56" data-reveal>
                     <div class="w-64 space-y-4 text-white">
                         <p class="font-nineties text-5xl">Hip Hop</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
-                <div class="absolute bottom-96 left-32">
+                <div class="absolute bottom-96 left-32" data-reveal>
                     <div class="w-64 space-y-4 text-white">
                         <p class="font-nineties text-5xl">R&B</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
-                <div class="absolute top-96 right-44">
+                <div class="absolute top-96 right-44" data-reveal>
                     <div class="w-64 space-y-4 text-white">
                         <p class="font-nineties text-5xl">Techno</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
-                <div class="absolute bottom-96 right-64">
+                <div class="absolute bottom-96 right-64" data-reveal>
                     <div class="w-64 space-y-4 text-white">
                         <p class="font-nineties text-5xl">EDM</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>

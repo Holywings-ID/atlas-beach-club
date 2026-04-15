@@ -35,6 +35,10 @@ class PageController
     {
         return view('pages.exploredetail');
     }
+    public function menu(): View
+    {
+        return view('pages.menu');
+    }
 
     public function whatson(): View
     {
