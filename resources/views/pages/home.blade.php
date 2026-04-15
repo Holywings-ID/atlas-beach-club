@@ -20,7 +20,7 @@
                         sub-title="Welcome To"
                         image="{{asset('assets/logo/logo.png')}}" />
 
-                    <section class="relative text-white w-full h-12 text-center bg-[#A74423] overflow-visible">
+                    <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
                             <h2 class="text-3xl lg:text-5xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
@@ -36,7 +36,7 @@
                     </section>
                     <section class="relative h-full w-full">
                         <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1500px] object-cover object-center" />
-                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#A74423]/30 to-[#A74423]"></div>
+                        <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
                             <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Biggest Beach Club In The World</h3>
@@ -46,29 +46,29 @@
                                 ATLAS BEACH CLUB
                             </h4>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
                                     <div class="font-nineties font-extrabold text-4xl">Daybeds</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Dining</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Poolbar</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Activity</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 05</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Group Bookings</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-16 justify-center">
                     @foreach (config('daybeds') as $daybed)
-                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#A74423] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
+                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#963D20] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
                         <span class="group-hover:rotate-90 transition-all duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
@@ -140,16 +140,16 @@
                             <div class="flex justify-end gap-2">
                                 <button @click="$refs.scroller.scrollBy({ left: -300, behavior: 'smooth' })">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                        <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                        <path fill="#A74423" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
-                                        <path fill="#A74423" d="M17 24h17v2H17z" />
+                                        <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                        <path fill="#963D20" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
+                                        <path fill="#963D20" d="M17 24h17v2H17z" />
                                     </svg>
                                 </button>
                                 <button @click="$refs.scroller.scrollBy({ left: 300, behavior: 'smooth' })" class="cursor-pointer">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                        <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                        <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                        <path fill="#A74423" d="M16 24h17v2H16z" />
+                                        <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                        <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                        <path fill="#963D20" d="M16 24h17v2H16z" />
                                     </svg>
                                 </button>
                             </div>
@@ -163,7 +163,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                    <div class="border-b-2 border-[#963D20] font-semibold text-[#963D20] pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                         <div class="flex gap-2">
                             <p>Atlas Beach Club</p> |
                             <p>{{ $daybed['title'] }}</p>
@@ -171,16 +171,16 @@
                         <div class="flex items-center gap-8">
                             <a href="" class="items-center flex gap-3">Overview
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                    <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
                             <a href="" class="items-center flex gap-3">Reserve
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                    <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
                         </div>
@@ -191,7 +191,7 @@
         </section>
 
         <section class="relative z-10 ">
-            <div class="relative bg-[#A74423] overflow-hidden">
+            <div class="relative bg-[#963D20] overflow-hidden">
                 <!-- image floating -->
                 <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-96 h-72 absolute -top-24 -right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
                 <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-32 h-24 absolute top-52 right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" />
@@ -334,16 +334,16 @@
                         <div class="flex justify-end gap-2">
                             <button @click="$refs.scrollerPool.scrollBy({ left: -600, behavior: 'smooth' })">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                    <path fill="#A74423" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
-                                    <path fill="#A74423" d="M17 24h17v2H17z" />
+                                    <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#963D20" d="M25.3 34.7L15.6 25l9.7-9.7l1.4 1.4l-8.3 8.3l8.3 8.3z" />
+                                    <path fill="#963D20" d="M17 24h17v2H17z" />
                                 </svg>
                             </button>
                             <button @click="$refs.scrollerPool.scrollBy({ left: 600, behavior: 'smooth' })" class="cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                    <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </button>
                         </div>
@@ -358,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container border-b-2 border-[#A74423] font-semibold text-[#A74423] pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                <div class="container border-b-2 border-[#963D20] font-semibold text-[#963D20] pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                     <div class="flex gap-2">
                         <p>Atlas Beach Club</p> |
                         <p>Pool Bar</p>
@@ -366,16 +366,16 @@
                     <div class="flex items-center gap-8">
                         <a href="" class="items-center flex gap-3">Overview
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                                <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#963D20" d="M16 24h17v2H16z" />
                             </svg>
                         </a>
                         <a href="" class="items-center flex gap-3">Reserve
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                <path fill="#A74423" d="M16 24h17v2H16z" />
+                                <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#963D20" d="M16 24h17v2H16z" />
                             </svg>
                         </a>
                     </div>
@@ -383,7 +383,7 @@
             </div>
         </section>
         <section>
-            <div class="relative bg-[#EBE1D5] text-[#A74423] overflow-hidden">
+            <div class="relative bg-[#EBE1D5] text-[#963D20] overflow-hidden">
                 <!-- image floating -->
                 <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-24 h-32 absolute top-32 right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" />
                 <img src="{{ asset('assets/image/sport1.png') }}" alt="" class="float-image w-64 h-72 absolute top-64 -right-24 object-cover rounded-3xl" style="--float-rotate:-10deg; animation-delay:0.8s" />
@@ -404,7 +404,7 @@
                             <span class="ml-32"><br />Standards</span>
                         </p>
                         <p class="font-nineties text-2xl" data-reveal>for those who value health</p>
-                        <button class="bg-[#A74423] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2 mx-auto" data-reveal>
+                        <button class="bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2 mx-auto" data-reveal>
                             Overview
                             <span class="group-hover:rotate-90 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -415,7 +415,7 @@
                     </div>
 
                     <div x-data="{ active: 0 }" class="pt-32">
-                        <div class="border-[#A74423] border-b-2 font-semibold pb-4 flex flex-wrap items-center gap-4 lg:gap-12">
+                        <div class="border-[#963D20] border-b-2 font-semibold pb-4 flex flex-wrap items-center gap-4 lg:gap-12">
                             @foreach (config('activity') as $i => $activity)
                             <button @click="active = {{ $i }}" :class="active === {{ $i }} ? 'text-slate-400' : 'hover:text-slate-400'" class="transition">{{ $activity['category'] }}</button>
                             @endforeach
@@ -453,7 +453,7 @@
                         @endforeach
                     </div>
 
-                    <div class="border-[#A74423] border-b-2 font-semibold pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                    <div class="border-[#963D20] border-b-2 font-semibold pb-2 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
                         <div class="flex gap-2">
                             <p>Atlas Beach Club</p> |
                             <p>Activities</p>
@@ -461,16 +461,16 @@
                         <div class="flex items-center gap-4 lg:gap-8">
                             <a href="" class="items-center flex gap-3">Overview
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                    <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
                             <a href="" class="items-center flex gap-3">Reserve
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
-                                    <path fill="#A74423" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                    <path fill="#A74423" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                    <path fill="#A74423" d="M16 24h17v2H16z" />
+                                    <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
                         </div>
@@ -479,7 +479,7 @@
             </div>
         </section>
         <section class="relative overflow-hidden bg-white">
-            <div class="absolute top-0 left-0 right-0 py-24 bg-[#A74423] rounded-b-[50%] z-20">
+            <div class="absolute top-0 left-0 right-0 py-24 bg-[#963D20] rounded-b-[50%] z-20">
                 <div class="container relative z-20 text-center">
                     <p class="text-white text-2xl font-nineties uppercase mb-6">Explore Atlas Beach Club</p>
                     <h1 class="text-white text-5xl font-extrabold font-nineties mb-6">Group Bookings</h1>
@@ -488,7 +488,7 @@
                         magna aliqua. Ut enim ad
                     </p>
                     <a href="{{ route('explore') }}"
-                        class="inline-block bg-white uppercase hover:bg-[#EBE1D5] text-[#A74423] font-semibold tracking-widest px-12 lg:px-32 py-3 rounded-full transition-colors duration-200 no-underline">
+                        class="inline-block bg-white uppercase hover:bg-[#EBE1D5] text-[#963D20] font-semibold tracking-widest px-12 lg:px-32 py-3 rounded-full transition-colors duration-200 no-underline">
                         Explore Now
                     </a>
                 </div>

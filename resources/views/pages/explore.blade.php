@@ -19,7 +19,7 @@
                         title="Seaside Bliss"
                         sub-title="Welcome To"
                         image="{{asset('assets/logo/logo.png')}}" />
-                    <section class="relative text-white w-full h-12 text-center bg-[#A74423] overflow-visible">
+                    <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
                             <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Beach Club<br /> Journey</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
@@ -28,104 +28,125 @@
                         </div>
                     </section>
                     <section class="relative h-full w-full">
-                        <img src="{{ asset('assets/image/explore.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1200px] object-cover object-bottom" />
-                        <div class="absolute inset-0 h-full w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#A74423]"></div>
+                        <img src="{{ asset('assets/image/explore.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1400px] lg:h-[1000px] object-cover object-bottom" />
+                        <div class="absolute inset-0 h-full w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#963D20]"></div>
 
-                        <div class="text-white absolute z-[20] inset-0 h-full w-full pt-[400px]">
+                        <div class="text-white absolute z-[20] inset-0 h-full w-full lg:pt-[200px] pt-[400px]" data-reveal>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Family Getaway</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Romantic Bliss</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Friend Madness</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
-                                <div class="bg-[#A74423]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Party Anthem</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </div>
                             </div>
-                            <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mt-12 text-center" data-reveal>The Biggest Beach Club In The World</h3>
+                            <h3 class="relative z-20 text-2xl lg:text-4xl font-nineties mt-12 text-center" data-reveal>The Biggest Beach Club In The World</h3>
 
                         </div>
                     </section>
                 </div>
             </div>
         </div>
-        <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#A74423] overflow-hidden">
-            <div class="container py-12">
-                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-full lg:w-2/5 space-y-3">
-                        <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
-                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
-                        <button class="bg-[#A74423] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
-                            Menu
-                            <span class="group-hover:rotate-90 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="w-full lg:w-3/5">
-                        <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
+        <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#963D20] overflow-hidden">
+            <div class="container py-16 space-y-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 border-b-2 border-[#963D20] py-12">
+                    <img src="{{ asset('assets/image/explore.png') }}" alt="" class="h-full w-full object-cover lg:aspect-auto aspect-square" />
+                    <div>
+                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="" class="w-full aspect-square object-cover" />
+                        <div class="space-y-6 pt-4 lg:pl-4">
+                            <div class="flex justify-between gap-8">
+                                <p class="w-1/3 text-2xl flex flex-col">
+                                    No 01<span class="font-nineties font-3xl font-extrabold">Family</span>
+                                </p>
+                                <p class="text-4xl lg:text-5xl w-2/3 font-extrabold text-right font-nineties">
+                                    Family Getaway
+                                </p>
+                            </div>
+                            <p class="text-right">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <div class="pt-24">
+                                <div class="flex justify-between border-b border-[#963D20] py-3">
+                                    <div class="text-black">Venue</div>
+                                    <div>Beach Club</div>
+                                </div>
+                                <div class="flex justify-between border-b border-[#963D20] py-3">
+                                    <div class="text-black">Vibe Tags</div>
+                                    <div>Photography / Dining / Relaxation</div>
+                                </div>
+                                <div class="flex justify-between border-b border-[#963D20] py-3">
+                                    <div class="text-black">Best for</div>
+                                    <div>Couple / Family / Friends</div>
+                                </div>
+                                <div>
+                                    <a href="{{ route('explore.detail') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">Details
+                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
+                                                <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                                <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                                <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-full lg:w-2/5 space-y-3">
-                        <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
-                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
-                        <button class="bg-[#A74423] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
-                            Menu
-                            <span class="group-hover:rotate-90 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="w-full lg:w-3/5">
-                        <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
-                    </div>
-                </div>
-                <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#A74423] py-16" data-reveal>
-                    <div class="w-full lg:w-2/5 space-y-3">
-                        <div class="font-nineties text-3xl">Italian Cuisine</div>
-                        <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
-                        <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
-                        <button class="bg-[#A74423] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
-                            Menu
-                            <span class="group-hover:rotate-90 transition-all duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
-                                </svg>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="w-full lg:w-3/5">
-                        <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
+                <div class="grid grid-cols-1 lg:grid-cols-2 border-b-2 border-[#963D20] py-12">
+                    <img src="{{ asset('assets/image/highlight2.png') }}" alt="" class="h-full w-full object-cover lg:aspect-auto aspect-square" />
+                    <div>
+                        <img src="{{ asset('assets/image/highlight1.png') }}" alt="" class="w-full aspect-square object-cover" />
+                        <div class="space-y-6 pt-4 lg:pl-4">
+                            <div class="flex justify-between gap-8">
+                                <p class="w-1/3 text-2xl flex flex-col">
+                                    No 01<span class="font-nineties font-3xl font-extrabold">Family</span>
+                                </p>
+                                <p class="text-4xl lg:text-5xl w-2/3 font-extrabold text-right font-nineties">
+                                    Family Getaway
+                                </p>
+                            </div>
+                            <p class="text-right">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                            <div class="pt-24">
+                                <div class="flex justify-between border-b border-[#963D20] py-3">
+                                    <div class="text-black">Venue</div>
+                                    <div>Beach Club</div>
+                                </div>
+                                <div class="flex justify-between border-b border-[#963D20] py-3">
+                                    <div class="text-black">Vibe Tags</div>
+                                    <div>Photography / Dining / Relaxation</div>
+                                </div>
+                                <div class="flex justify-between border-b border-[#963D20] py-3">
+                                    <div class="text-black">Best for</div>
+                                    <div>Couple / Family / Friends</div>
+                                </div>
+                                <div>
+                                    <a href="{{ route('explore.detail') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">Details
+                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
+                                                <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                                <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                                <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                            </svg></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

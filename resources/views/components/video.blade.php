@@ -9,7 +9,7 @@
             <source src="{{ $videoMobile }}" type="video/mp4">
         </video>
     </div> -->
-    <div class="absolute inset-0 h-[120vh] min-h-[1100px] w-dvw z-10 bg-gradient-to-b from-transparent via-transparent to-[#A74423]"></div>
+    <div class="absolute inset-0 h-[120vh] min-h-[1100px] w-dvw z-10 bg-gradient-to-b from-transparent via-transparent to-[#963D20]"></div>
     <div class="absolute flex flex-col justify-center z-20 w-full inset-0 p-3 text-center text-white">
         <img src="{{ $image }}" alt="{{ $title }}" class="mb-16 h-12 lg:h-16 mx-auto object-cover" />
         <h4 class="text-xl lg:text-2xl font-parslay" data-reveal>{{ $subTitle }}</h4>

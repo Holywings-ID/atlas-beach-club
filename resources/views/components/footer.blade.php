@@ -1,4 +1,4 @@
-<footer class="bg-[#A74423] relative">
+<footer class="bg-[#963D20] relative">
 
     <div class="container relative z-[90] mx-auto px-8 py-12">
 

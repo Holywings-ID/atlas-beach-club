@@ -2,7 +2,7 @@
     <div class="h-full w-full relative">
         <img src="{{ $background }}" alt="{{ $title }}" class="h-full w-full object-cover" />
     </div>
-    <div class="absolute inset-0 h-[120vh] min-h-[1100px] w-dvw z-10 bg-gradient-to-b from-transparent via-transparent to-[{{ ($color ?? '') === 'black' ? '#000000' : '#A74423' }}]"></div>
+    <div class="absolute inset-0 h-[120vh] min-h-[1100px] w-dvw z-10 bg-gradient-to-b from-transparent via-transparent to-[{{ ($color ?? '') === 'black' ? '#000000' : '#963D20' }}]"></div>
     <div class="absolute flex flex-col justify-center z-20 w-full inset-0 p-3 text-center text-white">
         @if(!empty($image))
         <img src="{{ $image }}" alt="{{ $title }}" class="mb-16 h-12 lg:h-16 mx-auto object-cover" />

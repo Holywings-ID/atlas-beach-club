@@ -31,6 +31,11 @@ class PageController
         return view('pages.explore');
     }
 
+    public function exploreDetail(): View
+    {
+        return view('pages.exploredetail');
+    }
+
     public function whatson(): View
     {
         return view('pages.whatson');

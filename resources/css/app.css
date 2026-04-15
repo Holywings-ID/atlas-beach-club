@@ -40,9 +40,9 @@ header {
   @apply text-white overscroll-contain;
 }
 
- /* #EBE1D5, #A74423, #10496E, #333333 */
+ /* #EBE1D5, #963D20, #10496E, #333333 */
 .redNew {
-  @apply text-[#A74423];
+  @apply text-[#963D20];
 }
 .brownNew {
   @apply text-[#EBE1D5];
@@ -95,7 +95,7 @@ header {
 
 /* ========== Navigation ========== */
 .nav-link {
-  @apply relative px-4 text-sm uppercase font-semibold tracking-wider text-white transition-colors hover:text-[#A74423];
+  @apply relative px-4 text-sm uppercase font-semibold tracking-wider text-white transition-colors hover:text-[#963D20];
 }
 
 .nav-link.active {

@@ -96,7 +96,7 @@
                                                 :class="realIndex() === 2 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
                                                 <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
-                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
                                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                             <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -110,7 +110,7 @@
                                                 :class="realIndex() === 0 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
                                                 <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
-                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
                                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                             <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -124,7 +124,7 @@
                                                 :class="realIndex() === 1 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
                                                 <img src="{{ asset('assets/image/event2.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
-                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
                                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                             <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -138,7 +138,7 @@
                                                 :class="realIndex() === 2 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
                                                 <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
-                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
                                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                             <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -152,7 +152,7 @@
                                                 :class="realIndex() === 0 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
                                                 <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
-                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                                                <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
                                                     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                             <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
@@ -237,6 +237,7 @@
             </div>
             <x-feature-card
                 color="#333333"
+                text="#FFFFFF"
                 title="Live BBQ Grill"
                 subtitle="Fired Up Flavor"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
@@ -244,6 +245,7 @@
                 link="/dining" />
             <x-feature-card
                 color="#333333"
+                text="#FFFFFF"
                 title="Bar Takeover"
                 subtitle="Raised by Spirits"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"

@@ -19,7 +19,7 @@
                         title="Copacabana"
                         sub-title="Daybeds"
                         image="{{asset('assets/logo/logo.png')}}" />
-                    <section class="relative text-white w-full h-12 text-center bg-[#A74423] overflow-visible">
+                    <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
                             <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Dusk Different</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
@@ -29,12 +29,12 @@
                     </section>
                     <section class="relative h-full w-full">
                         <img src="{{ asset('assets/image/daybed.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[600px] object-cover object-top" />
-                        <div class="absolute inset-0 h-full w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#A74423]"></div>
+                        <div class="absolute inset-0 h-full w-dvw z-10 bg-gradient-to-t from-transparent via-transparent to-[#963D20]"></div>
                     </section>
                 </div>
             </div>
         </div>
-        <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#A74423] overflow-hidden">
+        <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#963D20] overflow-hidden">
             <div class="container space-y-12 text-center py-12 pb-24">
                 @php $zones = config('daybedsover'); @endphp
 
@@ -47,11 +47,11 @@
                     selectZone(i) { this.activeZone = i; this.activePosition = 0; }
                 }" class="text-left space-y-10">
 
-                    <div class="border-b border-[#A74423]">
+                    <div class="border-b border-[#963D20]">
                         <div class="flex items-center gap-8 pb-3">
                             <template x-for="(z, i) in zones" :key="i">
                                 <button @click="selectZone(i)" class transition-all"
-                                    :class="activeZone === i ? 'text-[#A74423] font-semibold' : 'text-[#3A3530]/60 hover:text-[#3A3530]'"
+                                    :class="activeZone === i ? 'text-[#963D20] font-semibold' : 'text-[#3A3530]/60 hover:text-[#3A3530]'"
                                     x-text="z.name"></button>
                             </template>
                         </div>
@@ -60,7 +60,7 @@
                     <div class="flex items-center gap-6 pb-3">
                         <template x-for="(p, i) in zone.position" :key="p.id">
                             <button @click="activePosition = i" class="flex items-center gap-2 transition-all"
-                                :class="activePosition === i ? 'text-[#A74423] font-semibold' : 'text-[#3A3530]/60 hover:text-[#3A3530]'">
+                                :class="activePosition === i ? 'text-[#963D20] font-semibold' : 'text-[#3A3530]/60 hover:text-[#3A3530]'">
                                 <span x-text="p.name"></span>
                                 <span class="w-5 h-5 rounded-full border border-current flex items-center justify-center text-[10px]" x-html="activePosition === i ? '↓' : '→'"></span>
                             </button>
@@ -82,13 +82,13 @@
                         </div>
                     </div>
 
-                    <div class="border-b border-[#A74423] font-semibold pb-4 flex items-center justify-between">
+                    <div class="border-b border-[#963D20] font-semibold pb-4 flex items-center justify-between">
                         <div class="lg:flex gap-2">
                             <p>Atlas Beach Club <span>|</span></p>
                             <p x-text="zone.name"></p>
                             <p>(<span x-text="position.name"></span>)</p>
                         </div>
-                        <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#A74423] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
+                        <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                             Reserve <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                 <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                 <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -101,41 +101,41 @@
                         <div class="w-full lg:w-[38%] space-y-0">
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
                                 <span class="text-black">Check-in</span>
-                                <span class="text-[#A74423]" x-text="position.checkIn"></span>
+                                <span class="text-[#963D20]" x-text="position.checkIn"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
                                 <span class="text-black">Check-out</span>
-                                <span class="text-[#A74423]" x-text="position.checkout"></span>
+                                <span class="text-[#963D20]" x-text="position.checkout"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
                                 <span class="text-black">Occupancy</span>
-                                <span class="text-[#A74423]" x-text="position.Occupancy || '—'"></span>
+                                <span class="text-[#963D20]" x-text="position.Occupancy || '—'"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
                                 <span class="text-black">Type</span>
-                                <span class="text-[#A74423]" x-text="position.type || '—'"></span>
+                                <span class="text-[#963D20]" x-text="position.type || '—'"></span>
                             </div>
                         </div>
 
                         {{-- Right Column: Benefits + T&C --}}
                         <div class="w-full lg:w-[62%] space-y-6">
                             <div>
-                                <h4 class="text-xl font-semibold text-[#A74423] mb-3">Daybed Benefits</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Daybed Benefits</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="b in position.benefits" :key="b">
-                                        <li class="text-[#A74423] leading-[1.7] flex items-start gap-2">
-                                            <span class="text-[#A74423] mt-0.5">•</span>
+                                        <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
+                                            <span class="text-[#963D20] mt-0.5">•</span>
                                             <span x-text="b"></span>
                                         </li>
                                     </template>
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-[#A74423] mb-3">Terms & Conditions</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Terms & Conditions</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="t in position.tnc" :key="t">
-                                        <li class="text-[#A74423] leading-[1.7] flex items-start gap-2">
-                                            <span class="text-[#A74423] mt-0.5">•</span>
+                                        <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
+                                            <span class="text-[#963D20] mt-0.5">•</span>
                                             <span x-text="t"></span>
                                         </li>
                                     </template>
@@ -146,7 +146,7 @@
 
                     {{-- Floorplan / Layout --}}
                     <div class="pt-10">
-                        <p class="text-xl font-semibold text-[#A74423] mb-4">Layout</p>
+                        <p class="text-xl font-semibold text-[#963D20] mb-4">Layout</p>
                         <img :src="position.layoutImage" alt="Floor plan" class="w-full" />
                     </div>
 
