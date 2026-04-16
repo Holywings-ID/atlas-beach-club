@@ -97,8 +97,15 @@ header {
 .nav-link {
   @apply relative px-4 text-sm uppercase font-semibold tracking-wider text-white transition-colors hover:text-[#963D20];
 }
+.nav-link-solo {
+  @apply relative text-sm uppercase font-semibold tracking-wider text-white transition-colors hover:text-[#963D20];
+}
 
 .nav-link.active {
+  @apply text-slate-400;
+}
+
+.nav-link-solo.active {
   @apply text-slate-400;
 }
 

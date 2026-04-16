@@ -67,22 +67,34 @@ $navItems = [
 }">
     <div class="mx-auto flex items-center justify-between pt-4 px-4 lg:px-8">
         <button @click="open = !open" class="tracking-tight">
-            <img x-show="!open" src="{{ asset('assets/logo/menu.png') }}" alt="Menu" class="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-all duration-300" :class="dark && 'brightness-0'" />
-            <img x-show="open" x-cloak src="{{ asset('assets/logo/atlas.png') }}" alt="Close" class="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-all duration-300" :class="dark && 'brightness-0'" />
+            <img x-show="!open"
+                :src="dark ? '{{ asset('assets/logo/menu-secondary.png') }}' : '{{ asset('assets/logo/menu.png') }}'"
+                alt="Menu" class="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-all duration-300" />
+            <img x-show="open" x-cloak
+                :src="dark ? '{{ asset('assets/logo/atlas-secondary.png') }}' : '{{ asset('assets/logo/atlas.png') }}'"
+                alt="Close" class="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-all duration-300" />
         </button>
 
-        <nav x-show="open" x-cloak x-transition class="hidden lg:flex border-b pb-4 transition-colors duration-300" :class="dark ? 'border-black' : 'border-white'">
+        <nav x-show="open" x-cloak x-transition class="hidden lg:flex border-b pb-4 transition-colors duration-300"
+            :class="dark ? 'border-[#963D20]' : 'border-white'">
             @foreach ($navItems as $item)
             <a href="{{ route($item['route']) }}"
                 class="nav-link {{ request()->routeIs($item['route']) ? 'active' : '' }} transition-colors duration-300"
-                :class="dark && '{{ request()->routeIs($item['route']) ? '!text-slate-400' : '!text-black hover:!text-[#7a3018]' }}'">
+                :class="dark && '{{ request()->routeIs($item['route']) ? '!text-slate-400' : '!text-[#963D20] hover:!text-[#7a3018]' }}'">
                 {{ $item['label'] }}
             </a>
             @endforeach
         </nav>
 
+        @if(request()->routeIs('reserve'))
+        <img x-show="!open"
+            :src="dark ? '{{ asset('assets/logo/logo-secondary.png') }}' : '{{ asset('assets/logo/logo.png') }}'"
+            alt="Menu" class="hidden lg:block w-24 lg:w-36 object-contain transition-all duration-300" />
+        @endif
+
         {{-- Mobile nav --}}
-        <nav x-show="open" x-cloak x-transition class="lg:hidden absolute top-full left-0 right-0 bg-black/50 backdrop-blur-sm flex flex-col items-center py-4 gap-2">
+        <nav x-show="open" x-cloak x-transition
+            class="lg:hidden absolute top-full left-0 right-0 bg-black/50 backdrop-blur-sm flex flex-col items-center py-4 gap-2">
             @foreach ($navItems as $item)
             <a href="{{ route($item['route']) }}"
                 class="nav-link {{ request()->routeIs($item['route']) ? 'active' : '' }} transition-colors duration-300 py-1">
@@ -91,7 +103,8 @@ $navItems = [
             @endforeach
         </nav>
 
-        <a href="{{ route('reserve') }}" class="nav-link text-xs lg:text-sm transition-colors duration-300" :class="dark && '!text-black hover:!text-[#7a3018]'">
+        <a href="{{ route('reserve') }}" class="nav-link-solo text-xs lg:text-sm transition-colors duration-300"
+            :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
             Reserve
         </a>
     </div>
