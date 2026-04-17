@@ -1,14 +1,14 @@
 @php
 $navItems = [
-['label' => 'Home', 'route' => 'home'],
-['label' => 'Daybed', 'route' => 'daybed'],
-['label' => 'Dining', 'route' => 'dining'],
-['label' => 'Pool Bar', 'route' => 'poolbar'],
-['label' => 'Activities', 'route' => 'activities'],
-['label' => 'Explore', 'route' => 'explore'],
-['label' => "What's On", 'route' => 'whatson'],
-['label' => 'Offer', 'route' => 'offer'],
-['label' => 'Support', 'route' => 'support'],
+['label' => 'Home', 'href' => '/#section-one'],
+['label' => 'Daybed', 'href' => '/#section-two'],
+['label' => 'Dining', 'href' => '/#section-dining'],
+['label' => 'Pool Bar', 'href' => '/#section-poolbar'],
+['label' => 'Activities', 'href' => '/#section-activities'],
+['label' => 'Explore', 'href' => '/#section-explore'],
+['label' => "What's On", 'href' => route('whatson')],
+['label' => 'Offer', 'href' => route('offer')],
+['label' => 'Support', 'href' => route('support')],
 ];
 @endphp
 
@@ -78,9 +78,9 @@ $navItems = [
         <nav x-show="open" x-cloak x-transition class="hidden lg:flex border-b pb-4 transition-colors duration-300"
             :class="dark ? 'border-[#963D20]' : 'border-white'">
             @foreach ($navItems as $item)
-            <a href="{{ route($item['route']) }}"
-                class="nav-link {{ request()->routeIs($item['route']) ? 'active' : '' }} transition-colors duration-300"
-                :class="dark && '{{ request()->routeIs($item['route']) ? '!text-slate-400' : '!text-[#963D20] hover:!text-[#7a3018]' }}'">
+            <a href="{{ $item['href'] }}"
+                class="nav-link transition-colors duration-300"
+                :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
                 {{ $item['label'] }}
             </a>
             @endforeach
@@ -96,8 +96,8 @@ $navItems = [
         <nav x-show="open" x-cloak x-transition
             class="lg:hidden absolute top-full left-0 right-0 bg-black/50 backdrop-blur-sm flex flex-col items-center py-4 gap-2">
             @foreach ($navItems as $item)
-            <a href="{{ route($item['route']) }}"
-                class="nav-link {{ request()->routeIs($item['route']) ? 'active' : '' }} transition-colors duration-300 py-1">
+            <a href="{{ $item['href'] }}"
+                class="nav-link transition-colors duration-300 py-1">
                 {{ $item['label'] }}
             </a>
             @endforeach

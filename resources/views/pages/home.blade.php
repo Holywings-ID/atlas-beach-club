@@ -46,33 +46,33 @@
                                 ATLAS BEACH CLUB
                             </h4>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
-                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="/#section-two" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Daybeds</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                </div>
-                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                </a>
+                                <a href="/#section-dining" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Dining</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                </div>
-                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                </a>
+                                <a href="/#section-poolbar" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Poolbar</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                </div>
+                                </a>
                             </div>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
-                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="/#section-activities" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Activity</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                </div>
-                                <div class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                </a>
+                                <a href="/#section-explore" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 05</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Group Bookings</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </section>
@@ -190,7 +190,7 @@
             </div>
         </section>
 
-        <section class="relative z-10 ">
+        <section id="section-dining" class="relative z-10 ">
             <div class="relative bg-[#963D20] overflow-hidden">
                 <!-- image floating -->
                 <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute -top-12 lg:-top-24 -right-6 lg:-right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
@@ -296,7 +296,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section-poolbar">
             <div class="bg-[#EBE1D5] space-y-12 pb-12">
                 <div class="relative text-center h-[700px]" style="clip-path: ellipse(100% 100% at 50% 0%);">
                     <img src="{{ asset("assets/image/poolbar.png") }}" alt="Poolbar" class="fixed -z-10 top-0 left-0 rig w-dvw h-dvh object-cover" />
@@ -382,7 +382,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section-activities">
             <div class="relative bg-[#EBE1D5] text-[#963D20] overflow-hidden">
                 <!-- image floating -->
                 <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-20 lg:top-32 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" />
@@ -478,7 +478,7 @@
                 </div>
             </div>
         </section>
-        <section class="relative overflow-hidden bg-white">
+        <section id="section-explore" class="relative overflow-hidden bg-white">
             <div class="absolute top-0 left-0 right-0 py-12 lg:py-24 bg-[#963D20] rounded-b-[50%] z-20">
                 <div class="container relative z-20 text-center">
                     <p class="text-white text-2xl font-nineties uppercase mb-6">Explore Atlas Beach Club</p>

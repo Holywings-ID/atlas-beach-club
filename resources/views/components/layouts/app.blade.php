@@ -52,6 +52,7 @@
     x-init="document.addEventListener('click', (e) => {
         const a = e.target.closest('a[href]');
         if (!a || a.target === '_blank' || a.origin !== location.origin) return;
+        if (a.hash && (a.pathname === location.pathname || (a.pathname === '/' && location.pathname === '/'))) return;
         e.preventDefault();
         navigate(a.href);
     })">
