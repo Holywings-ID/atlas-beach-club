@@ -505,7 +505,7 @@
                 ]
             }">
                 {{-- Slides --}}
-                <div class="relative w-full lg:h-[1300px] h-[700px]  overflow-hidden">
+                <div class="relative w-full lg:h-[1000px] h-[700px]  overflow-hidden">
                     <template x-for="(slide, index) in slides" :key="index">
                         <div class="absolute inset-0 transition-opacity duration-700"
                             :class="index === current ? 'opacity-100' : 'opacity-0'">

@@ -86,7 +86,7 @@ $navItems = [
             @endforeach
         </nav>
 
-        @if(request()->routeIs('reserve'))
+        @if(request()->routeIs('reserve', 'booking'))
         <img x-show="!open"
             :src="dark ? '{{ asset('assets/logo/logo-secondary.png') }}' : '{{ asset('assets/logo/logo.png') }}'"
             alt="Menu" class="hidden lg:block w-24 lg:w-36 object-contain transition-all duration-300" />

@@ -16,4 +16,5 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/offer', 'offer')->name('offer');
     Route::get('/support', 'support')->name('support');
     Route::get('/reserve', 'reserve')->name('reserve');
+    Route::get('/reserve/booking', 'booking')->name('booking');
 });

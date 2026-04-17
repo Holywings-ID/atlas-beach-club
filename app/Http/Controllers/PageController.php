@@ -59,4 +59,8 @@ class PageController
     {
         return view('pages.reserve');
     }
+    public function booking(): View
+    {
+        return view('pages.booking');
+    }
 }

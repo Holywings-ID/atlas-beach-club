@@ -1,0 +1,300 @@
+<x-layouts.app title="Booking">
+    <main class="bg-[#EBE1D5] -mt-24 pb-24 pt-32">
+        <div class="container mx-auto px-4 py-6">
+
+            {{-- ── Map ── --}}
+            <div class="relative rounded overflow-hidden mb-6 lg:h-[600px]">
+                <img
+                    src="{{ asset('assets/image/PHOTO.png') }}"
+                    alt="Resort Map"
+                    class="w-full h-full object-cover" />
+            </div>
+
+            <div class="border-b border-[#963D20] text-[#963D20] pb-4 flex gap-4 flex-col lg:flex-row lg:items-center lg:justify-between">
+                <div class="flex gap-2">
+                    <p>Atlas Beach Club <span>|</span></p>
+                    <p>Copacabana</p>
+                    <p>(<span>Left Side A</span>)</p>
+                </div>
+                <button class="flex items-center gap-1.5 bg-[#963D20] hover:bg-[#7A3118] text-[#EBE1D5] font-medium tracking-wide px-3 py-2 transition-colors shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    Calendar
+                </button>
+                <div>
+                    <p class="text-2xl font-semibold lg:text-right">Friday</p>
+                    <p class="lg:text-right">26 February 2026</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-semibold lg:text-right">IDR 4.000.000</p>
+                    <p class="lg:text-right">Max 3 Adult</p>
+                </div>
+            </div>
+
+            <div class="py-8 flex flex-col lg:flex-row gap-8 lg:gap-12 border-b border-[#963D20]">
+                <div class="w-full lg:w-[38%] space-y-0">
+                    <div class="flex items-center justify-between py-3 border-b border-black/10">
+                        <span class="text-black">Check-in</span>
+                        <span class="text-[#963D20]">15:30</span>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-b border-black/10">
+                        <span class="text-black">Check-out</span>
+                        <span class="text-[#963D20]">12:00</span>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-b border-black/10">
+                        <span class="text-black">Occupancy</span>
+                        <span class="text-[#963D20]">Maximum 4</span>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-b border-black/10">
+                        <span class="text-black">Type</span>
+                        <span class="text-[#963D20]">Daybed</span>
+                    </div>
+                </div>
+
+                {{-- Right Column: Benefits + T&C --}}
+                <div class="w-full lg:w-[62%] space-y-6">
+                    <div>
+                        <h4 class="text-xl font-semibold text-[#963D20] mb-3">Daybed Benefits</h4>
+                        <ul class="space-y-1.5">
+                            <template x-for="b in ['One-time picnic by the beach for 2 persons (min.3 nights stay) (Valid for 14.00-16.00 session)', 'One-time flower bath upon arrival', 'One-time in-room breakfast', '10% Spa discount on in-room treatments and Spa on the Rocks treatments', '10% Discount on food and beverages including Rock Bar, BALI']" :key="b">
+                                <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
+                                    <span class="text-[#963D20] mt-0.5">•</span>
+                                    <span x-text="b"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-[#963D20] mb-3">Terms & Conditions</h4>
+                        <ul class="space-y-1.5">
+                            <template x-for="t in ['Package offer requires a minimum 2 nights stay.', 'Package rates are subject to 21% government tax and service charges', 'Package offer only valid for direct bookings through our website', 'Credit card and deposit are required upon arrival to complete the check-in process', 'All benefit inclusions are for 2 (two) persons per room', 'All reservations are subject to room availability', 'This offer cannot be combined with other promotions or discounts']" :key="t">
+                                <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
+                                    <span class="text-[#963D20] mt-0.5">•</span>
+                                    <span x-text="t"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12 mt-12">
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-6">
+
+                        <div class="lg:col-span-1 col-span-2">
+                            <label class="block font-semibold mb-2 text-black">Name</label>
+                            <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                                <input type="text" placeholder="Ex. John Doe" class="bg-transparent outline-none w-full text-[#963D20] placeholder-[#963D20]/50 " />
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 col-span-2">
+                            <label class="block font-semibold mb-2 text-black">Date of Birth</label>
+                            <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                                </svg>
+                                <input type="date" placeholder="mm/dd/yy" class="bg-transparent outline-none w-full text-[#963D20] placeholder-[#963D20]/50  appearance-none" />
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 col-span-2">
+                            <label class="block font-semibold mb-2 text-black">Phone</label>
+                            <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z" />
+                                </svg>
+                                <input type="tel" placeholder="Ex. 08** **** ****" class="bg-transparent outline-none w-full text-[#963D20] placeholder-[#963D20]/50 " />
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 col-span-2">
+                            <label class="block font-semibold mb-2 text-black">Email</label>
+                            <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                </svg>
+                                <input type="email" placeholder="Ex. atlas@gmail.com" class="bg-transparent outline-none w-full text-[#963D20] placeholder-[#963D20]/50 " />
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 col-span-2">
+                            <label class="block font-semibold mb-2 text-black">Nationality</label>
+                            <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                                    <line x1="4" y1="22" x2="4" y2="15" />
+                                </svg>
+                                <select class="bg-transparent outline-none w-full text-[#963D20] cursor-pointer appearance-none">
+                                    <option value="" disabled selected>Select Nationality</option>
+                                    <option>Indonesian</option>
+                                    <option>Malaysian</option>
+                                    <option>Singaporean</option>
+                                    <option>Australian</option>
+                                    <option>American</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 col-span-2">
+                            <label class="block font-semibold mb-2 text-black">ETA</label>
+                            <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <polyline points="12 7 12 12 15 15" />
+                                </svg>
+                                <select class="bg-transparent outline-none w-full text-[#963D20] cursor-pointer appearance-none">
+                                    <option>07:00 AM</option>
+                                    <option>08:00 AM</option>
+                                    <option>09:00 AM</option>
+                                    <option>10:00 AM</option>
+                                    <option>11:00 AM</option>
+                                    <option>12:00 PM</option>
+                                    <option>01:00 PM</option>
+                                    <option>02:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-span-2">
+                            <label class="block font-semibold mb-2 text-black">Notes</label>
+                            <div class="flex items-start border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                </svg>
+                                <input type="text" placeholder="Ex. I want to know the rate for private event" class="bg-transparent outline-none w-full text-[#963D20] placeholder-[#963D20]/50 " />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 bg-white shadow-xl p-8 text-[#963D20]">
+                    <h2 class="text-2xl mb-1">Your Booking Order</h2>
+                    <p class=mb-4 leading-relaxed">
+                        Your order booking summary will show up here after you fill up your visit plan
+                    </p>
+
+                    <!-- Booking Details -->
+                    <div class="flex flex-col gap-2.5 mb-4">
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4  shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span class=" font-medium ">Atlas Beach Club</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4  shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            <span class=" ">Friday, 27 February 2026</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-4 h-4  shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                                <circle cx="12" cy="7" r="4" />
+                                <path d="M4 21v-1a8 8 0 0116 0v1" />
+                            </svg>
+                            <span class=" ">Max 3 Pax</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-[#963D20] mb-3" />
+                    <p class="text-center text-xl  mb-3">Copacabana – Left Side 1A</p>
+
+                    <!-- Affiliator Code -->
+                    <div class="mb-3">
+                        <label class="block text-black mb-1.5">Affiliator Code</label>
+                        <div class="flex items-center">
+                            <input type="text" placeholder="Ex. ATLAS123"
+                                class="flex-1 px-4 py-2.5 rounded-l-full border-2 border-[#963D20] bg-transparent text-sm focus:outline-none transition-colors" />
+                            <button class="flex items-center gap-1.5 bg-[#963D20] text-white font-medium px-4 py-2.5 transition-colors shrink-0">
+                                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.5833 0H9.69515C9.30564 0 8.76124 0.238931 8.48603 0.530114L0.413407 9.07764C-0.137802 9.66062 -0.137802 10.6164 0.413407 11.1987L6.42413 17.5628C6.97409 18.1458 7.87593 18.1458 8.42672 17.5622L16.4993 9.01598C16.7743 8.72484 17 8.14749 17 7.73594V1.50008C17 0.675222 16.3623 0 15.5833 0ZM12.7498 6.00009C11.9674 6.00009 11.3331 5.32777 11.3331 4.50002C11.3331 3.6709 11.9674 2.99994 12.7498 2.99994C13.5322 2.99994 14.1667 3.6709 14.1667 4.50002C14.1668 5.32777 13.5322 6.00009 12.7498 6.00009Z" fill="#EEECE3" />
+                                </svg>
+
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Voucher Code -->
+                    <div class="mb-5">
+                        <label class="block text-black mb-1.5">Voucher/Offer Code</label>
+                        <div class="flex items-center">
+                            <input type="text" placeholder="Ex. ATLAS123"
+                                class="flex-1 px-4 py-2.5 rounded-l-full border-2 border-[#963D20] bg-transparent text-sm focus:outline-none transition-colors" />
+                            <button class="flex items-center gap-1.5 bg-[#963D20] text-white font-medium px-4 py-2.5 transition-colors shrink-0">
+                                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.5833 0H9.69515C9.30564 0 8.76124 0.238931 8.48603 0.530114L0.413407 9.07764C-0.137802 9.66062 -0.137802 10.6164 0.413407 11.1987L6.42413 17.5628C6.97409 18.1458 7.87593 18.1458 8.42672 17.5622L16.4993 9.01598C16.7743 8.72484 17 8.14749 17 7.73594V1.50008C17 0.675222 16.3623 0 15.5833 0ZM12.7498 6.00009C11.9674 6.00009 11.3331 5.32777 11.3331 4.50002C11.3331 3.6709 11.9674 2.99994 12.7498 2.99994C13.5322 2.99994 14.1667 3.6709 14.1667 4.50002C14.1668 5.32777 13.5322 6.00009 12.7498 6.00009Z" fill="#EEECE3" />
+                                </svg>
+
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <h3 class="text-3xl font-nineties mb-3">Summary</h3>
+                    <hr class="border-[#963D20] mb-3" />
+
+                    <div class="flex flex-col gap-2.5 mb-3">
+                        <div class="flex justify-between">
+                            <span class=" ">Subtotal</span>
+                            <span class=" font-medium ">IDR. 4.000.000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class=" ">Tax</span>
+                            <span class=" ">IDR. 0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class=" ">Service</span>
+                            <span class=" ">IDR. 0</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class=" ">Discount</span>
+                            <span class=" ">IDR. 0</span>
+                        </div>
+                    </div>
+
+                    <hr class="border-[#963D20] mb-3" />
+
+                    <div class="flex justify-between items-center mb-3">
+                        <span class=" font-semibold ">Total Payment</span>
+                        <span class="text-lg font-bold ">IDR 4.000.000</span>
+                    </div>
+
+                    <hr class="border-[#963D20] mb-4" />
+
+                    <!-- T&C -->
+                    <label class="flex items-start gap-3 cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 w-5 h-5 shrink-0 accent-[#963D20] cursor-pointer" />
+                        <span class=" text-[#963D20]">
+                            I read and agree with
+                            <a href="#" class="font-semibold underline">Terms & Conditions &amp; Privacy Policy</a>
+                        </span>
+                    </label>
+
+                    <!-- Checkout -->
+                    <button class="w-full flex items-center justify-center gap-2 bg-[#963D20] hover:brightness-110 text-white font-medium mt-5 py-3.5 rounded-full transition-colors">
+                        Checkout
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+</x-layouts.app>
