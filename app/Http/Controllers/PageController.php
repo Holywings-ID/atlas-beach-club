@@ -63,4 +63,8 @@ class PageController
     {
         return view('pages.booking');
     }
+    public function thankyou(): View
+    {
+        return view('pages.thankyou');
+    }
 }
