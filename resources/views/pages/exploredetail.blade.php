@@ -1,6 +1,6 @@
 <x-layouts.app title="Explore Detail">
     <main class="bg-[#EBE1D5] -mt-24 text-[#963D20] antialiased">
-        <div class="container mx-auto pt-40 pb-6 text-center overflow-hidden">
+        <div class="container mx-auto pt-40 pb-6 text-center lg:overflow-visible overflow-hidden">
 
             <h1 class=" text-5xl md:text-6xl font-extrabold font-nineties text-[#963D20] mb-5 tracking-tight">
                 Family Getaway

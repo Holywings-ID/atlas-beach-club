@@ -44,14 +44,14 @@
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
-                        <button class="bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
+                        <a href="{{ route('menu') }}" class="w-fit bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
                             Menu
                             <span class="group-hover:rotate-90 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
                     <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
@@ -65,14 +65,14 @@
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
-                        <button class="bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
+                        <a href="{{ route('menu') }}" class="w-fit bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
                             Menu
                             <span class="group-hover:rotate-90 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
                     <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
@@ -86,14 +86,14 @@
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
-                        <button class="bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
+                        <a href="{{ route('menu') }}" class="w-fit bg-[#963D20] text-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2" data-reveal>
                             Menu
                             <span class="group-hover:rotate-90 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
                                 </svg>
                             </span>
-                        </button>
+                        </a>
                     </div>
                     <div class="w-full lg:w-3/5">
                         <img src="{{ asset('assets/image/food1.png') }}" alt="Dining Image 2" class="w-full aspect-square object-cover" />
