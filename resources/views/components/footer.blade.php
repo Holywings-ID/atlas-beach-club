@@ -4,7 +4,7 @@
 
         {{-- Logo --}}
         <div class="flex justify-center mb-10">
-            <a href="/">
+            <a href={{ route('home') }}>
                 <img src="{{ asset('assets/logo/logo.png') }}" alt="Atlas Beach Club" class="h-16 w-auto">
             </a>
         </div>

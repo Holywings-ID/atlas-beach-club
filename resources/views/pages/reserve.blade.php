@@ -1,7 +1,7 @@
 <x-layouts.app title="Reserve">
     <main class="bg-[#EBE1D5] -mt-24 pb-24 pt-32">
         <div class="flex justify-center mb-6">
-            <a href="/">
+            <a href={{ route('home') }}>
                 <img src="{{ asset('assets/logo/logo-secondary.png') }}"
                     alt="logo"
                     class="w-24 lg:w-36 object-contain transition-all duration-300" />

@@ -1,6 +1,6 @@
 @php
 $navItems = [
-['label' => 'Home', 'href' => '/#section-one'],
+['label' => 'Home', 'href' => route('home')],
 ['label' => 'Daybed', 'href' => '/#section-two'],
 ['label' => 'Dining', 'href' => '/#section-dining'],
 ['label' => 'Pool Bar', 'href' => '/#section-poolbar'],

@@ -1,5 +1,12 @@
 <x-layouts.app title="Booking">
     <main class="bg-[#EBE1D5] -mt-24 pb-24 pt-32">
+        <div class="flex justify-center mb-6">
+            <a href={{ route('home') }}>
+                <img src="{{ asset('assets/logo/logo-secondary.png') }}"
+                    alt="logo"
+                    class="w-24 lg:w-36 object-contain transition-all duration-300" />
+            </a>
+        </div>
         <div class="container mx-auto px-4 py-6">
 
             {{-- ── Map ── --}}
