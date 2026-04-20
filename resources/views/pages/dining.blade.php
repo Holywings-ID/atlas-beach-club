@@ -100,7 +100,16 @@
                     </div>
                 </div>
 
-                @php $zones = config('daybedsover'); @endphp
+                @php
+                    $zones = config('daybedsover');
+                    foreach ($zones as &$z) {
+                        foreach ($z['position'] as &$p) {
+                            $p['image'] = array_map(fn($v) => str_starts_with($v, 'img:') ? $v : asset($v), $p['image']);
+                            $p['layoutImage'] = asset($p['layoutImage']);
+                        }
+                    }
+                    unset($z, $p);
+                @endphp
 
                 <div x-data="{
                     activeZone: 0,

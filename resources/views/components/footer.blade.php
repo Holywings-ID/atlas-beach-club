@@ -4,7 +4,9 @@
 
         {{-- Logo --}}
         <div class="flex justify-center mb-10">
-            <img src="{{ asset('assets/logo/logo.png') }}" alt="Atlas Beach Club" class="h-16 w-auto">
+            <a href="/">
+                <img src="{{ asset('assets/logo/logo.png') }}" alt="Atlas Beach Club" class="h-16 w-auto">
+            </a>
         </div>
 
         {{-- Reserve Bar --}}

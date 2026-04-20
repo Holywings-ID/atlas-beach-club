@@ -40,14 +40,6 @@ header {
   @apply text-white overscroll-contain;
 }
 
- /* #EBE1D5, #963D20, #10496E, #333333 */
-.redNew {
-  @apply text-[#963D20];
-}
-.brownNew {
-  @apply text-[#EBE1D5];
-}
-
 ::-webkit-scrollbar {
   display: none;
 }

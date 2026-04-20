@@ -105,13 +105,13 @@
                     <p>4 Sections</p>
                 </div>
             </div>
-            <div class="container pt-24 relative bg-[#EBE1D5] redNew">
-                <div class="absolute top-2 left-0 right-0 w-fit mx-auto text-center font-nineties text-4xl redNew">
+            <div class="container pt-24 relative bg-[#EBE1D5] text-[#963D20]">
+                <div class="absolute top-2 left-0 right-0 w-fit mx-auto text-center font-nineties text-4xl text-[#963D20]">
                     <p>Daybed</p>
                 </div>
                 <p class="w-full max-w-[600px] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr</p>
             </div>
-            <div class="container pt-24 relative redNew space-y-5" data-reveal>
+            <div class="container pt-24 relative text-[#963D20] space-y-5" data-reveal>
                 <p class="w-full max-w-[600px] text-center text-lg mx-auto">What’s Included? </p>
                 <div class="flex items-center gap-3 justify-center flex-wrap">
                     <p class="w-max text-center">Lorem Ipsum </p>
@@ -135,8 +135,8 @@
                 <div class="space-y-12" x-data data-reveal>
                     <div class="flex flex-col lg:flex-row justify-between gap-6 lg:gap-12" id="{{ Str::slug($daybed['title']) }}">
                         <div class="w-full lg:w-1/3 flex flex-col gap-8 lg:gap-24">
-                            <h3 class="redNew font-parslay text-6xl">{{ $daybed['title'] }}</h3>
-                            <p class="font-nineties redNew w-full lg:w-72 text-2xl">{{ $daybed['description'] }}</p>
+                            <h3 class="text-[#963D20] font-parslay text-6xl">{{ $daybed['title'] }}</h3>
+                            <p class="font-nineties text-[#963D20] w-full lg:w-72 text-2xl">{{ $daybed['description'] }}</p>
                             <div class="flex justify-end gap-2">
                                 <button @click="$refs.scroller.scrollBy({ left: -300, behavior: 'smooth' })">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
@@ -214,7 +214,7 @@
                             <span class="lg:ml-32"><br />Leave Iconic</span>
                         </p>
                         <p class="font-nineties text-2xl" data-reveal>find your taste only at pavilion</p>
-                        <button class="bg-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 redNew flex items-center gap-2 mx-auto" data-reveal>
+                        <button class="bg-white hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 text-[#963D20] flex items-center gap-2 mx-auto" data-reveal>
                             Overview
                             <span class="group-hover:rotate-90 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -313,7 +313,7 @@
                         <p class="text-xl max-w-[700px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div class="relative z-10 container flex flex-col lg:flex-row redNew gap-6 lg:gap-12 py-12">
+                <div class="relative z-10 container flex flex-col lg:flex-row text-[#963D20] gap-6 lg:gap-12 py-12">
                     <div class="w-full lg:w-2/5 flex flex-col">
                         <div class="text-4xl font-nineties font-semibold">Special Just For You</div>
                         <div id="accordion" x-data="{ open: null }" class="mt-4 grow">
@@ -431,7 +431,7 @@
                                     </div>
                                     <div class="relative aspect-[3/4]">
                                         <img src="{{ asset($activity['images'][2]['img']) }}" alt="{{ $activity['images'][2]['subtitle'] }}" class="w-full aspect-[3/4] object-cover" />
-                                        <p class="absolute -bottom-8 right-0 left-0 font-parslay text-lg text-center redNew">{{ $activity['images'][2]['subtitle'] }}</p>
+                                        <p class="absolute -bottom-8 right-0 left-0 font-parslay text-lg text-center text-[#963D20]">{{ $activity['images'][2]['subtitle'] }}</p>
                                     </div>
                                 </div>
                             </div>

@@ -36,7 +36,16 @@
         </div>
         <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#963D20] overflow-hidden">
             <div class="container space-y-12 text-center py-12 pb-24">
-                @php $zones = config('daybedsover'); @endphp
+                @php
+                    $zones = config('daybedsover');
+                    foreach ($zones as &$z) {
+                        foreach ($z['position'] as &$p) {
+                            $p['image'] = array_map(fn($v) => str_starts_with($v, 'img:') ? $v : asset($v), $p['image']);
+                            $p['layoutImage'] = asset($p['layoutImage']);
+                        }
+                    }
+                    unset($z, $p);
+                @endphp
 
                 <div x-data="{
                     activeZone: 0,
