@@ -46,29 +46,29 @@
                                 ATLAS BEACH CLUB
                             </h4>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
-                                <a href="/#section-two" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-two' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Daybeds</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
-                                <a href="/#section-dining" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-dining' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Dining</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
-                                <a href="/#section-poolbar" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-poolbar' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Poolbar</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
                             </div>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
-                                <a href="/#section-activities" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-activities' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Activity</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
-                                <a href="/#section-explore" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-explore' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 05</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Group Bookings</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
