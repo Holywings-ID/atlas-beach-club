@@ -120,7 +120,7 @@
                 </div>
                 <div class="grid lg:grid-cols-4 grid-cols-2 items-center gap-4 lg:gap-16 justify-center">
                     @foreach (config('daybeds') as $daybed)
-                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#963D20] flex items-center gap-8 w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
+                    <a @click.prevent="window.scrollTo({ top: document.getElementById('{{ Str::slug($daybed['title']) }}').getBoundingClientRect().top + window.scrollY - 250, behavior: 'smooth' })" class="group text-center border-b pb-2 hover:text-slate-400 hover:border-slate-400 border-[#963D20] flex items-center gap-8 w-full lg:w-48 justify-between cursor-pointer">{{ $daybed['title'] }}
                         <span class="group-hover:rotate-90 transition-all duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="m16.172 11l-5.364-5.364l1.414-1.414L20 12l-7.778 7.778l-1.414-1.414L16.172 13H4v-2z" />
@@ -169,7 +169,7 @@
                             <p>{{ $daybed['title'] }}</p>
                         </div>
                         <div class="flex items-center gap-8">
-                            <a href="" class="items-center flex gap-3">Overview
+                            <a href="/daybed" class="items-center flex gap-3">Overview
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -277,7 +277,7 @@
                             <p>Dining</p>
                         </div>
                         <div class="flex items-center gap-4 lg:gap-8">
-                            <a href="" class="items-center flex gap-3">Overview
+                            <a href="/dining" class="items-center flex gap-3">Overview
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -364,7 +364,7 @@
                         <p>Pool Bar</p>
                     </div>
                     <div class="flex items-center gap-8">
-                        <a href="" class="items-center flex gap-3">Overview
+                        <a href="/poolbar" class="items-center flex gap-3">Overview
                             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                 <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                 <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
