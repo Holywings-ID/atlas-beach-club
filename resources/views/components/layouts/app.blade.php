@@ -7,6 +7,7 @@
     <title>{{ $title ?? 'Atlas Beach Club' }} — Atlas Beach Club</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://atlasbeachfest.s3.ap-southeast-3.amazonaws.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
@@ -64,7 +65,6 @@
         {{ $slot }}
 
         <x-footer />
-        <x-contact />
     </div>
 
     {{-- Splash Screen --}}

@@ -16,6 +16,14 @@ window.imageSlider = function () {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Native lazy loading for all images below the fold
+  document.querySelectorAll('img').forEach((img) => {
+    if (!img.hasAttribute('loading') && !img.hasAttribute('fetchpriority')) {
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+    }
+  });
+
   // Sticky header shadow
   // const header = document.getElementById('header');
   // if (header) {

@@ -35,7 +35,7 @@
                         </div>
                     </section>
                     <section class="relative h-full w-full">
-                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[2000px] lg:h-[1500px] object-cover object-center" />
+                        <img src="{{ asset('assets/image/enchanted.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[2000px] lg:h-[1500px] object-cover object-center" loading="lazy" decoding="async" />
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
@@ -84,15 +84,15 @@
 
             <div class="marquee-container">
                 <div class="marquee-content">
-                    <img src="{{asset('assets/image/highlight1.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
-                    <img src="{{asset('assets/image/highlight2.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
-                    <img src="{{asset('assets/image/highlight3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
-                    <img src="{{asset('assets/image/highlight4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/highlight1.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
+                    <img src="{{asset('assets/image/highlight2.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
+                    <img src="{{asset('assets/image/highlight3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
+                    <img src="{{asset('assets/image/highlight4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
                     {{-- Duplicate for seamless loop --}}
-                    <img src="{{asset('assets/image/highlight1.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
-                    <img src="{{asset('assets/image/highlight2.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
-                    <img src="{{asset('assets/image/highlight3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
-                    <img src="{{asset('assets/image/highlight4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
+                    <img src="{{asset('assets/image/highlight1.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
+                    <img src="{{asset('assets/image/highlight2.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
+                    <img src="{{asset('assets/image/highlight3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
+                    <img src="{{asset('assets/image/highlight4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" loading="lazy" decoding="async" />
                 </div>
             </div>
             <div class="relative">
@@ -193,13 +193,13 @@
         <section id="section-dining" class="relative z-10 ">
             <div class="relative bg-[#963D20] overflow-hidden">
                 <!-- image floating -->
-                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute -top-12 lg:-top-24 -right-6 lg:-right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
-                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-20 h-16 lg:w-32 lg:h-24 absolute top-36 lg:top-52 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" />
-                <img src="{{ asset('assets/image/food2.png') }}" alt="" class="float-image w-40 h-36 lg:w-72 lg:h-64 absolute top-48 lg:top-64 -right-12 lg:-right-24 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.8s" />
+                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute -top-12 lg:-top-24 -right-6 lg:-right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" loading="lazy" decoding="async" />
+                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-20 h-16 lg:w-32 lg:h-24 absolute top-36 lg:top-52 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" loading="lazy" decoding="async" />
+                <img src="{{ asset('assets/image/food2.png') }}" alt="" class="float-image w-40 h-36 lg:w-72 lg:h-64 absolute top-48 lg:top-64 -right-12 lg:-right-24 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.8s" loading="lazy" decoding="async" />
 
-                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-20 h-16 lg:w-32 lg:h-24 absolute top-4 lg:top-8 left-24 lg:left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:2s" />
-                <img src="{{ asset('assets/image/food4.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute top-6 lg:top-12 -left-24 lg:-left-52 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.5s" />
-                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-40 h-28 lg:w-72 lg:h-52 absolute top-72 lg:top-96 -left-6 lg:-left-12 object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:1.2s" />
+                <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image w-20 h-16 lg:w-32 lg:h-24 absolute top-4 lg:top-8 left-24 lg:left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:2s" loading="lazy" decoding="async" />
+                <img src="{{ asset('assets/image/food4.png') }}" alt="" class="float-image w-48 h-36 lg:w-96 lg:h-72 absolute top-6 lg:top-12 -left-24 lg:-left-52 object-cover rounded-3xl" style="--float-rotate:-6deg; animation-delay:0.5s" loading="lazy" decoding="async" />
+                <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image w-40 h-28 lg:w-72 lg:h-52 absolute top-72 lg:top-96 -left-6 lg:-left-12 object-cover rounded-3xl" style="--float-rotate:12deg; animation-delay:1.2s" loading="lazy" decoding="async" />
                 <!-- image floating -->
 
                 <div class="container space-y-12 text-center py-8 pb-24">
@@ -385,11 +385,11 @@
         <section id="section-activities">
             <div class="relative bg-[#EBE1D5] text-[#963D20] overflow-hidden">
                 <!-- image floating -->
-                <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-20 lg:top-32 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" />
-                <img src="{{ asset('assets/image/sport1.png') }}" alt="" class="float-image w-36 h-40 lg:w-64 lg:h-72 absolute top-48 lg:top-64 -right-12 lg:-right-24 object-cover rounded-3xl" style="--float-rotate:-10deg; animation-delay:0.8s" />
+                <img src="{{ asset('assets/image/sport3.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-20 lg:top-32 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:16deg; animation-delay:1.1s" loading="lazy" decoding="async" />
+                <img src="{{ asset('assets/image/sport1.png') }}" alt="" class="float-image w-36 h-40 lg:w-64 lg:h-72 absolute top-48 lg:top-64 -right-12 lg:-right-24 object-cover rounded-3xl" style="--float-rotate:-10deg; animation-delay:0.8s" loading="lazy" decoding="async" />
 
-                <img src="{{ asset('assets/image/sport2.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-4 lg:top-8 left-24 lg:left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-16deg; animation-delay:0.8s" />
-                <img src="{{ asset('assets/image/sport4.png') }}" alt="" class="float-image w-40 h-52 lg:w-72 lg:h-96 absolute top-20 lg:top-32 -left-5 lg:-left-10 object-cover rounded-3xl" style="--float-rotate:8deg; animation-delay:0.2s" />
+                <img src="{{ asset('assets/image/sport2.png') }}" alt="" class="float-image w-16 h-20 lg:w-24 lg:h-32 absolute top-4 lg:top-8 left-24 lg:left-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-16deg; animation-delay:0.8s" loading="lazy" decoding="async" />
+                <img src="{{ asset('assets/image/sport4.png') }}" alt="" class="float-image w-40 h-52 lg:w-72 lg:h-96 absolute top-20 lg:top-32 -left-5 lg:-left-10 object-cover rounded-3xl" style="--float-rotate:8deg; animation-delay:0.2s" loading="lazy" decoding="async" />
                 <!-- image floating -->
 
                 <div class="relative z-10 container space-y-12 text-center py-8 pb-24">

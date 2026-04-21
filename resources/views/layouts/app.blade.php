@@ -19,7 +19,6 @@
     </div>
 
     <x-footer />
-    <x-contact />
 
     @livewireScripts
 </body>
