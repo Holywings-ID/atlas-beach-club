@@ -67,6 +67,95 @@
         <x-contact />
     </div>
 
+    {{-- Splash Screen --}}
+    <style>
+        #splash {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #963D20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: opacity .8s ease
+        }
+
+        #splash .logo {
+            max-width: 220px;
+            opacity: 0;
+            animation: splash-in .3s ease forwards
+        }
+
+        #splash.out .logo {
+            animation: splash-logo-out .6s cubic-bezier(.55, .06, .68, .19) forwards
+        }
+
+        #splash.fade {
+            opacity: 0
+        }
+
+        @keyframes splash-in {
+            from {
+                opacity: 0;
+                transform: scale(.8)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        @keyframes splash-logo-out {
+            0% {
+                transform: scale(1) rotate(0);
+                opacity: 1;
+                filter: blur(0)
+            }
+
+            30% {
+                transform: scale(.85) rotate(-5deg);
+                opacity: 1;
+                filter: blur(0)
+            }
+
+            70% {
+                transform: scale(1.8) rotate(10deg);
+                opacity: .5;
+                filter: blur(4px)
+            }
+
+            100% {
+                transform: scale(3) rotate(-3deg) translateY(-60px);
+                opacity: 0;
+                filter: blur(12px)
+            }
+        }
+    </style>
+    <div id="splash">
+        <img src="{{ asset('assets/logo/logo.png') }}" alt="Logo" class="logo">
+    </div>
+    <script>
+        (function() {
+            var s = document.getElementById('splash');
+            if (sessionStorage.getItem('splashShown')) {
+                s.remove();
+                return
+            }
+            sessionStorage.setItem('splashShown', '1');
+            setTimeout(function() {
+                s.classList.add('out');
+                setTimeout(function() {
+                    s.classList.add('fade')
+                }, 600);
+                setTimeout(function() {
+                    s.remove()
+                }, 1400);
+            }, 3500);
+        })();
+    </script>
+
     @livewireScripts
     @stack('scripts')
 </body>
