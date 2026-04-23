@@ -1,6 +1,6 @@
 <x-layouts.app title="Explore Detail">
     <main class="bg-[#EBE1D5] -mt-24 text-[#963D20] antialiased">
-        <div class="container mx-auto pt-40 pb-6 text-center lg:overflow-visible overflow-hidden">
+        <div class="container mx-auto pt-40 pb-6 text-center">
 
             <h1 class=" text-5xl md:text-6xl font-extrabold font-nineties text-[#963D20] mb-5 tracking-tight">
                 Family Getaway
@@ -20,7 +20,7 @@
                 <span>Best for : <strong class="font-medium text-[#963D20]">Couple / Family / Friends</strong></span>
             </div>
 
-            <div class="relative w-full h-[340px] md:h-[650px]">
+            <div class="relative w-ful h-[340px] md:h-[650px]">
 
                 {{-- Main center --}}
                 <div class="absolute left-0 right-0 top-0 w-full h-full">

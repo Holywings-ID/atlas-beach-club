@@ -26,6 +26,11 @@ class PageController
         return view('pages.poolbar');
     }
 
+    public function activities(): View
+    {
+        return view('pages.activities');
+    }
+
     public function explore(): View
     {
         return view('pages.explore');

@@ -28,7 +28,7 @@
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full">
-                            <h3 class="relative z-20 text-2xl lg:text-5xl font-nineties mb-4 text-center" data-reveal>Event Highlight</h3>
+                            <h3 class="relative z-20 text-5xl font-nineties mb-4 text-center" data-reveal>Event Highlight</h3>
                             <div class="relative z-30 container mt-12 lg:mt-24 px-4" data-reveal
                                 x-data="{
                                     real: 3,
@@ -63,8 +63,14 @@
                                         if (Math.abs(this.dx) > 50) this.go(this.pos + (this.dx < 0 ? 1 : -1));
                                         this.dx = 0;
                                     },
+                                    mobile: window.innerWidth < 1024,
+                                    init() {
+                                        window.addEventListener('resize', () => this.mobile = window.innerWidth < 1024);
+                                    },
+                                    isFocused(idx) { return this.mobile || this.realIndex() === idx; },
                                     offset() {
-                                        const s = 100 / 3;
+                                        const perView = this.mobile ? 1 : 3;
+                                        const s = 100 / perView;
                                         const shift = -(this.pos - 1) * s;
                                         const gapShift = -(this.pos - 1) * 16;
                                         return `translateX(calc(${shift}% + ${gapShift}px + ${this.dragging ? this.dx : 0}px))`;
@@ -92,9 +98,9 @@
                                             :style="'transform:' + offset()"
                                             @transitionend="settle()">
                                             {{-- Clone: last slide --}}
-                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
-                                                :class="realIndex() === 2 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
-                                                <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                            <div class="w-full lg:w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="isFocused(2) ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[400px] lg:h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
                                                 <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
@@ -106,9 +112,9 @@
                                                 </a>
                                             </div>
                                             {{-- Slide 0 --}}
-                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
-                                                :class="realIndex() === 0 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
-                                                <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                            <div class="w-full lg:w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="isFocused(0) ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[400px] lg:h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
                                                 <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
@@ -120,9 +126,9 @@
                                                 </a>
                                             </div>
                                             {{-- Slide 1 --}}
-                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
-                                                :class="realIndex() === 1 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
-                                                <img src="{{ asset('assets/image/event2.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                            <div class="w-full lg:w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="isFocused(1) ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event2.png') }}" alt="Event" class="w-full h-[400px] lg:h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
                                                 <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
@@ -134,9 +140,9 @@
                                                 </a>
                                             </div>
                                             {{-- Slide 2 --}}
-                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
-                                                :class="realIndex() === 2 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
-                                                <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                            <div class="w-full lg:w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="isFocused(2) ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event3.png') }}" alt="Event" class="w-full h-[400px] lg:h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
                                                 <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
@@ -148,9 +154,9 @@
                                                 </a>
                                             </div>
                                             {{-- Clone: first slide --}}
-                                            <div class="w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
-                                                :class="realIndex() === 0 ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
-                                                <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[600px] aspect-[9/16] object-cover" />
+                                            <div class="w-full lg:w-1/3 shrink-0 flex flex-col items-center gap-4 transition-all duration-500"
+                                                :class="isFocused(0) ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-50'">
+                                                <img src="{{ asset('assets/image/event1.png') }}" alt="Event" class="w-full h-[400px] lg:h-[600px] aspect-[9/16] object-cover" />
                                                 <p class="font-semibold text-xl text-center">Wed | 28 Feb</p>
                                                 <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                                                     Reserve
@@ -194,35 +200,35 @@
                     <img src="{{asset('assets/image/dj4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
                 </div>
             </div>
-            <div class="relative">
-                <img src="{{asset('assets/image/genre.png')}}" alt="" class="w-screen h-[1400px] object-cover" />
+            <div class="relative overflow-hidden">
+                <img src="{{asset('assets/image/genre.png')}}" alt="" class="relative z-0 w-screen h-[1400px] object-cover" />
                 <div class="container absolute top-12 left-0 right-0 w-full text-white">
-                    <div class="flex gap-8">
+                    <div class="flex lg:flex-row flex-col gap-8">
                         <p class="font-extrabold font-nineties text-5xl whitespace-break-spaces text-right">Genre Master</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                        <p class="lg:text-xl text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
                     </div>
                 </div>
                 <div class="absolute top-96 left-56" data-reveal>
                     <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-5xl">Hip Hop</p>
+                        <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
                 <div class="absolute bottom-96 left-32" data-reveal>
                     <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-5xl">R&B</p>
+                        <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
                 <div class="absolute top-96 right-44" data-reveal>
                     <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-5xl">Techno</p>
+                        <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>
                 <div class="absolute bottom-96 right-64" data-reveal>
                     <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-5xl">EDM</p>
+                        <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
                         <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                     </div>
                 </div>

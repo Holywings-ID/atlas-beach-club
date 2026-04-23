@@ -11,7 +11,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/explore', 'explore')->name('explore');
     Route::get('/explore/detail', 'exploreDetail')->name('explore.detail');
     Route::get('/menu', 'menu')->name('menu');
-    Route::get('/activities', 'explore')->name('activities');
+    Route::get('/activities', 'activities')->name('activities');
     Route::get('/whats-on', 'whatson')->name('whatson');
     Route::get('/offer', 'offer')->name('offer');
     Route::get('/support', 'support')->name('support');

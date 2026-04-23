@@ -142,7 +142,7 @@
                         <p class="text-[#8a7a6a] mt-0.5 mb-3">
                             Non-member: IDR {{ number_format($daybed['nonmember'], 0, ',', '.') }}
                         </p>
-                        <a href="/reserve/booking" class="inline-flex items-center gap-1.5 bg-[#963D20] hover:bg-[#7A3118] text-[#EBE1D5] font-medium tracking-wide px-4 py-2 transition-colors">
+                        <a href="{{ route('booking') }}" class="inline-flex items-center gap-1.5 bg-[#963D20] hover:bg-[#7A3118] text-[#EBE1D5] font-medium tracking-wide px-4 py-2 transition-colors">
                             Select
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />

@@ -120,26 +120,6 @@
                     selectZone(i) { this.activeZone = i; this.activePosition = 0; }
                 }" class="text-left space-y-10">
 
-                    <div class="border-b border-[#963D20]">
-                        <div class="flex items-center gap-8 pb-3">
-                            <template x-for="(z, i) in zones" :key="i">
-                                <button @click="selectZone(i)" class transition-all"
-                                    :class="activeZone === i ? 'text-[#963D20] font-semibold' : 'text-[#3A3530]/60 hover:text-[#3A3530]'"
-                                    x-text="z.name"></button>
-                            </template>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-6 pb-3">
-                        <template x-for="(p, i) in zone.position" :key="p.id">
-                            <button @click="activePosition = i" class="flex items-center gap-2 transition-all"
-                                :class="activePosition === i ? 'text-[#963D20] font-semibold' : 'text-[#3A3530]/60 hover:text-[#3A3530]'">
-                                <span x-text="p.name"></span>
-                                <span class="w-5 h-5 rounded-full border border-current flex items-center justify-center text-[10px]" x-html="activePosition === i ? '↓' : '→'"></span>
-                            </button>
-                        </template>
-                    </div>
-
                     <div class="grid grid-cols-1 lg:grid-cols-2 h-[800px] lg:h-[500px]">
                         <div class="relative overflow-hidden">
                             <img :src="position.image[1]" alt="" class="w-full h-full object-cover" />

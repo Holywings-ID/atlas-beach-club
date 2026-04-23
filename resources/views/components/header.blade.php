@@ -1,11 +1,11 @@
 @php
 $navItems = [
 ['label' => 'Home', 'href' => route('home')],
-['label' => 'Daybed', 'href' => route('home') . '/#section-two'],
-['label' => 'Dining', 'href' => route('home') . '/#section-dining'],
-['label' => 'Pool Bar', 'href' => route('home') . '/#section-poolbar'],
-['label' => 'Activities', 'href' => route('home') . '/#section-activities'],
-['label' => 'Explore', 'href' => route('home') . '/#section-explore'],
+['label' => 'Daybed', 'href' => route('daybed')],
+['label' => 'Dining', 'href' => route('dining')],
+['label' => 'Pool Bar', 'href' => route('poolbar')],
+['label' => 'Activities', 'href' => route('activities')],
+['label' => 'Explore', 'href' => route('explore')],
 ['label' => "What's On", 'href' => route('whatson')],
 ['label' => 'Offer', 'href' => route('offer')],
 ['label' => 'Support', 'href' => route('support')],
