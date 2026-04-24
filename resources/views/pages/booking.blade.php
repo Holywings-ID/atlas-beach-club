@@ -23,12 +23,46 @@
                     <p>Copacabana</p>
                     <p>(<span>Left Side A</span>)</p>
                 </div>
-                <button class="flex items-center gap-1.5 bg-[#963D20] hover:bg-[#7A3118] text-[#EBE1D5] font-medium tracking-wide px-3 py-2 transition-colors shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    Calendar
-                </button>
+                <div x-data="calendarPicker()" class="relative shrink-0">
+                    <button @click="open = !open" class="flex items-center gap-1.5 bg-[#963D20] hover:bg-[#7A3118] text-[#EBE1D5] font-medium tracking-wide px-3 py-2 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span x-text="selected ? selected : 'Calendar'"></span>
+                    </button>
+
+                    <div x-show="open" @click.outside="open = false" x-transition
+                        class="absolute right-0 top-full mt-2 w-72 bg-[#EBE1D5] border border-[#DDD0C2] shadow-xl z-50 p-4">
+                        <div class="flex items-center justify-between mb-3">
+                            <button @click="prevMonth()" class="w-7 h-7 rounded-full border border-[#963D20] text-[#963D20] hover:bg-[#963D20] hover:text-[#EBE1D5] flex items-center justify-center transition-colors">
+                                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <span class="text-[#963D20] font-medium" x-text="monthLabel"></span>
+                            <button @click="nextMonth()" class="w-7 h-7 rounded-full border border-[#963D20] text-[#963D20] hover:bg-[#963D20] hover:text-[#EBE1D5] flex items-center justify-center transition-colors">
+                                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-7 text-center text-sm">
+                            <template x-for="d in ['Su','Mo','Tu','We','Th','Fr','Sa']">
+                                <span x-text="d" class="py-1 text-xs text-[#8a7a6a]"></span>
+                            </template>
+                            <template x-for="blank in startDay">
+                                <span></span>
+                            </template>
+                            <template x-for="day in daysInMonth">
+                                <button @click="selectDate(day)"
+                                    :class="isSelected(day) ? 'bg-[#963D20] text-[#EBE1D5]' : 'text-[#6a5a4a] hover:bg-[#963D20]/10'"
+                                    class="w-8 h-8 mx-auto rounded-full flex items-center justify-center transition-colors cursor-pointer"
+                                    x-text="day"></button>
+                            </template>
+                        </div>
+                    </div>
+                </div>
                 <div>
                     <p class="text-2xl font-semibold lg:text-right">Friday</p>
                     <p class="lg:text-right">26 February 2026</p>
@@ -303,5 +337,47 @@
         </div>
         </div>
     </main>
+
+    @push('scripts')
+    <script>
+        function calendarPicker() {
+            const now = new Date();
+            return {
+                open: false,
+                month: now.getMonth(),
+                year: now.getFullYear(),
+                selected: null,
+                selectedDay: null,
+                selectedMonth: null,
+                selectedYear: null,
+                get monthLabel() {
+                    return new Date(this.year, this.month).toLocaleString('en-US', { month: 'long', year: 'numeric' });
+                },
+                get startDay() {
+                    return new Date(this.year, this.month, 1).getDay();
+                },
+                get daysInMonth() {
+                    return new Date(this.year, this.month + 1, 0).getDate();
+                },
+                prevMonth() {
+                    if (this.month === 0) { this.month = 11; this.year--; } else { this.month--; }
+                },
+                nextMonth() {
+                    if (this.month === 11) { this.month = 0; this.year++; } else { this.month++; }
+                },
+                selectDate(day) {
+                    this.selectedDay = day;
+                    this.selectedMonth = this.month;
+                    this.selectedYear = this.year;
+                    this.selected = new Date(this.year, this.month, day).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+                    this.open = false;
+                },
+                isSelected(day) {
+                    return day === this.selectedDay && this.month === this.selectedMonth && this.year === this.selectedYear;
+                },
+            };
+        }
+    </script>
+    @endpush
 
 </x-layouts.app>
