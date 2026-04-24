@@ -1,5 +1,5 @@
 <x-layouts.app title="Thank You">
-    <main class="-mt-24 bg-[#EBE1D5] relative z-10 h-dvh min-h-[1200px] overflow-hidden">
+    <main class="-mt-24 bg-[#EBE1D5] relative z-10 h-dvh min-h-[900px] overflow-hidden">
         <!-- image floating -->
         <img src="{{ asset('assets/image/food1.png') }}" alt="" class="float-image z-30 w-48 h-36 lg:w-96 lg:h-72 absolute -top-12 lg:-top-24 -right-6 lg:-right-12 object-cover rounded-3xl rotate-6" style="--float-rotate:6deg; animation-delay:0s" />
         <img src="{{ asset('assets/image/food3.png') }}" alt="" class="float-image z-30 w-20 h-16 lg:w-32 lg:h-24 absolute top-36 lg:top-52 right-24 lg:right-52 blur-sm object-cover rounded-3xl" style="--float-rotate:-12deg; animation-delay:1.5s" />
