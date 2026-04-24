@@ -1,31 +1,31 @@
 @php
 $navItems = [
-    ['label' => 'Home', 'href' => route('home')],
-    ['label' => 'Daybed', 'href' => route('daybed')],
-    ['label' => 'Dining', 'href' => route('dining'), 'children' => [
-        ['label' => 'Overview', 'href' => route('dining')],
-        ['label' => 'Menu', 'href' => route('menu')],
-    ]],
-    ['label' => 'Pool Bar', 'href' => route('poolbar')],
-    ['label' => 'Activities', 'href' => route('activities')],
-    ['label' => 'Explore', 'href' => route('explore'), 'children' => [
-        ['label' => 'Family', 'href' => route('explore.family')],
-        ['label' => 'Couple', 'href' => route('explore.couple')],
-        ['label' => 'Friends', 'href' => route('explore.friends')],
-        ['label' => 'Group', 'href' => route('explore.group')],
-    ]],
-    ['label' => "What's On", 'href' => route('whatson'), 'children' => [
-        ['label' => 'Event Highlight', 'href' => route('whatson') . '#event-highlight'],
-        ['label' => 'BBQ Grill', 'href' => route('whatson') . '#bbq-grill'],
-        ['label' => 'Bar Takeover', 'href' => route('whatson') . '#bar-takeover'],
-        ['label' => 'Parade', 'href' => route('whatson') . '#parade'],
-    ]],
-    ['label' => 'Offer', 'href' => route('offer')],
-    ['label' => 'Support', 'href' => route('support'), 'children' => [
-        ['label' => 'Support', 'href' => route('support')],
-        ['label' => 'Q&A', 'href' => route('support.qa')],
-        ['label' => 'Terms & Conditions', 'href' => route('support.terms')],
-    ]],
+['label' => 'Home', 'href' => route('home')],
+['label' => 'Daybed', 'href' => route('daybed')],
+['label' => 'Dining', 'href' => route('dining'), 'active' => request()->routeIs('dining', 'menu'), 'children' => [
+['label' => 'Overview', 'href' => route('dining')],
+['label' => 'Menu', 'href' => route('menu')],
+]],
+['label' => 'Pool Bar', 'href' => route('poolbar')],
+['label' => 'Activities', 'href' => route('activities')],
+['label' => 'Explore', 'href' => route('explore'), 'active' => request()->routeIs('explore', 'explore.*'), 'children' => [
+['label' => 'Family', 'href' => route('explore.family')],
+['label' => 'Couple', 'href' => route('explore.couple')],
+['label' => 'Friends', 'href' => route('explore.friends')],
+['label' => 'Group', 'href' => route('explore.group')],
+]],
+['label' => "What's On", 'href' => route('whatson'), 'active' => request()->routeIs('whatson'), 'children' => [
+['label' => 'Event Highlight', 'href' => route('whatson') . '#event-highlight'],
+['label' => 'BBQ Grill', 'href' => route('whatson') . '#bbq-grill'],
+['label' => 'Bar Takeover', 'href' => route('whatson') . '#bar-takeover'],
+['label' => 'Parade', 'href' => route('whatson') . '#parade'],
+]],
+['label' => 'Offer', 'href' => route('offer')],
+['label' => 'Support', 'href' => route('support'), 'active' => request()->routeIs('support', 'support.*'), 'children' => [
+['label' => 'Support', 'href' => route('support')],
+['label' => 'Q&A', 'href' => route('support.qa')],
+['label' => 'Terms & Conditions', 'href' => route('support.terms')],
+]],
 ];
 @endphp
 
@@ -92,30 +92,36 @@ $navItems = [
                 alt="Close" class="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-all duration-300" />
         </button>
 
-        <nav x-show="open" x-cloak x-transition class="hidden lg:flex items-center border-b pb-4 transition-colors duration-300"
+        <nav x-show="open" x-cloak x-transition class="relative hidden lg:flex items-center border-b pb-4 transition-colors duration-300"
             :class="dark ? 'border-[#963D20]' : 'border-white'">
             @foreach ($navItems as $item)
-                @if (!empty($item['children']))
-                <div class="relative" x-data="{ sub: false }" @mouseenter="sub = true" @mouseleave="sub = false">
-                    <a href="{{ $item['href'] }}"
-                        class="nav-link transition-colors duration-300 inline-flex items-center gap-1"
-                        :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
-                        {{ $item['label'] }}
-                        <svg class="w-3 h-3 transition-transform" :class="sub && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </a>
-                    <div x-show="sub" x-cloak x-transition.opacity class="absolute top-full left-0 mt-2 min-w-[160px] bg-black/80 backdrop-blur-sm rounded-lg py-2 shadow-lg">
-                        @foreach ($item['children'] as $child)
-                        <a href="{{ $child['href'] }}" class="block px-4 py-2 text-sm text-white hover:bg-white/10 whitespace-nowrap transition-colors">{{ $child['label'] }}</a>
-                        @endforeach
-                    </div>
-                </div>
-                @else
+            @if (!empty($item['children']))
+            <div x-data="{ sub: {{ !empty($item['active']) ? 'true' : 'false' }} }">
                 <a href="{{ $item['href'] }}"
-                    class="nav-link transition-colors duration-300"
+                    class="nav-link transition-colors duration-300 inline-flex items-center gap-1"
                     :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
                     {{ $item['label'] }}
                 </a>
-                @endif
+                <div x-show="sub" x-cloak x-transition.opacity class="absolute flex justify-end top-full right-0 mt-2 min-w-[160px] py-2">
+                    @foreach ($item['children'] as $child)
+                    <a href="{{ $child['href'] }}" class="nav-link whitespace-nowrap transition-colors duration-300 inline-flex items-center gap-1"
+                        :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">{{ $child['label'] }}
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
+                                <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                <path fill="#ffffff" d="M16 24h17v2H16z" />
+                            </svg></span>
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+            @else
+            <a href="{{ $item['href'] }}"
+                class="nav-link transition-colors duration-300"
+                :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
+                {{ $item['label'] }}
+            </a>
+            @endif
             @endforeach
         </nav>
 
@@ -129,24 +135,26 @@ $navItems = [
         <nav x-show="open" x-cloak x-transition
             class="lg:hidden absolute top-full left-0 right-0 bg-black/50 backdrop-blur-sm flex flex-col items-center py-4 gap-2">
             @foreach ($navItems as $item)
-                @if (!empty($item['children']))
-                <div x-data="{ sub: false }" class="flex flex-col items-center">
-                    <button @click="sub = !sub" class="nav-link transition-colors duration-300 py-1 inline-flex items-center gap-1">
-                        {{ $item['label'] }}
-                        <svg class="w-3 h-3 transition-transform" :class="sub && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div x-show="sub" x-cloak x-transition class="flex flex-col items-center gap-1 mt-1">
-                        @foreach ($item['children'] as $child)
-                        <a href="{{ $child['href'] }}" class="text-sm text-white/80 hover:text-white py-1 transition-colors">{{ $child['label'] }}</a>
-                        @endforeach
-                    </div>
-                </div>
-                @else
-                <a href="{{ $item['href'] }}"
-                    class="nav-link transition-colors duration-300 py-1">
+            @if (!empty($item['children']))
+            <div x-data="{ sub: {{ !empty($item['active']) ? 'true' : 'false' }} }" class="flex flex-col items-center">
+                <button @click="sub = !sub" class="nav-link transition-colors duration-300 py-1 inline-flex items-center gap-1">
                     {{ $item['label'] }}
-                </a>
-                @endif
+                    <svg class="w-3 h-3 transition-transform" :class="sub && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="sub" x-cloak x-transition class="flex flex-col items-center gap-1 mt-1">
+                    @foreach ($item['children'] as $child)
+                    <a href="{{ $child['href'] }}" class="text-sm text-white/80 hover:text-white py-1 transition-colors">{{ $child['label'] }}</a>
+                    @endforeach
+                </div>
+            </div>
+            @else
+            <a href="{{ $item['href'] }}"
+                class="nav-link transition-colors duration-300 py-1">
+                {{ $item['label'] }}
+            </a>
+            @endif
             @endforeach
         </nav>
 
