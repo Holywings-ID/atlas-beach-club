@@ -60,7 +60,6 @@
 
     <div class="page-transition" :class="leaving && 'page-leaving'">
         <x-header />
-        <x-mobile-menu />
 
         {{ $slot }}
 

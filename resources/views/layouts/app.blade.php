@@ -12,7 +12,6 @@
 <body class="font-sans antialiased">
 
     <x-header />
-    <x-mobile-menu />
 
     <div class="relative ">
         {{ $slot }}

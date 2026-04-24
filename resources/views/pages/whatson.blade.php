@@ -27,7 +27,7 @@
                         <img src="{{ asset('assets/image/whatson2.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1000px] object-cover object-center" />
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
 
-                        <div class="text-white absolute inset-0 h-full w-full" id="event-highlight">
+                        <div id="event-highlight" class="text-white absolute inset-0 h-full w-full">
                             <h3 class="relative z-20 text-5xl font-nineties mb-4 text-center" data-reveal>Event Highlight</h3>
                             <div class="relative z-30 container mt-12 lg:mt-24 px-4" data-reveal
                                 x-data="{
@@ -208,33 +208,61 @@
                         <p class="lg:text-xl text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
                     </div>
                 </div>
-                <div class="absolute top-96 left-56" data-reveal>
-                    <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
-                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <div class="lg:block hidden">
+                    <div class="absolute hover:scale-125 transition-all duration-300 top-96 left-56" data-reveal>
+                        <div class="w-64 space-y-4 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
+                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
+                    </div>
+                    <div class="absolute hover:scale-125 transition-all duration-300 bottom-96 left-32" data-reveal>
+                        <div class="w-64 space-y-4 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
+                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
+                    </div>
+                    <div class="absolute hover:scale-125 transition-all duration-300 top-96 right-44" data-reveal>
+                        <div class="w-64 space-y-4 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
+                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
+                    </div>
+                    <div class="absolute hover:scale-125 transition-all duration-300 bottom-96 right-64" data-reveal>
+                        <div class="w-64 space-y-4 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
+                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
                     </div>
                 </div>
-                <div class="absolute bottom-96 left-32" data-reveal>
-                    <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
-                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <div class="lg:hidden absolute bottom-64 left-6 right-6 flex flex-col gap-5">
+                    <div class="hover:scale-125 transition-all duration-300" data-reveal>
+                        <div class="space-y-2 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
+                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
                     </div>
-                </div>
-                <div class="absolute top-96 right-44" data-reveal>
-                    <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
-                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="hover:scale-125 transition-all duration-300" data-reveal>
+                        <div class="space-y-2 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
+                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
                     </div>
-                </div>
-                <div class="absolute bottom-96 right-64" data-reveal>
-                    <div class="w-64 space-y-4 text-white">
-                        <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
-                        <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                    <div class="hover:scale-125 transition-all duration-300" data-reveal>
+                        <div class="space-y-2 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
+                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
+                    </div>
+                    <div class="hover:scale-125 transition-all duration-300" data-reveal>
+                        <div class="space-y-2 text-white">
+                            <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
+                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="parade">
+        <section>
             <div class="relative bg-[#333333] py-24">
                 <p class="absolute font-nineties text-5xl left-0 right-0 text-center -top-24 z-10">Activity Highlight</p>
                 <div class="container text-center">
@@ -260,6 +288,7 @@
                 image="assets/image/cardAct.png"
                 link="/dining" />
             <x-feature-card
+                id="parade"
                 color="#333333"
                 text="#FFFFFF"
                 title="Parade"
