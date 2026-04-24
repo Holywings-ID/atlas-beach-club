@@ -36,9 +36,24 @@ class PageController
         return view('pages.explore');
     }
 
-    public function exploreDetail(): View
+    public function exploreFamily(): View
     {
-        return view('pages.exploredetail');
+        return view('pages.explore-family');
+    }
+
+    public function exploreCouple(): View
+    {
+        return view('pages.explore-couple');
+    }
+
+    public function exploreFriends(): View
+    {
+        return view('pages.explore-friends');
+    }
+
+    public function exploreGroup(): View
+    {
+        return view('pages.explore-group');
     }
     public function menu(): View
     {
@@ -58,6 +73,16 @@ class PageController
     public function support(): View
     {
         return view('pages.support');
+    }
+
+    public function supportQa(): View
+    {
+        return view('pages.support-qa');
+    }
+
+    public function supportTerms(): View
+    {
+        return view('pages.support-terms');
     }
 
     public function reserve(): View

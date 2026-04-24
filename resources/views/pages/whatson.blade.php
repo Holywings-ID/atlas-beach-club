@@ -27,7 +27,7 @@
                         <img src="{{ asset('assets/image/whatson2.png') }}" alt="The Biggest Beach Club In The World" class="w-dvw h-[1000px] object-cover object-center" />
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
 
-                        <div class="text-white absolute inset-0 h-full w-full">
+                        <div class="text-white absolute inset-0 h-full w-full" id="event-highlight">
                             <h3 class="relative z-20 text-5xl font-nineties mb-4 text-center" data-reveal>Event Highlight</h3>
                             <div class="relative z-30 container mt-12 lg:mt-24 px-4" data-reveal
                                 x-data="{
@@ -234,7 +234,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="parade">
             <div class="relative bg-[#333333] py-24">
                 <p class="absolute font-nineties text-5xl left-0 right-0 text-center -top-24 z-10">Activity Highlight</p>
                 <div class="container text-center">
@@ -242,6 +242,7 @@
                 </div>
             </div>
             <x-feature-card
+                id="bbq-grill"
                 color="#333333"
                 text="#FFFFFF"
                 title="Live BBQ Grill"
@@ -250,9 +251,18 @@
                 image="assets/image/cardAct.png"
                 link="/dining" />
             <x-feature-card
+                id="bar-takeover"
                 color="#333333"
                 text="#FFFFFF"
                 title="Bar Takeover"
+                subtitle="Raised by Spirits"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
+                image="assets/image/cardAct.png"
+                link="/dining" />
+            <x-feature-card
+                color="#333333"
+                text="#FFFFFF"
+                title="Parade"
                 subtitle="Raised by Spirits"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
                 image="assets/image/cardAct.png"

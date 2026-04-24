@@ -1,6 +1,6 @@
-@props(['color' => '#333333', 'text' => '#ffffff', 'title', 'subtitle', 'description', 'image', 'link' => '#'])
+@props(['color' => '#333333', 'text' => '#ffffff', 'title', 'subtitle', 'description', 'image', 'link' => '#', 'id' => null])
 
-<div style="background-color: {{ $color }}">
+<div @if($id) id="{{ $id }}" @endif style="background-color: {{ $color }}">
     <div class="container space-y-8 py-12" data-reveal>
         <div class="flex gap-8">
             <div class="w-1/5 font-semibold" style="color: {{ $text }}">{{ $title }}</div>

@@ -76,6 +76,7 @@
                 </div>
 
                 <div x-data="calendarPicker()" class="relative shrink-0 ml-4">
+                    {{-- Trigger Button --}}
                     <button @click="open = !open" class="flex items-center gap-1.5 bg-[#963D20] hover:bg-[#7A3118] text-[#EBE1D5] font-medium tracking-wide px-3 py-2 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -83,35 +84,109 @@
                         <span x-text="selected ? selected : 'Calendar'"></span>
                     </button>
 
+                    {{-- Modal Overlay --}}
                     <div x-show="open" @click.outside="open = false" x-transition
-                        class="absolute right-0 top-full mt-2 w-72 bg-[#EBE1D5] border border-[#DDD0C2] shadow-xl z-50 p-4">
-                        <div class="flex items-center justify-between mb-3">
-                            <button @click="prevMonth()" class="w-7 h-7 rounded-full border border-[#963D20] text-[#963D20] hover:bg-[#963D20] hover:text-[#EBE1D5] flex items-center justify-center transition-colors">
-                                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <span class="text-[#963D20] font-medium" x-text="monthLabel"></span>
-                            <button @click="nextMonth()" class="w-7 h-7 rounded-full border border-[#963D20] text-[#963D20] hover:bg-[#963D20] hover:text-[#EBE1D5] flex items-center justify-center transition-colors">
-                                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
+                        class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+                        <div class="bg-[#EBE1D5] rounded-xl border border-[#D4C8B8] shadow-2xl w-full max-w-3xl overflow-hidden flex relative"
+                            @click.stop>
 
-                        <div class="grid grid-cols-7 text-center text-sm">
-                            <template x-for="d in ['Su','Mo','Tu','We','Th','Fr','Sa']">
-                                <span x-text="d" class="py-1 text-xs text-[#8a7a6a]"></span>
-                            </template>
-                            <template x-for="blank in startDay">
-                                <span></span>
-                            </template>
-                            <template x-for="day in daysInMonth">
-                                <button @click="selectDate(day)"
-                                    :class="isSelected(day) ? 'bg-[#963D20] text-[#EBE1D5]' : 'text-[#6a5a4a] hover:bg-[#963D20]/10'"
-                                    class="w-8 h-8 mx-auto rounded-full flex items-center justify-center transition-colors cursor-pointer"
-                                    x-text="day"></button>
-                            </template>
+                            {{-- Left: Calendar --}}
+                            <div class="flex-1 p-6 border-r border-[#D4C8B8]">
+                                {{-- Month Header --}}
+                                <div class="flex items-center justify-center gap-4 mb-5">
+                                    <button @click="prevMonth()"
+                                        class="w-7 h-7 rounded-full border border-[#963D20] text-[#963D20] hover:bg-[#963D20] hover:text-[#EBE1D5] flex items-center justify-center transition-colors">
+                                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+                                        </svg>
+                                    </button>
+                                    <span class="text-[#963D20] font-medium text-base min-w-[130px] text-center" x-text="monthLabel"></span>
+                                    <button @click="nextMonth()"
+                                        class="w-7 h-7 rounded-full border border-[#963D20] text-[#963D20] hover:bg-[#963D20] hover:text-[#EBE1D5] flex items-center justify-center transition-colors">
+                                        <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                {{-- Day Grid --}}
+                                <div class="grid grid-cols-7 text-center text-sm">
+                                    <template x-for="d in ['MON','TUE','WED','THU','FRI','SAT','SUN']">
+                                        <span x-text="d" class="py-1 text-[10px] font-medium text-[#8a7060]"></span>
+                                    </template>
+                                    <template x-for="blank in startDay">
+                                        <span class="aspect-square bg-[#E0D4C4] rounded-md"></span>
+                                    </template>
+                                    <template x-for="day in daysInMonth">
+                                        <button @click="selectDate(day)"
+                                            :class="isSelected(day)
+                                    ? 'bg-[#963D20] text-[#EBE1D5]'
+                                    : hasEvent(day)
+                                        ? 'bg-[#963D20]/10 text-[#4a3828] hover:bg-[#963D20]/20'
+                                        : 'text-[#4a3828] hover:bg-[#963D20]/10'"
+                                            class="aspect-square flex flex-col items-center justify-center rounded-md text-sm transition-colors cursor-pointer relative">
+                                            <span x-text="day"></span>
+                                            <span x-show="hasEvent(day)"
+                                                :class="isSelected(day) ? 'bg-[#EBE1D5]' : 'bg-[#963D20]'"
+                                                class="w-1 h-1 rounded-full mt-0.5"></span>
+                                        </button>
+                                    </template>
+                                    <template x-for="blank in trailingDays">
+                                        <span class="aspect-square bg-[#E0D4C4] rounded-md"></span>
+                                    </template>
+                                </div>
+                            </div>
+
+                            {{-- Right: Events Panel --}}
+                            <div class="w-72 mt-5 p-6 flex flex-col gap-3 overflow-y-auto max-h-[520px]">
+                                <div class="flex items-center justify-between pb-2 border-b border-[#D4C8B8]">
+                                    <span class="text-[#4a3828] font-medium" x-text="showingAll ? 'Upcoming Events' : 'Events'"></span>
+                                    <span x-show="displayEvents.length > 0"
+                                        class="text-xs text-[#963D20] bg-[#963D20]/10 px-2 py-0.5 rounded-full"
+                                        x-text="displayEvents.length + ' Event' + (displayEvents.length > 1 ? 's' : '')"></span>
+                                </div>
+
+                                <p class="text-xs text-[#7a6858]" x-text="showingAll ? 'All upcoming events' : selectedDateLabel"></p>
+
+                                <template x-if="displayEvents.length === 0">
+                                    <p class="text-sm text-[#8a7060]" x-text="showingAll ? 'No upcoming events.' : 'No events scheduled for this date.'"></p>
+                                </template>
+
+                                <template x-for="event in displayEvents" :key="event.id">
+                                    <div class="flex gap-3 bg-[#F5EEE4] border border-[#D4C8B8] rounded-lg overflow-hidden">
+                                        <img :src="event.image" :alt="event.name"
+                                            class="w-16 h-20 object-cover flex-shrink-0 bg-[#D4C8B8]"
+                                            onerror="this.style.background='#D4C8B8'">
+                                        <div class="py-2 pr-3 flex flex-col justify-center gap-1">
+                                            <p class="text-sm font-medium text-[#4a3828]" x-text="event.name"></p>
+                                            <p class="text-xs text-[#7a6858] flex items-center gap-1">
+                                                <svg class="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                                </svg>
+                                                <span x-text="event.date"></span>
+                                            </p>
+                                            <p class="text-xs text-[#7a6858] flex items-center gap-1">
+                                                <svg class="w-3 h-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <circle cx="12" cy="12" r="10" />
+                                                    <polyline points="12 6 12 12 16 14" />
+                                                </svg>
+                                                <span x-text="event.time"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+
+                            {{-- Close Button --}}
+                            <button @click="open = false"
+                                class="absolute top-3 right-3 w-7 h-7 flex items-center justify-center text-[#7a6858] hover:text-[#963D20] transition-colors">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -407,60 +482,131 @@
 
         /* ── Calendar picker ── */
         function calendarPicker() {
-            const now = new Date();
             return {
                 open: false,
-                month: now.getMonth(),
-                year: now.getFullYear(),
                 selected: null,
-                selectedDay: null,
-                selectedMonth: null,
-                selectedYear: null,
+                currentYear: new Date().getFullYear(),
+                currentMonth: new Date().getMonth(),
+                selectedDayEvents: [],
+                selectedDateLabel: '',
+                showingAll: true,
+
+                events: {
+                    '2026-04-24': [{
+                        id: 1,
+                        name: 'Atlas Opening Night',
+                        date: 'Thursday, 24 April 2026',
+                        time: '20:00 - 02:00',
+                        image: '/images/events/atlas.jpg'
+                    }],
+                    '2026-05-05': [{
+                        id: 2,
+                        name: 'French Montana',
+                        date: 'Tuesday, 05 May 2026',
+                        time: '13:00 - 00:00',
+                        image: '/images/events/french-montana.jpg'
+                    }],
+                    '2026-05-14': [{
+                            id: 3,
+                            name: 'Backyard Vol.1 – DJ Talisha',
+                            date: 'Thursday, 14 May 2026',
+                            time: '12:00 - 00:00',
+                            image: '/images/events/talisha.jpg'
+                        },
+                        {
+                            id: 4,
+                            name: 'Late Night Grooves',
+                            date: 'Thursday, 14 May 2026',
+                            time: '23:00 - 04:00',
+                            image: '/images/events/grooves.jpg'
+                        },
+                    ],
+                },
+
                 get monthLabel() {
-                    return new Date(this.year, this.month).toLocaleString('en-US', {
+                    return new Date(this.currentYear, this.currentMonth, 1)
+                        .toLocaleDateString('en-US', {
+                            month: 'long',
+                            year: 'numeric'
+                        }).toUpperCase();
+                },
+
+                get startDay() {
+                    let day = new Date(this.currentYear, this.currentMonth, 1).getDay();
+                    return day === 0 ? 6 : day - 1; // Monday-first offset
+                },
+
+                get daysInMonth() {
+                    return new Date(this.currentYear, this.currentMonth + 1, 0).getDate();
+                },
+
+                get trailingDays() {
+                    const total = this.startDay + this.daysInMonth;
+                    const rem = total % 7;
+                    return rem === 0 ? 0 : 7 - rem;
+                },
+
+                toKey(day) {
+                    return `${this.currentYear}-${String(this.currentMonth + 1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+                },
+
+                isSelected(day) {
+                    return this.selected === this.toKey(day);
+                },
+
+                get upcomingEvents() {
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+                    return Object.entries(this.events)
+                        .filter(([key]) => new Date(key + 'T00:00:00') >= today)
+                        .sort(([a], [b]) => a.localeCompare(b))
+                        .flatMap(([, evts]) => evts);
+                },
+
+                get displayEvents() {
+                    return this.showingAll ? this.upcomingEvents : this.selectedDayEvents;
+                },
+
+                hasEvent(day) {
+                    return !!this.events[this.toKey(day)];
+                },
+
+                selectDate(day) {
+                    const key = this.toKey(day);
+                    if (this.selected === key) {
+                        this.selected = null;
+                        this.showingAll = true;
+                        this.selectedDayEvents = [];
+                        this.selectedDateLabel = '';
+                        return;
+                    }
+                    this.selected = key;
+                    this.showingAll = false;
+                    this.selectedDayEvents = this.events[key] || [];
+                    const d = new Date(this.currentYear, this.currentMonth, day);
+                    this.selectedDateLabel = d.toLocaleDateString('en-US', {
+                        weekday: 'long',
+                        day: '2-digit',
                         month: 'long',
                         year: 'numeric'
                     });
                 },
-                get startDay() {
-                    return new Date(this.year, this.month, 1).getDay();
-                },
-                get daysInMonth() {
-                    return new Date(this.year, this.month + 1, 0).getDate();
-                },
-                prevMonth() {
-                    if (this.month === 0) {
-                        this.month = 11;
-                        this.year--;
-                    } else {
-                        this.month--;
-                    }
-                },
-                nextMonth() {
-                    if (this.month === 11) {
-                        this.month = 0;
-                        this.year++;
-                    } else {
-                        this.month++;
-                    }
-                },
-                selectDate(day) {
-                    this.selectedDay = day;
-                    this.selectedMonth = this.month;
-                    this.selectedYear = this.year;
-                    this.selected = new Date(this.year, this.month, day).toLocaleDateString('en-US', {
-                        day: 'numeric',
-                        month: 'short',
-                        year: 'numeric'
-                    });
-                    this.open = false;
-                },
-                isSelected(day) {
-                    return day === this.selectedDay && this.month === this.selectedMonth && this.year === this.selectedYear;
-                },
-            };
-        }
 
+                prevMonth() {
+                    if (this.currentMonth === 0) {
+                        this.currentMonth = 11;
+                        this.currentYear--;
+                    } else this.currentMonth--;
+                },
+
+                nextMonth() {
+                    if (this.currentMonth === 11) {
+                        this.currentMonth = 0;
+                        this.currentYear++;
+                    } else this.currentMonth++;
+                },
+            }
+        }
         /* ── Venue tabs ── */
         function setVenue(el) {
             document.querySelectorAll('.venue-tab').forEach(t => {

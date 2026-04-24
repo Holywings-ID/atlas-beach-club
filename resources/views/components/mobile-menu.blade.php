@@ -2,12 +2,30 @@
     $navItems = [
         ['label' => 'Home', 'route' => 'home'],
         ['label' => 'Daybed', 'route' => 'daybed'],
-        ['label' => 'Dining', 'route' => 'dining'],
+        ['label' => 'Dining', 'route' => 'dining', 'children' => [
+            ['label' => 'Overview', 'route' => 'dining'],
+            ['label' => 'Menu', 'route' => 'menu'],
+        ]],
         ['label' => 'Pool Bar', 'route' => 'poolbar'],
-        ['label' => 'Explore', 'route' => 'explore'],
-        ['label' => "What's On", 'route' => 'whatson'],
+        ['label' => 'Activities', 'route' => 'activities'],
+        ['label' => 'Explore', 'route' => 'explore', 'children' => [
+            ['label' => 'Family', 'route' => 'explore.family'],
+            ['label' => 'Couple', 'route' => 'explore.couple'],
+            ['label' => 'Friends', 'route' => 'explore.friends'],
+            ['label' => 'Group', 'route' => 'explore.group'],
+        ]],
+        ['label' => "What's On", 'route' => 'whatson', 'children' => [
+            ['label' => 'Event Highlight', 'href' => '/whats-on#event-highlight'],
+            ['label' => 'BBQ Grill', 'href' => '/whats-on#bbq-grill'],
+            ['label' => 'Bar Takeover', 'href' => '/whats-on#bar-takeover'],
+            ['label' => 'Parade', 'href' => '/whats-on#parade'],
+        ]],
         ['label' => 'Offer', 'route' => 'offer'],
-        ['label' => 'Support', 'route' => 'support'],
+        ['label' => 'Support', 'route' => 'support', 'children' => [
+            ['label' => 'Support', 'route' => 'support'],
+            ['label' => 'Q&A', 'route' => 'support.qa'],
+            ['label' => 'Terms & Conditions', 'route' => 'support.terms'],
+        ]],
         ['label' => 'Reserve', 'route' => 'reserve'],
     ];
 @endphp
@@ -34,10 +52,27 @@
     </div>
     <nav class="mt-8">
         @foreach ($navItems as $item)
+            @if (!empty($item['children']))
+            <div x-data="{ sub: false }">
+                <button @click="sub = !sub" class="w-full flex items-center justify-between px-6 py-3 text-lg {{ request()->routeIs($item['route'].'*') ? 'font-bold text-black' : 'text-gray-600' }}">
+                    {{ $item['label'] }}
+                    <svg class="w-4 h-4 transition-transform" :class="sub && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="sub" x-cloak x-transition>
+                    @foreach ($item['children'] as $child)
+                    <a href="{{ isset($child['route']) ? route($child['route']) : $child['href'] }}"
+                       class="block pl-10 pr-6 py-2 text-base {{ isset($child['route']) && request()->routeIs($child['route']) ? 'font-bold text-black' : 'text-gray-500' }}">
+                        {{ $child['label'] }}
+                    </a>
+                    @endforeach
+                </div>
+            </div>
+            @else
             <a href="{{ route($item['route']) }}"
                class="block px-6 py-3 text-lg {{ request()->routeIs($item['route']) ? 'font-bold text-black' : 'text-gray-600' }}">
                 {{ $item['label'] }}
             </a>
+            @endif
         @endforeach
     </nav>
 </div>
