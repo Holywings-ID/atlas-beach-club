@@ -78,6 +78,9 @@ $navItems = [
     },
     init() {
         this.checkBg();
+        window.addEventListener('load', () => this.checkBg());
+        setTimeout(() => this.checkBg(), 300);
+        setTimeout(() => this.checkBg(), 1000);
         window.addEventListener('scroll', () => requestAnimationFrame(() => this.checkBg()), { passive: true });
         window.addEventListener('resize', () => this.checkBg(), { passive: true });
     }
