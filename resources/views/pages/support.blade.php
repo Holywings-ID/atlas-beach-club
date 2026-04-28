@@ -4,7 +4,8 @@
             <div class="container flex flex-col lg:flex-row gap-24 justify-between">
                 <div class="lg:w-2/5">
                     <h1 class="font-extrabold text-6xl uppercase font-nineties mb-5">Hola<br />Migas</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                    <p><strong>Hi, this is Atlas Beach Club.</strong></p>
+                    <p>For any inquiries or assistance, please contact our team—we’re here to make your experience seamless.</p>
                     <div class="mt-16 mb-4">
                         <p class="font-semibold">Hotline</p>
                         <p>62 811 1908 2168</p>

@@ -205,32 +205,32 @@
                 <div class="container absolute top-12 left-0 right-0 w-full text-white">
                     <div class="flex lg:flex-row flex-col gap-8">
                         <p class="font-extrabold font-nineties text-5xl whitespace-break-spaces text-right">Genre Master</p>
-                        <p class="lg:text-xl text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                        <p class="lg:text-xl text-base">At Atlas, music isn’t just played, it’s mastered. Our Genre Masters bring together the best of every sound, creating moments that define the energy of the day and night.</p>
                     </div>
                 </div>
                 <div class="lg:block hidden">
                     <div class="absolute hover:scale-125 transition-all duration-300 top-96 left-56" data-reveal>
                         <div class="w-64 space-y-4 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
-                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="text-lg">High-energy beats, bold rhythms, and crowd-moving anthems that keep the vibe alive.</p>
                         </div>
                     </div>
                     <div class="absolute hover:scale-125 transition-all duration-300 bottom-96 left-32" data-reveal>
                         <div class="w-64 space-y-4 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
-                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="text-lg">Smooth, soulful sounds that set the tone for laid-back moments and late-night grooves.</p>
                         </div>
                     </div>
                     <div class="absolute hover:scale-125 transition-all duration-300 top-96 right-44" data-reveal>
                         <div class="w-64 space-y-4 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
-                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="text-lg">Deep, driving rhythms built for immersive experiences and underground energy.</p>
                         </div>
                     </div>
                     <div class="absolute hover:scale-125 transition-all duration-300 bottom-96 right-64" data-reveal>
                         <div class="w-64 space-y-4 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
-                            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="text-lg">Big drops, electrifying builds, and festival-level energy that takes the night to another level.</p>
                         </div>
                     </div>
                 </div>
@@ -238,25 +238,25 @@
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
-                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="lg:text-lg text-sm">High-energy beats, bold rhythms, and crowd-moving anthems that keep the vibe alive.</p>
                         </div>
                     </div>
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
-                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="lg:text-lg text-sm">Smooth, soulful sounds that set the tone for laid-back moments and late-night grooves.</p>
                         </div>
                     </div>
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
-                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="lg:text-lg text-sm">Deep, driving rhythms built for immersive experiences and underground energy.</p>
                         </div>
                     </div>
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
                             <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
-                            <p class="lg:text-lg text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <p class="lg:text-lg text-sm">Big drops, electrifying builds, and festival-level energy that takes the night to another level.</p>
                         </div>
                     </div>
                 </div>

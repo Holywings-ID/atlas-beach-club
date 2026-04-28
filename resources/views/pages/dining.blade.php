@@ -23,7 +23,10 @@
                         <div class="container absolute z-20 inset-0">
                             <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Eat. Sip.<br /> Repeat.</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Indulge in a dining experience where flavor meets the ocean. At The Deck, our chefs curate a menu designed to satisfy every palate, bringing together quality ingredients, bold flavors, and beautifully crafted dishes.
+                            </p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
+                                Set against a stunning beachfront backdrop, every meal is elevated by panoramic ocean views and a relaxed yet refined atmosphere. Whether you’re joining us for a casual lunch or a sunset dinner, The Deck delivers the perfect balance of taste, ambiance, and experience.
                             </p>
                         </div>
                     </section>
@@ -101,14 +104,14 @@
                 </div>
 
                 @php
-                    $zones = config('daybedsover');
-                    foreach ($zones as &$z) {
-                        foreach ($z['position'] as &$p) {
-                            $p['image'] = array_map(fn($v) => str_starts_with($v, 'img:') ? $v : asset($v), $p['image']);
-                            $p['layoutImage'] = asset($p['layoutImage']);
-                        }
-                    }
-                    unset($z, $p);
+                $zones = config('daybedsover');
+                foreach ($zones as &$z) {
+                foreach ($z['position'] as &$p) {
+                $p['image'] = array_map(fn($v) => str_starts_with($v, 'img:') ? $v : asset($v), $p['image']);
+                $p['layoutImage'] = asset($p['layoutImage']);
+                }
+                }
+                unset($z, $p);
                 @endphp
 
                 <div x-data="{

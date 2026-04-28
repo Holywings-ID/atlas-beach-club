@@ -23,7 +23,13 @@
                         <div class="container absolute z-20 inset-0">
                             <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Dusk Different</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                At the center of the energy, our Pool Bar is designed to keep the vibe flowing from day to night. Built across two levels, the upper floor serves the beachfront sand area, while the lower level connects directly to the pool, so wherever you are, your next drink is always within reach.
+                            </p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
+                                Expect everything from refreshing classics to signature cocktails, all crafted by our bartenders to match the rhythm of Atlas. Whether you’re in the water, on the sand, or soaking in the atmosphere, the Pool Bar is where the experience comes alive.
+                            </p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
+                                <strong>Stay cool. Stay refreshed. Stay in the moment.</strong>
                             </p>
                         </div>
                     </section>
@@ -37,14 +43,14 @@
         <section id="section-two" class="z-[2] relative -mt-[100vh] bg-[#EBE1D5] text-[#963D20] overflow-hidden">
             <div class="container space-y-12 text-center py-12 pb-24">
                 @php
-                    $zones = config('daybedsover');
-                    foreach ($zones as &$z) {
-                        foreach ($z['position'] as &$p) {
-                            $p['image'] = array_map(fn($v) => str_starts_with($v, 'img:') ? $v : asset($v), $p['image']);
-                            $p['layoutImage'] = asset($p['layoutImage']);
-                        }
-                    }
-                    unset($z, $p);
+                $zones = config('daybedsover');
+                foreach ($zones as &$z) {
+                foreach ($z['position'] as &$p) {
+                $p['image'] = array_map(fn($v) => str_starts_with($v, 'img:') ? $v : asset($v), $p['image']);
+                $p['layoutImage'] = asset($p['layoutImage']);
+                }
+                }
+                unset($z, $p);
                 @endphp
 
                 <div x-data="{
@@ -99,10 +105,10 @@
                         </div>
                         <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:bg-[#9a3828] transition">
                             Reserve <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
-                                <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
-                                <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
-                                <path fill="#ffffff" d="M16 24h17v2H16z" />
-                            </svg></span>
+                                    <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
+                                    <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
+                                    <path fill="#ffffff" d="M16 24h17v2H16z" />
+                                </svg></span>
                         </a>
                     </div>
 

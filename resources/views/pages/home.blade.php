@@ -24,13 +24,24 @@
                         <div class="container absolute z-20 inset-0">
                             <h2 class="text-3xl lg:text-5xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <strong>New Atlas Beach Club</strong> isn’t just an upgrade, t’s a complete transformation of what a beach club experience should feel like. Bigger, bolder, and more immersive than ever, we’re redefining the standard of Beach Club.
                             </p>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Set along the coastline with our signature <strong>beanbags on the beach</strong>, Atlas remains the only destination where you can truly sink into the sand in style. Now, paired with our <strong>newly expanded and oversized space</strong>, every moment feels more elevated whether you're here to relax or celebrate.
                             </p>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Entertainment at Atlas has evolved into a <strong>multi-sensory journey</strong>, powered by the four elements: <strong>water, air, fire, and earth</strong>. Expect dynamic shows, larger-than-life performances, and an atmosphere that transforms from day to night seamlessly.
+                            </p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
+                                And this is just the beginning.
+                            </p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
+                                From global artists and high-energy events to upgraded spaces designed for unforgettable moments, <strong>Atlas Beach Club</strong> is built to be not just the biggest, but the most iconic beach club in the world.
+                            </p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
+                                <strong>
+                                    Come for the view. Stay for the experience.
+                                </strong>
                             </p>
                         </div>
                     </section>
@@ -39,39 +50,40 @@
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
-                            <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Biggest Beach Club In The World</h3>
+                            <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Bigger Beach Club In The World</h3>
                             <h4 class="relative z-20 text-3xl lg:text-5xl font-nineties flex flex-col lg:flex-row items-center justify-center font-extrabold" data-reveal>
                                 5 HIGHLIGHTS
                                 <span class="font-parslay font-normal px-5 text-3xl">of</span>
                                 ATLAS BEACH CLUB
                             </h4>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
-                                <a href="{{ route('home') . '/#section-two' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-two' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-52 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Daybeds</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                    <div>Relax in Bali’s most spacious and upgraded daybeds, designed for comfort, style, and the perfect beachfront view.</div>
                                 </a>
-                                <a href="{{ route('home') . '/#section-dining' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-dining' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-52 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Dining</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                    <div>From local flavors to international favorites, enjoy a curated dining experience that matches every mood, all day long.</div>
                                 </a>
-                                <a href="{{ route('home') . '/#section-poolbar' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-poolbar' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-52 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Poolbar</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                    <div>Stay cool while you sip. Our pool bar keeps the drinks flowing with signature cocktails, live vibes, and unbeatable energy.</div>
                                 </a>
                             </div>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
-                                <a href="{{ route('home') . '/#section-activities' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-activities' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-52 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Activity</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                    <div>Activities
+                                        More than just a beach club, experience daily entertainment, performances, and immersive moments inspired by the elements.</div>
                                 </a>
-                                <a href="{{ route('home') . '/#section-explore' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-80 p-4 rounded-3xl hover:bg-[#10496E]/60">
+                                <a href="{{ route('home') . '/#section-explore' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-52 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 05</div>
                                     <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Group Bookings</div>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                                    <div>Celebrating something big? From birthdays to special events, Atlas is built to host unforgettable group experiences.</div>
                                 </a>
                             </div>
                         </div>
@@ -113,7 +125,7 @@
             </div>
             <div class="container pt-24 relative text-[#963D20] space-y-5" data-reveal>
                 <p class="w-full max-w-[600px] text-center text-lg mx-auto">What’s Included? </p>
-                <div class="flex items-center gap-3 justify-center flex-wrap">
+                <div class="flex items-center gap-8 justify-center flex-wrap">
                     <p class="w-max text-center">Lorem Ipsum </p>
                     <p class="w-max text-center">Lorem Ipsum </p>
                     <p class="w-max text-center">Lorem Ipsum </p>
@@ -223,12 +235,15 @@
                             </span>
                         </a>
                     </div>
-                    <div class="max-w-[800px] mx-auto" data-reveal>
+                    <div class="max-w-[800px] mx-auto space-y-5" data-reveal>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru
+                            Experience dining elevated at The Deck, where exceptional cuisine meets one of the best views in Bali. Curated by our chefs, each dish is crafted with quality ingredients and bold flavors, offering a menu that satisfies every palate from relaxed bites to refined selections.
+                        </p>
+                        <p>
+                            Set in a beautifully designed restaurant space, The Deck overlooks the beach, giving you uninterrupted ocean views and a front-row seat to Bali’s iconic sunsets. Whether you’re joining us for a leisurely lunch or a golden-hour dinner, every moment is enhanced by the atmosphere.
+                        </p>
+                        <p>
+                            Great food, stunning scenery, and an effortless beachfront vibe, this is dining at Atlas.
                         </p>
                     </div>
                     <div class="pt-12">
@@ -437,12 +452,9 @@
                             </div>
                             <div class="flex flex-col lg:flex-row gap-8 lg:gap-24 text-left">
                                 <div class="w-full lg:w-2/5 space-y-3" data-reveal>
-                                    <div class="font-nineties text-3xl">Courtside is the new</div>
-                                    <div class="font-parslay text-5xl">Social Club</div>
-                                    <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru</div>
+                                    <div class="font-nineties text-3xl">{{ $activity['description'] }}</div>
+                                    <div class="font-parslay text-5xl">{{ $activity['description2'] }}</div>
+                                    <div class=" pr-12">{{ $activity['description3'] }}</div>
                                 </div>
                                 <div class="relative w-full lg:w-3/5">
                                     <img src="{{ asset($activity['images'][3]['img']) }}" alt="" class="w-full h-[400px] lg:h-[650px] object-top object-cover" data-reveal />

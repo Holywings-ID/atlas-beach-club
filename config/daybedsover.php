@@ -2,8 +2,8 @@
 
 return [
     [
-        'name' => 'Copacabana',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        'name' => 'The Deck',
+        'description' => 'An elevated dining space where we serve great food in a scenic atmosphere, perfect for a more refined beach club experience.',
         'position' => [
             [
                 'id' => 1,
@@ -62,8 +62,8 @@ return [
         ],
     ],
     [
-        'name' => 'Surf Side',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        'name' => 'Deck Side',
+        'description' => 'A comfortable, laid-back zone featuring dry daybeds, ideal for those who want to chill, socialize, and enjoy the view without being in the water.',
         'position' => [
             [
                 'id' => 3,
@@ -122,8 +122,8 @@ return [
         ],
     ],
     [
-        'name' => 'Sultan',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        'name' => 'Pool Side',
+        'description' => 'The heart of the action during the day. Surrounded by water and music, this area brings a lively, energetic poolside experience.',
         'position' => [
             [
                 'id' => 3,
@@ -182,8 +182,8 @@ return [
         ],
     ],
     [
-        'name' => 'Backstage',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor',
+        'name' => 'Party Side',
+        'description' => 'Front and center to the stage, this is where the energy peaks. The best spot to enjoy live performances, DJs, and unforgettable party moments.',
         'position' => [
             [
                 'id' => 3,
