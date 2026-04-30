@@ -15,9 +15,9 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-x-8 text-black mb-10">
-                <span>Venue : <strong class="font-medium text-[#963D20]">Beach Club</strong></span>
-                <span>Vibe Tags : <strong class="font-medium text-[#963D20]">Photography / Dining / Relaxation</strong></span>
-                <span>Best for : <strong class="font-medium text-[#963D20]">Couple / Family / Friends</strong></span>
+                <span>{{ __('nav.venue') }} : <strong class="font-medium text-[#963D20]">Beach Club</strong></span>
+                <span>{{ __('nav.vibe_tags') }} : <strong class="font-medium text-[#963D20]">Photography / Dining / Relaxation</strong></span>
+                <span>{{ __('nav.best_for') }} : <strong class="font-medium text-[#963D20]">Couple / Family / Friends</strong></span>
             </div>
 
             <div class="relative w-ful h-[340px] md:h-[650px]">
@@ -70,7 +70,7 @@
 
                 <div class="lg:w-1/5">
                     <p class="font-semibold uppercase text-[#963D20]">
-                        Choose your<br>daybed
+                        {{ __('nav.choose_your_daybed') }}
                     </p>
                 </div>
 
@@ -120,7 +120,7 @@
 
                 <div class="lg:w-1/5">
                     <p class="font-semibold uppercase text-[#963D20]">
-                        Location<br>Guide
+                        {{ __('nav.location_guide') }}
                     </p>
                     <h2 class="mt-12 lg:mt-44 font-extrabold font-nineties text-[#963D20] text-5xl">
                         Ocean<br>Beach<br>Pool

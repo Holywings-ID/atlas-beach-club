@@ -21,7 +21,7 @@
                         Beverage
                     </button>
                     <button @click="selected = 'shisha'" :class="selected === 'shisha' ? 'text-black' : 'text-[#963D20]'" class="text-left font-semibold pb-2 whitespace-nowrap text-xl border-[#963D20] border-b">
-                        Shisha & Cigars
+                        {{ __('nav.shisha_cigars') }}
                     </button>
                     <a href="{{ route('reserve') }}" class="inline-flex items-center gap-2 text-sm bg-[#963D20] text-white uppercase rounded-full px-6 py-2.5 hover:scale-110 transition">
                         Reserve
@@ -39,7 +39,7 @@
                 <div class="">
                     <img x-show="selected === 'food'" src="{{ asset('assets/image/menu.png') }}" alt="Food Menu" class="h-full w-full object-contain" />
                     <img x-show="selected === 'beverage'" src="{{ asset('assets/image/menu.png') }}" alt="Beverage Menu" class="h-full w-full object-contain" />
-                    <img x-show="selected === 'shisha'" src="{{ asset('assets/image/menu.png') }}" alt="Shisha & Cigars Menu" class="h-full w-full object-contain" />
+                    <img x-show="selected === 'shisha'" src="{{ asset('assets/image/menu.png') }}" alt="{{ __('nav.shisha_cigars') }} Menu" class="h-full w-full object-contain" />
                 </div>
             </div>
         </section>

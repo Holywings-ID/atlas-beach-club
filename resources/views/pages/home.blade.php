@@ -17,32 +17,18 @@
                         video-desktop="https://atlasbeachfest.s3.ap-southeast-3.amazonaws.com/production/atlas/page/2025/9/1/6K36WKEx34zUaVwRC1D8mLBzvoVx2bpfwIdaCGVD.webm"
                         video-mobile="https://atlasbeachfest.s3.ap-southeast-3.amazonaws.com/production/atlas/page/2025/9/1/6K36WKEx34zUaVwRC1D8mLBzvoVx2bpfwIdaCGVD.webm"
                         title="Atlas Beach Club"
-                        sub-title="Welcome To"
+                        sub-title="{{ __('home.welcome_to') }}"
                         image="{{asset('assets/logo/logo.png')}}" />
 
                     <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
-                            <h2 class="text-3xl lg:text-5xl font-nineties font-extrabold" data-reveal>Enchanted Land</h2>
-                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                <strong>New Atlas Beach Club</strong> isn’t just an upgrade, t’s a complete transformation of what a beach club experience should feel like. Bigger, bolder, and more immersive than ever, we’re redefining the standard of Beach Club.
-                            </p>
-                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Set along the coastline with our signature <strong>beanbags on the beach</strong>, Atlas remains the only destination where you can truly sink into the sand in style. Now, paired with our <strong>newly expanded and oversized space</strong>, every moment feels more elevated whether you're here to relax or celebrate.
-                            </p>
-                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Entertainment at Atlas has evolved into a <strong>multi-sensory journey</strong>, powered by the four elements: <strong>water, air, fire, and earth</strong>. Expect dynamic shows, larger-than-life performances, and an atmosphere that transforms from day to night seamlessly.
-                            </p>
-                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                And this is just the beginning.
-                            </p>
-                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                From global artists and high-energy events to upgraded spaces designed for unforgettable moments, <strong>Atlas Beach Club</strong> is built to be not just the biggest, but the most iconic beach club in the world.
-                            </p>
-                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                <strong>
-                                    Come for the view. Stay for the experience.
-                                </strong>
-                            </p>
+                            <h2 class="text-3xl lg:text-5xl font-nineties font-extrabold" data-reveal>{{ __('home.enchanted_land') }}</h2>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>{!! __('home.enchanted_p1') !!}</p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>{!! __('home.enchanted_p2') !!}</p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>{!! __('home.enchanted_p3') !!}</p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>{{ __('home.enchanted_p4') }}</p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>{!! __('home.enchanted_p5') !!}</p>
+                            <p class="mx-auto mt-4 max-w-2xl" data-reveal>{!! __('home.enchanted_p6') !!}</p>
                         </div>
                     </section>
                     <section class="relative h-full w-full">
@@ -50,10 +36,10 @@
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-[#963D20]/30 to-[#963D20]"></div>
 
                         <div class="text-white absolute inset-0 h-full w-full pt-[700px]">
-                            <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>The Bigger Beach Club In The World</h3>
+                            <h3 class="relative z-20 text-xl lg:text-3xl font-nineties mb-4 text-center" data-reveal>{{ __('home.bigger_beach_club') }}</h3>
                             <h4 class="relative z-20 text-3xl lg:text-5xl font-nineties flex flex-col lg:flex-row items-center justify-center font-extrabold" data-reveal>
-                                5 HIGHLIGHTS
-                                <span class="font-parslay font-normal px-5 text-3xl">of</span>
+                                {{ __('home.5_highlights') }}
+                                <span class="font-parslay font-normal px-5 text-3xl">{{ __('home.of') }}</span>
                                 ATLAS BEACH CLUB
                             </h4>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
@@ -82,7 +68,7 @@
                                 </a>
                                 <a href="{{ route('home') . '/#section-explore' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-52 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 05</div>
-                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Group Bookings</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">{{ __('home.group_bookings') }}</div>
                                     <div>Celebrating something big? From birthdays to special events, Atlas is built to host unforgettable group experiences.</div>
                                 </a>
                             </div>
@@ -110,11 +96,11 @@
             <div class="relative">
                 <img src="{{asset('assets/image/highlight.png')}}" alt="" class="w-screen h-[800px] object-cover" />
                 <div class="absolute top-5 left-0 right-0 w-fit mx-auto text-center font-nineties text-4xl text-white">
-                    <p>No 01</p>
-                    <p>Daybeds</p>
+                    <p>{{ __('home.no_01') }}</p>
+                    <p>{{ __('home.daybeds_title') }}</p>
                 </div>
                 <div class="absolute bottom-2 left-0 right-0 w-fit mx-auto text-center font-nineties text-4xl text-white">
-                    <p>4 Sections</p>
+                    <p>{{ __('home.4_sections') }}</p>
                 </div>
             </div>
             <div class="container pt-24 relative bg-[#EBE1D5] text-[#963D20]">
@@ -124,7 +110,7 @@
                 <p class="w-full max-w-[600px] text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr</p>
             </div>
             <div class="container pt-24 relative text-[#963D20] space-y-5" data-reveal>
-                <p class="w-full max-w-[600px] text-center text-lg mx-auto">What’s Included? </p>
+                <p class="w-full max-w-[600px] text-center text-lg mx-auto">{{ __('nav.whats_included') }} </p>
                 <div class="flex items-center gap-8 justify-center flex-wrap">
                     <p class="w-max text-center">Lorem Ipsum </p>
                     <p class="w-max text-center">Lorem Ipsum </p>
@@ -181,14 +167,14 @@
                             <p>{{ $daybed['title'] }}</p>
                         </div>
                         <div class="flex items-center gap-8">
-                            <a href="{{ route('daybed') }}" class="items-center flex gap-3">Overview
+                            <a href="{{ route('daybed') }}" class="items-center flex gap-3">{{ __('nav.overview') }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
                                     <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
-                            <a href="{{ route('reserve') }}" class="items-center flex gap-3">Reserve
+                            <a href="{{ route('reserve') }}" class="items-center flex gap-3">{{ __('nav.reserve') }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -220,12 +206,12 @@
                         <p class="font-nineties text-4xl">Dining</p>
                     </div>
                     <div class="space-y-5">
-                        <p class="font-nineties text-4xl" data-reveal>World Class Dining</p>
+                        <p class="font-nineties text-4xl" data-reveal>{{ __('home.world_class_dining') }}</p>
                         <p class="font-parslay lg:ml-32 text-5xl" data-reveal>
-                            <span class="lg:pr-32">Come Hungry</span>
-                            <span class="lg:ml-32"><br />Leave Iconic</span>
+                            <span class="lg:pr-32">{{ __('home.come_hungry') }}</span>
+                            <span class="lg:ml-32"><br />{{ __('home.leave_iconic') }}</span>
                         </p>
-                        <p class="font-nineties text-2xl" data-reveal>find your taste only at pavilion</p>
+                        <p class="font-nineties text-2xl" data-reveal>{{ __('home.find_your_taste') }}</p>
                         <a href="{{ route('dining') }}" class="bg-white w-fit hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 text-[#963D20] flex items-center gap-2 mx-auto" data-reveal>
                             Overview
                             <span class="group-hover:rotate-90 transition-all duration-300">
@@ -237,13 +223,13 @@
                     </div>
                     <div class="max-w-[800px] mx-auto space-y-5" data-reveal>
                         <p>
-                            Experience dining elevated at The Deck, where exceptional cuisine meets one of the best views in Bali. Curated by our chefs, each dish is crafted with quality ingredients and bold flavors, offering a menu that satisfies every palate from relaxed bites to refined selections.
+                            {{ __('home.dining_p1') }}
                         </p>
                         <p>
-                            Set in a beautifully designed restaurant space, The Deck overlooks the beach, giving you uninterrupted ocean views and a front-row seat to Bali’s iconic sunsets. Whether you’re joining us for a leisurely lunch or a golden-hour dinner, every moment is enhanced by the atmosphere.
+                            {{ __('home.dining_p2') }}
                         </p>
                         <p>
-                            Great food, stunning scenery, and an effortless beachfront vibe, this is dining at Atlas.
+                            {{ __('home.dining_p3') }}
                         </p>
                     </div>
                     <div class="pt-12">
@@ -274,8 +260,8 @@
                     </div>
                     <div class="flex gap-24 text-left flex-col lg:flex-row">
                         <div class="w-full lg:w-2/5 space-y-3" data-reveal>
-                            <div class="font-nineties text-3xl">Taste the</div>
-                            <div class="font-parslay text-5xl">Extraordinary</div>
+                            <div class="font-nineties text-3xl">{{ __('home.taste_the') }}</div>
+                            <div class="font-parslay text-5xl">{{ __('home.extraordinary') }}</div>
                             <div class=" pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -292,14 +278,14 @@
                             <p>Dining</p>
                         </div>
                         <div class="flex items-center gap-4 lg:gap-8">
-                            <a href="{{ route('dining') }}" class="items-center flex gap-3">Overview
+                            <a href="{{ route('dining') }}" class="items-center flex gap-3">{{ __('nav.overview') }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
                                     <path fill="#ffffff" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
-                            <a href="{{ route('reserve') }} }}" class="items-center flex gap-3">Reserve
+                            <a href="{{ route('reserve') }} }}" class="items-center flex gap-3">{{ __('nav.reserve') }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -320,9 +306,9 @@
                         <p class="font-nineties text-4xl">Poolbar</p>
                     </div>
                     <div class="absolute bottom-32 right-4 lg:right-44 space-y-5 text-right" data-reveal>
-                        <p class="font-nineties text-4xl font-extrabold">Sip and Relax
+                        <p class="font-nineties text-4xl font-extrabold">{{ __('home.sip_and_relax') }}
                             <span class="font-parslay text-xl">
-                                by the pool
+                                {{ __('home.by_the_pool') }}
                             </span>
                         </p>
                         <p class="text-xl max-w-[700px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -330,7 +316,7 @@
                 </div>
                 <div class="relative z-10 container flex flex-col lg:flex-row text-[#963D20] gap-6 lg:gap-12 py-12">
                     <div class="w-full lg:w-2/5 flex flex-col">
-                        <div class="text-4xl font-nineties font-semibold">Special Just For You</div>
+                        <div class="text-4xl font-nineties font-semibold">{{ __('home.special_just_for_you') }}</div>
                         <div id="accordion" x-data="{ open: null }" class="mt-4 grow">
                             @foreach (['PoolTime', 'Bar by the sea', 'Lorem Ipsum'] as $i => $title)
                             <div class="border-b border-current">
@@ -379,15 +365,15 @@
                         <p>Pool Bar</p>
                     </div>
                     <div class="flex items-center gap-8">
-                        <a href="{{ route('poolbar') }}" class="items-center flex gap-3">Overview
-                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                        <a href="{{ route('poolbar') }}" class="items-center flex gap-3">{{ __('nav.overview') }}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                 <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                 <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
                                 <path fill="#963D20" d="M16 24h17v2H16z" />
                             </svg>
                         </a>
-                        <a href="{{ route('reserve') }}" class="items-center flex gap-3">Reserve
-                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
+                        <a href="{{ route('reserve') }}" class="items-center flex gap-3">{{ __('nav.reserve') }}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                 <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                 <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
                                 <path fill="#963D20" d="M16 24h17v2H16z" />
@@ -413,12 +399,12 @@
                         <p class="font-nineties text-4xl">Activity</p>
                     </div>
                     <div class="space-y-5">
-                        <p class="font-nineties text-4xl" data-reveal>Art of Padel</p>
+                        <p class="font-nineties text-4xl" data-reveal>{{ __('home.art_of_padel') }}</p>
                         <p class="font-parslay lg:ml-32 text-5xl" data-reveal>
-                            <span class="lg:pr-32">Highter</span>
-                            <span class="lg:ml-32"><br />Standards</span>
+                            <span class="lg:pr-32">{{ __('home.highter') }}</span>
+                            <span class="lg:ml-32"><br />{{ __('home.standards') }}</span>
                         </p>
-                        <p class="font-nineties text-2xl" data-reveal>for those who value health</p>
+                        <p class="font-nineties text-2xl" data-reveal>{{ __('home.for_health') }}</p>
                         <a href="{{ route('activities') }}" class="bg-[#963D20] text-white w-fit hover:scale-110 transition-all duration-300 rounded-full py-2 px-6 flex items-center gap-2 mx-auto" data-reveal>
                             Overview
                             <span class="group-hover:rotate-90 transition-all duration-300">
@@ -471,14 +457,14 @@
                             <p>Activities</p>
                         </div>
                         <div class="flex items-center gap-4 lg:gap-8">
-                            <a href="{{ route('activities') }}" class="items-center flex gap-3">Overview
+                            <a href="{{ route('activities') }}" class="items-center flex gap-3">{{ __('nav.overview') }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
                                     <path fill="#963D20" d="M16 24h17v2H16z" />
                                 </svg>
                             </a>
-                            <a href="{{ route('reserve') }}" class="items-center flex gap-3">Reserve
+                            <a href="{{ route('reserve') }}" class="items-center flex gap-3">{{ __('nav.reserve') }}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 50 50">
                                     <path fill="#963D20" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                     <path fill="#963D20" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -493,15 +479,15 @@
         <section id="section-explore" class="relative overflow-hidden bg-white">
             <div class="absolute top-0 left-0 right-0 py-12 lg:py-24 bg-[#963D20] rounded-b-[50%] z-20">
                 <div class="container relative z-20 text-center">
-                    <p class="text-white text-2xl font-nineties uppercase mb-6">Explore Atlas Beach Club</p>
-                    <h1 class="text-white text-5xl font-extrabold font-nineties mb-6">Group Bookings</h1>
+                    <p class="text-white text-2xl font-nineties uppercase mb-6">{{ __('home.explore_atlas') }}</p>
+                    <h1 class="text-white text-5xl font-extrabold font-nineties mb-6">{{ __('home.group_bookings') }}</h1>
                     <p class="text-white max-w-2xl mx-auto leading-relaxed mb-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad
                     </p>
                     <a href="{{ route('explore') }}"
                         class="inline-block bg-white uppercase hover:bg-[#EBE1D5] text-[#963D20] font-semibold tracking-widest px-12 lg:px-32 py-3 rounded-full transition-colors duration-200 no-underline">
-                        Explore Now
+                        {{ __('nav.explore_now') }}
                     </a>
                 </div>
             </div>

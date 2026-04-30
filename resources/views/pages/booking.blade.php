@@ -151,19 +151,19 @@
             <div class="py-8 flex flex-col lg:flex-row gap-8 lg:gap-12 border-b border-[#963D20]">
                 <div class="w-full lg:w-[38%] space-y-0">
                     <div class="flex items-center justify-between py-3 border-b border-black/10">
-                        <span class="text-black">Check-in</span>
+                        <span class="text-black">{{ __('nav.check_in') }}</span>
                         <span class="text-[#963D20]">15:30</span>
                     </div>
                     <div class="flex items-center justify-between py-3 border-b border-black/10">
-                        <span class="text-black">Check-out</span>
+                        <span class="text-black">{{ __('nav.check_out') }}</span>
                         <span class="text-[#963D20]">12:00</span>
                     </div>
                     <div class="flex items-center justify-between py-3 border-b border-black/10">
-                        <span class="text-black">Occupancy</span>
+                        <span class="text-black">{{ __('nav.occupancy') }}</span>
                         <span class="text-[#963D20]">Maximum 4</span>
                     </div>
                     <div class="flex items-center justify-between py-3 border-b border-black/10">
-                        <span class="text-black">Type</span>
+                        <span class="text-black">{{ __('nav.type') }}</span>
                         <span class="text-[#963D20]">Daybed</span>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                 {{-- Right Column: Benefits + T&C --}}
                 <div class="w-full lg:w-[62%] space-y-6">
                     <div>
-                        <h4 class="text-xl font-semibold text-[#963D20] mb-3">Daybed Benefits</h4>
+                        <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.daybed_benefits') }}</h4>
                         <ul class="space-y-1.5">
                             <template x-for="b in ['One-time picnic by the beach for 2 persons (min.3 nights stay) (Valid for 14.00-16.00 session)', 'One-time flower bath upon arrival', 'One-time in-room breakfast', '10% Spa discount on in-room treatments and Spa on the Rocks treatments', '10% Discount on food and beverages including Rock Bar, BALI']" :key="b">
                                 <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -182,7 +182,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-xl font-semibold text-[#963D20] mb-3">Terms & Conditions</h4>
+                        <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.terms_conditions') }}</h4>
                         <ul class="space-y-1.5">
                             <template x-for="t in ['Package offer requires a minimum 2 nights stay.', 'Package rates are subject to 21% government tax and service charges', 'Package offer only valid for direct bookings through our website', 'Credit card and deposit are required upon arrival to complete the check-in process', 'All benefit inclusions are for 2 (two) persons per room', 'All reservations are subject to room availability', 'This offer cannot be combined with other promotions or discounts']" :key="t">
                                 <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -199,7 +199,7 @@
                     <div class="grid grid-cols-2 gap-x-6 gap-y-6">
 
                         <div class="lg:col-span-1 col-span-2">
-                            <label class="block font-semibold mb-2 text-black">Name</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.name') }}</label>
                             <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -209,7 +209,7 @@
                         </div>
 
                         <div class="lg:col-span-1 col-span-2">
-                            <label class="block font-semibold mb-2 text-black">Date of Birth</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.date_of_birth') }}</label>
                             <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
@@ -219,7 +219,7 @@
                         </div>
 
                         <div class="lg:col-span-1 col-span-2">
-                            <label class="block font-semibold mb-2 text-black">Phone</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.phone') }}</label>
                             <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 6.75Z" />
@@ -229,7 +229,7 @@
                         </div>
 
                         <div class="lg:col-span-1 col-span-2">
-                            <label class="block font-semibold mb-2 text-black">Email</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.email') }}</label>
                             <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -239,14 +239,14 @@
                         </div>
 
                         <div class="lg:col-span-1 col-span-2">
-                            <label class="block font-semibold mb-2 text-black">Nationality</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.nationality') }}</label>
                             <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
                                     <line x1="4" y1="22" x2="4" y2="15" />
                                 </svg>
                                 <select class="bg-transparent outline-none w-full text-[#963D20] cursor-pointer appearance-none">
-                                    <option value="" disabled selected>Select Nationality</option>
+                                    <option value="" disabled selected>{{ __('pages.select_nationality') }}</option>
                                     <option>Indonesian</option>
                                     <option>Malaysian</option>
                                     <option>Singaporean</option>
@@ -258,7 +258,7 @@
                         </div>
 
                         <div class="lg:col-span-1 col-span-2">
-                            <label class="block font-semibold mb-2 text-black">ETA</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.eta') }}</label>
                             <div class="flex items-center border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <circle cx="12" cy="12" r="9" />
@@ -278,7 +278,7 @@
                         </div>
 
                         <div class="col-span-2">
-                            <label class="block font-semibold mb-2 text-black">Notes</label>
+                            <label class="block font-semibold mb-2 text-black">{{ __('pages.notes') }}</label>
                             <div class="flex items-start border border-[#963D20] rounded-full px-4 py-3 bg-transparent gap-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#963D20] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
@@ -291,7 +291,7 @@
                 </div>
 
                 <div class="lg:w-1/2 bg-white shadow-xl p-8 text-[#963D20]">
-                    <h2 class="text-2xl mb-1">Your Booking Order</h2>
+                    <h2 class="text-2xl mb-1">{{ __('pages.your_booking_order') }}</h2>
                     <p class=mb-4 leading-relaxed">
                         Your order booking summary will show up here after you fill up your visit plan
                     </p>
@@ -328,7 +328,7 @@
 
                     <!-- Affiliator Code -->
                     <div class="mb-3">
-                        <label class="block text-black mb-1.5">Affiliator Code</label>
+                        <label class="block text-black mb-1.5">{{ __('pages.affiliator_code') }}</label>
                         <div class="flex items-center">
                             <input type="text" placeholder="Ex. ATLAS123"
                                 class="flex-1 px-4 py-2.5 rounded-l-full border-2 border-[#963D20] bg-transparent text-sm focus:outline-none transition-colors" />
@@ -344,7 +344,7 @@
 
                     <!-- Voucher Code -->
                     <div class="mb-5">
-                        <label class="block text-black mb-1.5">Voucher/Offer Code</label>
+                        <label class="block text-black mb-1.5">{{ __('pages.voucher_offer_code') }}</label>
                         <div class="flex items-center">
                             <input type="text" placeholder="Ex. ATLAS123"
                                 class="flex-1 px-4 py-2.5 rounded-l-full border-2 border-[#963D20] bg-transparent text-sm focus:outline-none transition-colors" />
@@ -359,24 +359,24 @@
                     </div>
 
                     <!-- Summary -->
-                    <h3 class="text-3xl font-nineties mb-3">Summary</h3>
+                    <h3 class="text-3xl font-nineties mb-3">{{ __('pages.summary') }}</h3>
                     <hr class="border-[#963D20] mb-3" />
 
                     <div class="flex flex-col gap-2.5 mb-3">
                         <div class="flex justify-between">
-                            <span class=" ">Subtotal</span>
+                            <span class=" ">{{ __('pages.subtotal') }}</span>
                             <span class=" font-medium ">IDR. 4.000.000</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class=" ">Tax</span>
+                            <span class=" ">{{ __('pages.tax') }}</span>
                             <span class=" ">IDR. 0</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class=" ">Service</span>
+                            <span class=" ">{{ __('pages.service') }}</span>
                             <span class=" ">IDR. 0</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class=" ">Discount</span>
+                            <span class=" ">{{ __('pages.discount') }}</span>
                             <span class=" ">IDR. 0</span>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                     <hr class="border-[#963D20] mb-3" />
 
                     <div class="flex justify-between items-center mb-3">
-                        <span class=" font-semibold ">Total Payment</span>
+                        <span class=" font-semibold ">{{ __('pages.total_payment') }}</span>
                         <span class="text-lg font-bold ">IDR 4.000.000</span>
                     </div>
 
@@ -394,8 +394,8 @@
                     <label class="flex items-start gap-3 cursor-pointer">
                         <input type="checkbox" class="mt-0.5 w-5 h-5 shrink-0 accent-[#963D20] cursor-pointer" />
                         <span class=" text-[#963D20]">
-                            I read and agree with
-                            <a href="#" class="font-semibold underline">Terms & Conditions &amp; Privacy Policy</a>
+                            {{ __('pages.agree_terms') }}
+                            <a href="#" class="font-semibold underline">{{ __('pages.terms_privacy') }}</a>
                         </span>
                     </label>
 

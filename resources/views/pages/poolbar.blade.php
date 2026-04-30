@@ -21,15 +21,15 @@
                         image="{{asset('assets/logo/logo.png')}}" />
                     <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
-                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Dusk Different</h2>
+                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>{{ __('pages.dusk_different') }}</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                At the center of the energy, our Pool Bar is designed to keep the vibe flowing from day to night. Built across two levels, the upper floor serves the beachfront sand area, while the lower level connects directly to the pool, so wherever you are, your next drink is always within reach.
+                                {{ __('pages.poolbar_hero_p1') }}
                             </p>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Expect everything from refreshing classics to signature cocktails, all crafted by our bartenders to match the rhythm of Atlas. Whether you’re in the water, on the sand, or soaking in the atmosphere, the Pool Bar is where the experience comes alive.
+                                {{ __('pages.poolbar_hero_p2') }}
                             </p>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                <strong>Stay cool. Stay refreshed. Stay in the moment.</strong>
+                                !! __('pages.poolbar_hero_p3') !!
                             </p>
                         </div>
                     </section>
@@ -115,19 +115,19 @@
                     <div class="pt-8 flex flex-col lg:flex-row gap-8 lg:gap-12">
                         <div class="w-full lg:w-[38%] space-y-0">
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Check-in</span>
+                                <span class="text-black">{{ __('nav.check_in') }}</span>
                                 <span class="text-[#963D20]" x-text="position.checkIn"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Check-out</span>
+                                <span class="text-black">{{ __('nav.check_out') }}</span>
                                 <span class="text-[#963D20]" x-text="position.checkout"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Occupancy</span>
+                                <span class="text-black">{{ __('nav.occupancy') }}</span>
                                 <span class="text-[#963D20]" x-text="position.Occupancy || '—'"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Type</span>
+                                <span class="text-black">{{ __('nav.type') }}</span>
                                 <span class="text-[#963D20]" x-text="position.type || '—'"></span>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                         {{-- Right Column: Benefits + T&C --}}
                         <div class="w-full lg:w-[62%] space-y-6">
                             <div>
-                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Daybed Benefits</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.daybed_benefits') }}</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="b in position.benefits" :key="b">
                                         <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -146,7 +146,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Terms & Conditions</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.terms_conditions') }}</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="t in position.tnc" :key="t">
                                         <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -161,7 +161,7 @@
 
                     {{-- Floorplan / Layout --}}
                     <div class="pt-10">
-                        <p class="text-xl font-semibold text-[#963D20] mb-4">Layout</p>
+                        <p class="text-xl font-semibold text-[#963D20] mb-4">{{ __('nav.layout') }}</p>
                         <img :src="position.layoutImage" alt="Floor plan" class="w-full" />
                     </div>
 

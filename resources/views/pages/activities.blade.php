@@ -21,7 +21,7 @@
                         image="{{asset('assets/logo/logo.png')}}" />
                     <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
-                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Dusk Different</h2>
+                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>{{ __('pages.dusk_different') }}</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
@@ -109,19 +109,19 @@
                     <div class="pt-8 flex flex-col lg:flex-row gap-8 lg:gap-12">
                         <div class="w-full lg:w-[38%] space-y-0">
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Check-in</span>
+                                <span class="text-black">{{ __('nav.check_in') }}</span>
                                 <span class="text-[#963D20]" x-text="position.checkIn"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Check-out</span>
+                                <span class="text-black">{{ __('nav.check_out') }}</span>
                                 <span class="text-[#963D20]" x-text="position.checkout"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Occupancy</span>
+                                <span class="text-black">{{ __('nav.occupancy') }}</span>
                                 <span class="text-[#963D20]" x-text="position.Occupancy || '—'"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Type</span>
+                                <span class="text-black">{{ __('nav.type') }}</span>
                                 <span class="text-[#963D20]" x-text="position.type || '—'"></span>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                         {{-- Right Column: Benefits + T&C --}}
                         <div class="w-full lg:w-[62%] space-y-6">
                             <div>
-                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Daybed Benefits</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.daybed_benefits') }}</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="b in position.benefits" :key="b">
                                         <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -140,7 +140,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Terms & Conditions</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.terms_conditions') }}</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="t in position.tnc" :key="t">
                                         <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -155,7 +155,7 @@
 
                     {{-- Floorplan / Layout --}}
                     <div class="pt-10">
-                        <p class="text-xl font-semibold text-[#963D20] mb-4">Layout</p>
+                        <p class="text-xl font-semibold text-[#963D20] mb-4">{{ __('nav.layout') }}</p>
                         <img :src="position.layoutImage" alt="Floor plan" class="w-full" />
                     </div>
 

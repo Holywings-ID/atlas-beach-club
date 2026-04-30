@@ -1,30 +1,30 @@
 @php
 $navItems = [
-['label' => 'Home', 'href' => route('home')],
-['label' => 'Daybed', 'href' => route('daybed')],
-['label' => 'Dining', 'href' => route('dining'), 'active' => request()->routeIs('dining', 'menu'), 'children' => [
-['label' => 'Overview', 'href' => route('dining')],
-['label' => 'Menu', 'href' => route('menu')],
+['label' => __('nav.home'), 'href' => route('home')],
+['label' => __('nav.daybed'), 'href' => route('daybed')],
+['label' => __('nav.dining'), 'href' => route('dining'), 'active' => request()->routeIs('dining', 'menu'), 'children' => [
+['label' => __('nav.overview'), 'href' => route('dining')],
+['label' => __('nav.menu'), 'href' => route('menu')],
 ]],
-['label' => 'Pool Bar', 'href' => route('poolbar')],
-['label' => 'Activities', 'href' => route('activities')],
-['label' => 'Explore', 'href' => route('explore'), 'active' => request()->routeIs('explore', 'explore.*'), 'children' => [
-['label' => 'Family', 'href' => route('explore.family')],
-['label' => 'Couple', 'href' => route('explore.couple')],
-['label' => 'Friends', 'href' => route('explore.friends')],
-['label' => 'Group', 'href' => route('explore.group')],
+['label' => __('nav.pool_bar'), 'href' => route('poolbar')],
+['label' => __('nav.activities'), 'href' => route('activities')],
+['label' => __('nav.explore'), 'href' => route('explore'), 'active' => request()->routeIs('explore', 'explore.*'), 'children' => [
+['label' => __('nav.family'), 'href' => route('explore.family')],
+['label' => __('nav.couple'), 'href' => route('explore.couple')],
+['label' => __('nav.friends'), 'href' => route('explore.friends')],
+['label' => __('nav.group'), 'href' => route('explore.group')],
 ]],
-['label' => "Event", 'href' => route('whatson'), 'active' => request()->routeIs('whatson'), 'children' => [
-['label' => 'Event Highlight', 'href' => route('whatson') . '#event-highlight'],
-['label' => 'BBQ Grill', 'href' => route('whatson') . '#bbq-grill'],
-['label' => 'Bar Takeover', 'href' => route('whatson') . '#bar-takeover'],
-['label' => 'Parade', 'href' => route('whatson') . '#parade'],
+['label' => __('nav.event'), 'href' => route('whatson'), 'active' => request()->routeIs('whatson'), 'children' => [
+['label' => __('nav.event_highlight'), 'href' => route('whatson') . '#event-highlight'],
+['label' => __('nav.bbq_grill'), 'href' => route('whatson') . '#bbq-grill'],
+['label' => __('nav.bar_takeover'), 'href' => route('whatson') . '#bar-takeover'],
+['label' => __('nav.parade'), 'href' => route('whatson') . '#parade'],
 ]],
-['label' => 'Offer', 'href' => route('offer')],
-['label' => 'Support', 'href' => route('support'), 'active' => request()->routeIs('support', 'support.*'), 'children' => [
-['label' => 'Support', 'href' => route('support')],
-['label' => 'Q&A', 'href' => route('support.qa')],
-['label' => 'Terms & Conditions', 'href' => route('support.terms')],
+['label' => __('nav.offer'), 'href' => route('offer')],
+['label' => __('nav.support'), 'href' => route('support'), 'active' => request()->routeIs('support', 'support.*'), 'children' => [
+['label' => __('nav.support'), 'href' => route('support')],
+['label' => __('nav.qa'), 'href' => route('support.qa')],
+['label' => __('nav.terms_conditions'), 'href' => route('support.terms')],
 ]],
 ];
 @endphp
@@ -161,9 +161,34 @@ $navItems = [
             @endforeach
         </nav>
 
-        <a href="{{ route('reserve') }}" class="nav-link-solo text-xs lg:text-sm transition-colors duration-300 {{ request()->is('reserve*') ? 'invisible' : '' }}"
-            :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
-            Reserve
-        </a>
+        <div class="flex items-center gap-8">
+            {{-- Language Selector --}}
+            <div x-data="{ langOpen: false }" class="relative">
+                <button @click="langOpen = !langOpen" @click.outside="langOpen = false"
+                    class="nav-link-solo text-xs lg:text-sm transition-colors duration-300 inline-flex items-center gap-1"
+                    :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
+                    {{ strtoupper(app()->getLocale()) }}
+                    <svg class="w-3 h-3 transition-transform" :class="langOpen && 'rotate-180'" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="langOpen" x-cloak x-transition.opacity
+                    class="absolute right-0 mt-2 min-w-[80px] py-1 rounded shadow-lg z-50"
+                    :class="dark ? 'bg-white' : 'bg-black/80 backdrop-blur-sm'">
+                    @foreach(['en' => 'EN', 'id' => 'ID', 'zh' => 'ZH'] as $code => $label)
+                        <a href="{{ route('locale.switch', $code) }}"
+                            onclick="event.stopPropagation()"
+                            class="block px-4 py-1.5 text-xs transition-colors {{ app()->getLocale() === $code ? 'font-bold' : '' }}"
+                            :class="dark ? 'text-[#963D20] hover:bg-[#963D20]/10' : 'text-white hover:bg-white/20'">
+                            {{ $label }}
+                        </a>
+                    @endforeach
+                </div>
+            </div>
+            <a href="{{ route('reserve') }}" class="nav-link-solo text-xs lg:text-sm transition-colors duration-300 {{ request()->is('reserve*') ? 'hidden' : '' }}"
+                :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
+                {{ __('nav.reserve') }}
+            </a>
+        </div>
     </div>
 </header>

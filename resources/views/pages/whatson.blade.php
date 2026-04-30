@@ -29,7 +29,7 @@
                         <div class="absolute inset-0 h-dvh w-dvw z-10 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
 
                         <div id="event-highlight" class="text-white absolute inset-0 h-full w-full">
-                            <h3 class="relative z-20 text-5xl font-nineties mb-4 text-center" data-reveal>Event Highlight</h3>
+                            <h3 class="relative z-20 text-5xl font-nineties mb-4 text-center" data-reveal>{{ __('pages.atlas_event') }}</h3>
                             <div class="relative z-30 container mt-12 lg:mt-24 px-4" data-reveal
                                 x-data="{
                                     real: 3,
@@ -204,7 +204,7 @@
             <div class="relative">
                 <img src="{{ asset('assets/image/backyard.png') }}" alt="Backyard session" class="w-dvw h-[800px] object-cover object-center" />
                 <div class="absolute inset-0 py-12 container flex lg:flex-row flex-col lg:justify-between font-extrabold font-nineties text-5xl whitespace-break-spaces text-center lg:text-left">
-                    <p>Backyard</p>
+                    <p>{{ __('pages.backyard_session') }}</p>
                     <p>Session</p>
                 </div>
                 <p class="absolute font-nineties text-5xl left-0 right-0 text-center bottom-12 z-10">What's on Backyard</p>
@@ -213,59 +213,59 @@
                 <img src="{{asset('assets/image/genre.png')}}" alt="" class="relative z-0 w-screen h-[1400px] object-cover" />
                 <div class="container absolute top-12 left-0 right-0 w-full text-white">
                     <div class="flex lg:flex-row flex-col gap-8">
-                        <p class="font-extrabold font-nineties text-5xl whitespace-break-spaces text-right">Genre Master</p>
+                        <p class="font-extrabold font-nineties text-5xl whitespace-break-spaces text-right">{{ __('pages.genre_master') }}</p>
                         <p class="lg:text-xl text-base">At Atlas, music isn’t just played, it’s mastered. Our Genre Masters bring together the best of every sound, creating moments that define the energy of the day and night.</p>
                     </div>
                 </div>
                 <div class="lg:block hidden">
                     <div class="absolute hover:scale-125 transition-all duration-300 top-96 left-56" data-reveal>
                         <div class="w-64 space-y-4 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
-                            <p class="text-lg">High-energy beats, bold rhythms, and crowd-moving anthems that keep the vibe alive.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.hip_hop') }}</p>
+                            <p class="text-lg">{{ __('pages.hip_hop_desc') }}</p>
                         </div>
                     </div>
                     <div class="absolute hover:scale-125 transition-all duration-300 bottom-96 left-32" data-reveal>
                         <div class="w-64 space-y-4 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
-                            <p class="text-lg">Smooth, soulful sounds that set the tone for laid-back moments and late-night grooves.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.rnb') }}</p>
+                            <p class="text-lg">{{ __('pages.rnb_desc') }}</p>
                         </div>
                     </div>
                     <div class="absolute hover:scale-125 transition-all duration-300 top-96 right-44" data-reveal>
                         <div class="w-64 space-y-4 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
-                            <p class="text-lg">Deep, driving rhythms built for immersive experiences and underground energy.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.techno') }}</p>
+                            <p class="text-lg">{{ __('pages.techno_desc') }}</p>
                         </div>
                     </div>
                     <div class="absolute hover:scale-125 transition-all duration-300 bottom-96 right-64" data-reveal>
                         <div class="w-64 space-y-4 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
-                            <p class="text-lg">Big drops, electrifying builds, and festival-level energy that takes the night to another level.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.edm') }}</p>
+                            <p class="text-lg">{{ __('pages.edm_desc') }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:hidden absolute bottom-64 left-6 right-6 flex flex-col gap-5">
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">Hip Hop</p>
-                            <p class="lg:text-lg text-sm">High-energy beats, bold rhythms, and crowd-moving anthems that keep the vibe alive.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.hip_hop') }}</p>
+                            <p class="lg:text-lg text-sm">{{ __('pages.hip_hop_desc') }}</p>
                         </div>
                     </div>
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">R&B</p>
-                            <p class="lg:text-lg text-sm">Smooth, soulful sounds that set the tone for laid-back moments and late-night grooves.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.rnb') }}</p>
+                            <p class="lg:text-lg text-sm">{{ __('pages.rnb_desc') }}</p>
                         </div>
                     </div>
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">Techno</p>
-                            <p class="lg:text-lg text-sm">Deep, driving rhythms built for immersive experiences and underground energy.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.techno') }}</p>
+                            <p class="lg:text-lg text-sm">{{ __('pages.techno_desc') }}</p>
                         </div>
                     </div>
                     <div class="hover:scale-125 transition-all duration-300" data-reveal>
                         <div class="space-y-2 text-white">
-                            <p class="font-nineties text-3xl lg:text-5xl">EDM</p>
-                            <p class="lg:text-lg text-sm">Big drops, electrifying builds, and festival-level energy that takes the night to another level.</p>
+                            <p class="font-nineties text-3xl lg:text-5xl">{{ __('pages.edm') }}</p>
+                            <p class="lg:text-lg text-sm">{{ __('pages.edm_desc') }}</p>
                         </div>
                     </div>
                 </div>
@@ -273,7 +273,7 @@
         </section>
         <section>
             <div class="relative bg-[#333333] py-24">
-                <p class="absolute font-nineties text-5xl left-0 right-0 text-center -top-24 z-10">Activity Highlight</p>
+                <p class="absolute font-nineties text-5xl left-0 right-0 text-center -top-24 z-10">{{ __('pages.activity_highlight') }}</p>
                 <div class="container text-center">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostruLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr</p>
                 </div>

@@ -38,18 +38,18 @@
                                 <p class="font-nineties text-5xl">Cerita Rasa Nuansa Bali</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="font-semibold">
-                                    <p>Voucher Code</p>
+                                    <p>{{ __('nav.voucher_code') }}</p>
                                     <p>ACR108</p>
                                 </div>
                             </div>
 
                             <div class="">
                                 <div class="grid grid-cols-2 border-b border-[#963D20] py-3">
-                                    <div class="text-black">Categories</div>
+                                    <div class="text-black">{{ __('nav.categories') }}</div>
                                     <div>Daybed Booking</div>
                                 </div>
                                 <div class="grid grid-cols-2 border-b border-[#963D20] py-3">
-                                    <div class="text-black">Terms & Conditions</div>
+                                    <div class="text-black">{{ __('nav.terms_conditions') }}</div>
                                     <ul class="list-disc">
                                         <li>Valid on regular days</li>
                                         <li>Maximum 2 person</li>
@@ -57,7 +57,7 @@
                                     </ul>
                                 </div>
                                 <div class="grid grid-cols-2 py-3">
-                                    <div class="text-black">Valid</div>
+                                    <div class="text-black">{{ __('nav.valid') }}</div>
                                     <div>1-31 October 2026</div>
                                 </div>
                             </div>
@@ -70,18 +70,18 @@
                                 <p class="font-nineties text-5xl">Cerita Rasa Nuansa Bali</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                 <div class="font-semibold">
-                                    <p>Voucher Code</p>
+                                    <p>{{ __('nav.voucher_code') }}</p>
                                     <p>ACR108</p>
                                 </div>
                             </div>
 
                             <div class="">
                                 <div class="grid grid-cols-2 border-b border-[#963D20] py-3">
-                                    <div class="text-black">Categories</div>
+                                    <div class="text-black">{{ __('nav.categories') }}</div>
                                     <div>Daybed Booking</div>
                                 </div>
                                 <div class="grid grid-cols-2 border-b border-[#963D20] py-3">
-                                    <div class="text-black">Terms & Conditions</div>
+                                    <div class="text-black">{{ __('nav.terms_conditions') }}</div>
                                     <ul class="list-disc">
                                         <li>Valid on regular days</li>
                                         <li>Maximum 2 person</li>
@@ -89,7 +89,7 @@
                                     </ul>
                                 </div>
                                 <div class="grid grid-cols-2 py-3">
-                                    <div class="text-black">Valid</div>
+                                    <div class="text-black">{{ __('nav.valid') }}</div>
                                     <div>1-31 October 2026</div>
                                 </div>
                             </div>

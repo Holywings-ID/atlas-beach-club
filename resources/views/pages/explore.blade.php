@@ -21,7 +21,7 @@
                         image="{{asset('assets/logo/logo.png')}}" />
                     <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
-                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Beach Club<br /> Journey</h2>
+                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>{{ __('pages.beach_club_journey') }}</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
@@ -35,28 +35,28 @@
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mt-12 lg:mt-24 px-4" data-reveal>
                                 <a href="{{ route('explore') . '#family-gateaway' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 01</div>
-                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Family Getaway</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">{{ __('pages.family_getaway') }}</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
                                 <a href="{{ route('explore') . '#romantic-bliss' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 02</div>
-                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Romantic Bliss</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">{{ __('pages.romantic_bliss') }}</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
                             </div>
                             <div class="relative z-30 container flex flex-col lg:flex-row justify-center mt-4 lg:mt-8 gap-4 lg:gap-8 px-4" data-reveal>
                                 <a href="{{ route('explore') . '#friend-madness' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 03</div>
-                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Friend Madness</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">{{ __('pages.friend_madness') }}</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
                                 <a href="{{ route('explore') . '#party-anthem' }}" class="bg-[#963D20]/60 cursor-pointer transition-all duration-300 justify-center flex flex-col h-36 lg:h-44 w-full lg:w-96 p-4 rounded-3xl hover:bg-[#10496E]/60">
                                     <div>No 04</div>
-                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">Party Anthem</div>
+                                    <div class="font-nineties font-extrabold text-2xl lg:text-4xl">{{ __('pages.party_anthem') }}</div>
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
                                 </a>
                             </div>
-                            <h3 class="relative z-20 text-2xl lg:text-4xl font-nineties mt-12 text-center" data-reveal>The Biggest Beach Club In The World</h3>
+                            <h3 class="relative z-20 text-2xl lg:text-4xl font-nineties mt-12 text-center" data-reveal>{{ __('pages.biggest_beach_club') }}</h3>
 
                         </div>
                     </section>
@@ -83,19 +83,19 @@
                             </p>
                             <div class="pt-24">
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Venue</div>
+                                    <div class="text-black">{{ __('nav.venue') }}</div>
                                     <div>Beach Club</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Vibe Tags</div>
+                                    <div class="text-black">{{ __('nav.vibe_tags') }}</div>
                                     <div>Photography / Dining / Relaxation</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Best for</div>
+                                    <div class="text-black">{{ __('nav.best_for') }}</div>
                                     <div>Couple / Family / Friends</div>
                                 </div>
                                 <div>
-                                    <a href="{{ route('explore.family') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">Details
+                                    <a href="{{ route('explore.family') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">{{ __('nav.details') }}
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                 <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                                 <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -125,19 +125,19 @@
                             </p>
                             <div class="pt-24">
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Venue</div>
+                                    <div class="text-black">{{ __('nav.venue') }}</div>
                                     <div>Beach Club</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Vibe Tags</div>
+                                    <div class="text-black">{{ __('nav.vibe_tags') }}</div>
                                     <div>Photography / Dining / Relaxation</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Best for</div>
+                                    <div class="text-black">{{ __('nav.best_for') }}</div>
                                     <div>Couple / Family / Friends</div>
                                 </div>
                                 <div>
-                                    <a href="{{ route('explore.couple') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">Details
+                                    <a href="{{ route('explore.couple') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">{{ __('nav.details') }}
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                 <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                                 <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -167,19 +167,19 @@
                             </p>
                             <div class="pt-24">
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Venue</div>
+                                    <div class="text-black">{{ __('nav.venue') }}</div>
                                     <div>Beach Club</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Vibe Tags</div>
+                                    <div class="text-black">{{ __('nav.vibe_tags') }}</div>
                                     <div>Photography / Dining / Relaxation</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Best for</div>
+                                    <div class="text-black">{{ __('nav.best_for') }}</div>
                                     <div>Couple / Family / Friends</div>
                                 </div>
                                 <div>
-                                    <a href="{{ route('explore.couple') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">Details
+                                    <a href="{{ route('explore.couple') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">{{ __('nav.details') }}
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                 <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                                 <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />
@@ -209,19 +209,19 @@
                             </p>
                             <div class="pt-24">
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Venue</div>
+                                    <div class="text-black">{{ __('nav.venue') }}</div>
                                     <div>Beach Club</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Vibe Tags</div>
+                                    <div class="text-black">{{ __('nav.vibe_tags') }}</div>
                                     <div>Photography / Dining / Relaxation</div>
                                 </div>
                                 <div class="flex justify-between border-b border-[#963D20] py-3">
-                                    <div class="text-black">Best for</div>
+                                    <div class="text-black">{{ __('nav.best_for') }}</div>
                                     <div>Couple / Family / Friends</div>
                                 </div>
                                 <div>
-                                    <a href="{{ route('explore.couple') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">Details
+                                    <a href="{{ route('explore.couple') }}" class="bg-[#963D20] hover:brightness-110 text-white flex items-center justify-end gap-4 w-full p-2 text-xl">{{ __('nav.details') }}
                                         <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50">
                                                 <path fill="#ffffff" d="M25 42c-9.4 0-17-7.6-17-17S15.6 8 25 8s17 7.6 17 17s-7.6 17-17 17m0-32c-8.3 0-15 6.7-15 15s6.7 15 15 15s15-6.7 15-15s-6.7-15-15-15" />
                                                 <path fill="#ffffff" d="m24.7 34.7l-1.4-1.4l8.3-8.3l-8.3-8.3l1.4-1.4l9.7 9.7z" />

@@ -21,12 +21,12 @@
                         image="{{asset('assets/logo/logo.png')}}" />
                     <section class="relative text-white w-full h-12 text-center bg-[#963D20] overflow-visible">
                         <div class="container absolute z-20 inset-0">
-                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>Eat. Sip.<br /> Repeat.</h2>
+                            <h2 class="text-4xl lg:text-6xl font-nineties font-extrabold" data-reveal>{{ __('pages.eat_sip_repeat') }}</h2>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Indulge in a dining experience where flavor meets the ocean. At The Deck, our chefs curate a menu designed to satisfy every palate, bringing together quality ingredients, bold flavors, and beautifully crafted dishes.
+                                {{ __('pages.dining_hero_p1') }}
                             </p>
                             <p class="mx-auto mt-4 max-w-2xl" data-reveal>
-                                Set against a stunning beachfront backdrop, every meal is elevated by panoramic ocean views and a relaxed yet refined atmosphere. Whether you’re joining us for a casual lunch or a sunset dinner, The Deck delivers the perfect balance of taste, ambiance, and experience.
+                                {{ __('pages.dining_hero_p2') }}
                             </p>
                         </div>
                     </section>
@@ -41,7 +41,7 @@
             <div class="container py-12">
                 <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#963D20] py-16" data-reveal>
                     <div class="w-full lg:w-2/5 space-y-3">
-                        <div class="font-nineties text-3xl">Italian Cuisine</div>
+                        <div class="font-nineties text-3xl">{{ __('pages.italian_cuisine') }}</div>
                         <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
                         <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -62,7 +62,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 border-b border-[#963D20] py-16" data-reveal>
                     <div class="w-full lg:w-2/5 space-y-3">
-                        <div class="font-nineties text-3xl">Italian Cuisine</div>
+                        <div class="font-nineties text-3xl">{{ __('pages.italian_cuisine') }}</div>
                         <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
                         <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -83,7 +83,7 @@
                 </div>
                 <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 py-16" data-reveal>
                     <div class="w-full lg:w-2/5 space-y-3">
-                        <div class="font-nineties text-3xl">Italian Cuisine</div>
+                        <div class="font-nineties text-3xl">{{ __('pages.italian_cuisine') }}</div>
                         <div class="font-parslay text-3xl lg:text-5xl">Lorem Ipsum</div>
                         <div class="pr-0 lg:pr-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -156,19 +156,19 @@
                     <div class="pt-8 flex flex-col lg:flex-row gap-8 lg:gap-12">
                         <div class="w-full lg:w-[38%] space-y-0">
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Check-in</span>
+                                <span class="text-black">{{ __('nav.check_in') }}</span>
                                 <span class="text-[#963D20]" x-text="position.checkIn"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Check-out</span>
+                                <span class="text-black">{{ __('nav.check_out') }}</span>
                                 <span class="text-[#963D20]" x-text="position.checkout"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Occupancy</span>
+                                <span class="text-black">{{ __('nav.occupancy') }}</span>
                                 <span class="text-[#963D20]" x-text="position.Occupancy || '—'"></span>
                             </div>
                             <div class="flex items-center justify-between py-3 border-b border-black/10">
-                                <span class="text-black">Type</span>
+                                <span class="text-black">{{ __('nav.type') }}</span>
                                 <span class="text-[#963D20]" x-text="position.type || '—'"></span>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                         {{-- Right Column: Benefits + T&C --}}
                         <div class="w-full lg:w-[62%] space-y-6">
                             <div>
-                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Daybed Benefits</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.daybed_benefits') }}</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="b in position.benefits" :key="b">
                                         <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -187,7 +187,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">Terms & Conditions</h4>
+                                <h4 class="text-xl font-semibold text-[#963D20] mb-3">{{ __('nav.terms_conditions') }}</h4>
                                 <ul class="space-y-1.5">
                                     <template x-for="t in position.tnc" :key="t">
                                         <li class="text-[#963D20] leading-[1.7] flex items-start gap-2">
@@ -202,7 +202,7 @@
 
                     {{-- Floorplan / Layout --}}
                     <div class="pt-10">
-                        <p class="text-xl font-semibold text-[#963D20] mb-4">Layout</p>
+                        <p class="text-xl font-semibold text-[#963D20] mb-4">{{ __('nav.layout') }}</p>
                         <img :src="position.layoutImage" alt="Floor plan" class="w-full" />
                     </div>
 

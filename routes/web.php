@@ -3,6 +3,13 @@
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/locale/{locale}', function (string $locale) {
+    if (in_array($locale, ['en', 'id', 'zh'])) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+})->name('locale.switch');
+
 Route::controller(PageController::class)->group(function () {
     Route::get('/', 'home')->name('home');
     Route::get('/daybed', 'daybed')->name('daybed');

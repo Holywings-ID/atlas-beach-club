@@ -12,7 +12,7 @@
         {{-- Reserve Bar --}}
         <a href="{{ route('reserve') }}"
             class="block bg-[#2B2B2B] hover:bg-[#333333] rounded-sm py-12 text-center mb-12 no-underline transition-colors duration-300">
-            <span class="text-white text-lg tracking-[0.2em] uppercase">Reserve Here</span>
+            <span class="text-white text-lg tracking-[0.2em] uppercase">{{ __('nav.reserve_here') }}</span>
         </a>
 
         {{-- 3-Column Menu Grid --}}
@@ -23,13 +23,13 @@
 
                 {{-- Daybeds --}}
                 <div class="mb-10">
-                    <h3 class="text-white text-xl mb-3 tracking-wide">Daybeds</h3>
+                    <h3 class="text-white text-xl mb-3 tracking-wide">{{ __('nav.daybeds') }}</h3>
                     <hr class="border-white/20 mb-1">
                     @foreach ([
-                    ['label' => 'Atlas Copacabana', 'route' => 'daybed'],
-                    ['label' => 'Atlas Surf Side', 'route' => 'daybed'],
-                    ['label' => 'Atlas Sultan', 'route' => 'daybed'],
-                    ['label' => 'Atlas Backstage', 'route' => 'daybed'],
+                    ['label' => __('nav.atlas_copacabana'), 'route' => 'daybed'],
+                    ['label' => __('nav.atlas_surf_side'), 'route' => 'daybed'],
+                    ['label' => __('nav.atlas_sultan'), 'route' => 'daybed'],
+                    ['label' => __('nav.atlas_backstage'), 'route' => 'daybed'],
                     ] as $item)
                     <a href="{{ route($item['route']) }}"
                         class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -45,11 +45,11 @@
 
                 {{-- Dining --}}
                 <div class="mb-10">
-                    <h3 class="text-white text-xl mb-3 tracking-wide">Dining</h3>
+                    <h3 class="text-white text-xl mb-3 tracking-wide">{{ __('nav.dining') }}</h3>
                     <hr class="border-white/20 mb-1">
                     @foreach ([
-                    ['label' => 'Overview Cuisine', 'route' => 'dining'],
-                    ['label' => 'Menu Food & Beverages', 'route' => 'dining'],
+                    ['label' => __('nav.overview_cuisine'), 'route' => 'dining'],
+                    ['label' => __('nav.menu_food_beverages'), 'route' => 'dining'],
                     ] as $item)
                     <a href="{{ route($item['route']) }}"
                         class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -65,11 +65,11 @@
 
                 {{-- Poolbar --}}
                 <div>
-                    <h3 class="text-white text-xl mb-3 tracking-wide">Poolbar</h3>
+                    <h3 class="text-white text-xl mb-3 tracking-wide">{{ __('nav.poolbar') }}</h3>
                     <hr class="border-white/20 mb-1">
                     @foreach ([
-                    ['label' => 'Bar Side', 'route' => 'poolbar'],
-                    ['label' => 'Surf Side', 'route' => 'poolbar'],
+                    ['label' => __('nav.bar_side'), 'route' => 'poolbar'],
+                    ['label' => __('nav.surf_side'), 'route' => 'poolbar'],
                     ] as $item)
                     <a href="{{ route($item['route']) }}"
                         class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -90,12 +90,12 @@
 
                 {{-- Activities --}}
                 <div class="mb-10">
-                    <h3 class="text-white text-xl mb-3 tracking-wide">Activities</h3>
+                    <h3 class="text-white text-xl mb-3 tracking-wide">{{ __('nav.activities') }}</h3>
                     <hr class="border-white/20 mb-1">
                     @foreach ([
-                    ['label' => 'Padel', 'route' => 'activities'],
-                    ['label' => 'Flying Fox', 'route' => 'activities'],
-                    ['label' => 'Billiard', 'route' => 'activities'],
+                    ['label' => __('nav.padel'), 'route' => 'activities'],
+                    ['label' => __('nav.flying_fox'), 'route' => 'activities'],
+                    ['label' => __('nav.billiard'), 'route' => 'activities'],
                     ] as $item)
                     <a href="{{ route($item['route']) }}"
                         class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -111,13 +111,13 @@
 
                 {{-- Explore --}}
                 <div>
-                    <h3 class="text-white text-xl mb-3 tracking-wide">Explore</h3>
+                    <h3 class="text-white text-xl mb-3 tracking-wide">{{ __('nav.explore') }}</h3>
                     <hr class="border-white/20 mb-1">
                     @foreach ([
-                    ['label' => 'Family', 'route' => 'explore'],
-                    ['label' => 'Couple', 'route' => 'explore'],
-                    ['label' => 'Friends', 'route' => 'explore'],
-                    ['label' => 'Group', 'route' => 'explore'],
+                    ['label' => __('nav.family'), 'route' => 'explore'],
+                    ['label' => __('nav.couple'), 'route' => 'explore'],
+                    ['label' => __('nav.friends'), 'route' => 'explore'],
+                    ['label' => __('nav.group'), 'route' => 'explore'],
                     ] as $item)
                     <a href="{{ route($item['route']) }}"
                         class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -135,13 +135,13 @@
 
             {{-- Column 3: What's On --}}
             <div>
-                <h3 class="text-white text-xl mb-3 tracking-wide">What's On</h3>
+                <h3 class="text-white text-xl mb-3 tracking-wide">{{ __('nav.whats_on') }}</h3>
                 <hr class="border-white/20 mb-1">
                 @foreach ([
-                ['label' => 'Event Highlight', 'route' => 'whatson'],
-                ['label' => 'Barbeque', 'route' => 'whatson'],
-                ['label' => 'Bar Take Over', 'route' => 'whatson'],
-                ['label' => 'Parade Entertainment', 'route' => 'whatson'],
+                ['label' => __('nav.event_highlight'), 'route' => 'whatson'],
+                ['label' => __('nav.barbeque'), 'route' => 'whatson'],
+                ['label' => __('nav.bar_take_over'), 'route' => 'whatson'],
+                ['label' => __('nav.parade_entertainment'), 'route' => 'whatson'],
                 ] as $item)
                 <a href="{{ route($item['route']) }}"
                     class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -156,9 +156,9 @@
 
                 <div class="mt-6">
                     @foreach ([
-                    ['label' => 'Journey', 'route' => 'whatson'],
-                    ['label' => 'Offers', 'route' => 'offer'],
-                    ['label' => 'Support', 'route' => 'support'],
+                    ['label' => __('nav.journey'), 'route' => 'whatson'],
+                    ['label' => __('nav.offers'), 'route' => 'offer'],
+                    ['label' => __('nav.support'), 'route' => 'support'],
                     ] as $item)
                     <a href="{{ route($item['route']) }}"
                         class="flex items-center justify-between py-3 border-b border-white/20 no-underline text-white text-sm font-light tracking-wide hover:opacity-65 transition-opacity duration-200">
@@ -181,7 +181,7 @@
             {{-- Social + Tagline --}}
             <div>
                 <p class="text-white/60 text-[0.7rem] tracking-[0.15em] uppercase mb-4">
-                    Discover the Latest Atlas Beach Club Bali
+                    {{ __('nav.discover_latest') }}
                 </p>
                 <div class="flex justify-center lg:justify-normal gap-3">
 
@@ -232,7 +232,7 @@
 
         {{-- Copyright --}}
         <p class="mt-6 text-center text-white/35 text-[0.7rem] tracking-wide">
-            &copy; {{ date('Y') }} Atlas Beach Club. All rights reserved.
+            &copy; {{ date('Y') }} {{ __('nav.copyright', ['year' => date('Y')]) }}
         </p>
 
     </div>
