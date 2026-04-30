@@ -15,9 +15,9 @@
                 <div :style="'transform:translateY(-' + Math.min(scrollY, Math.max(0, contentH - window.innerHeight)) + 'px)'">
                     <x-hero
                         background="{{ asset('assets/image/whatson.png') }}"
-                        title="Meet"
-                        text="the sound"
-                        sub-title="Backyard"
+                        title="Atlas Event"
+                        text=""
+                        sub-title=""
                         color="black" />
 
                     <div class="relative text-white w-full h-12 text-center bg-black overflow-visible">
@@ -199,6 +199,14 @@
                     <img src="{{asset('assets/image/dj3.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
                     <img src="{{asset('assets/image/dj4.png')}}" alt="" class="w-96 h-64 object-cover shrink-0" />
                 </div>
+            </div>
+            <div class="relative">
+                <img src="{{ asset('assets/image/backyard.png') }}" alt="Backyard session" class="w-dvw h-[800px] object-cover object-center" />
+                <div class="absolute inset-0 py-12 container flex lg:flex-row flex-col lg:justify-between font-extrabold font-nineties text-5xl whitespace-break-spaces text-center lg:text-left">
+                    <p>Backyard</p>
+                    <p>Session</p>
+                </div>
+                <p class="absolute font-nineties text-5xl left-0 right-0 text-center bottom-12 z-10">What's on Backyard</p>
             </div>
             <div class="relative overflow-hidden">
                 <img src="{{asset('assets/image/genre.png')}}" alt="" class="relative z-0 w-screen h-[1400px] object-cover" />
