@@ -9,33 +9,15 @@
         </div>
         <div class="container mx-auto px-4 py-6">
 
-            {{-- ── Event Hero ── --}}
-            <div class="relative rounded overflow-hidden mb-6 lg:h-[500px]">
-                <img
-                    src="{{ asset('assets/image/' . ($eventImage ?? 'event1.png')) }}"
-                    alt="{{ $eventName ?? 'Event' }}"
-                    class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                    <div class="text-white">
-                        <h1 class="text-4xl font-nineties mb-2">{{ $eventName ?? 'Event' }}</h1>
-                        <p class="text-lg">{{ $eventDate ?? '' }}</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-b border-[#963D20] text-[#963D20] pb-4 flex gap-4 flex-col lg:flex-row lg:items-center lg:justify-between">
-                <div class="flex gap-2">
-                    <p>Atlas Beach Club <span>|</span></p>
-                    <p>Event Reservation</p>
-                </div>
-                <div>
-                    <p class="text-2xl font-semibold lg:text-right">{{ $eventName ?? 'Event' }}</p>
-                    <p class="lg:text-right">{{ $eventDate ?? '' }}</p>
-                </div>
-            </div>
-
             <div class="py-8 flex flex-col lg:flex-row gap-8 lg:gap-12 border-b border-[#963D20]">
-                <div class="w-full lg:w-[38%] space-y-0">
+                <div class="w-full lg:w-1/2 space-y-0">
+                    <img
+                        src="{{ asset('assets/image/' . ($eventImage ?? 'event1.png')) }}"
+                        alt="{{ $eventName ?? 'Event' }}"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <div class="w-full lg:w-1/2 space-y-3">
                     <div class="flex items-center justify-between py-3 border-b border-black/10">
                         <span class="text-black">Event</span>
                         <span class="text-[#963D20]">{{ $eventName ?? 'Event' }}</span>
@@ -52,9 +34,6 @@
                         <span class="text-black">Type</span>
                         <span class="text-[#963D20]">Event</span>
                     </div>
-                </div>
-
-                <div class="w-full lg:w-[62%] space-y-6">
                     <div>
                         <h4 class="text-xl font-semibold text-[#963D20] mb-3">Event Details</h4>
                         <ul class="space-y-1.5">
@@ -80,68 +59,25 @@
                 </div>
             </div>
 
-            {{-- ── Table Selection ── --}}
-            <div x-data="tableSelector()" class="mt-8">
-                <h3 class="text-2xl font-nineties text-[#963D20] mb-4">Select Your Table</h3>
+            <div class="relative rounded overflow-hidden mb-6 lg:h-[500px]">
+                <img
+                    src="{{ asset('assets/image/map.png') }}"
+                    alt="Resort Map"
+                    class="w-full h-full object-cover" />
+            </div>
 
-                {{-- Venue Tabs --}}
-                <div class="flex gap-5 mb-6 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                    <template x-for="(venue, idx) in venues" :key="venue">
-                        <button @click="activeVenue = idx; selectedTable = null"
-                            :class="activeVenue === idx ? 'text-[#963D20] font-medium' : 'text-[#8a7a6a] hover:text-[#963D20]'"
-                            class="flex items-center gap-1.5 whitespace-nowrap transition-colors">
-                            <span x-text="venue"></span>
-                            <span class="w-5 h-5 rounded-full border border-current flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" :d="activeVenue === idx ? 'M19 9l-7 7-7-7' : 'M9 5l7 7-7 7'" />
-                                </svg>
-                            </span>
-                        </button>
-                    </template>
+            <div class="border-b border-[#963D20] text-[#963D20] pb-4 flex gap-4 flex-col lg:flex-row lg:items-center lg:justify-between">
+                <div class="flex gap-2">
+                    <p>Atlas Beach Club <span>|</span></p>
+                    <p>Event Reservation</p>
                 </div>
-
-                {{-- Zone Cards --}}
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-                    <template x-for="(table, idx) in tables[activeVenue]" :key="idx">
-                        <div @click="selectedTable = idx"
-                            :class="selectedTable === idx ? 'ring-2 ring-[#963D20]' : ''"
-                            class="bg-[#f5ede4] border border-[#DDD0C2] overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-pointer">
-                            <img :src="table.img" :alt="table.zone"
-                                class="w-full h-56 object-cover block" />
-                            <div class="p-4">
-                                <p class="text-[#963D20] text-2xl font-semibold font-nineties mb-0.5" x-text="venues[activeVenue]"></p>
-                                <p class="text-[#8a7a6a] mb-1" x-text="table.zone"></p>
-                                <p class="flex items-center gap-1.5 text-[#6a5a4a] mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                    <span>Max <span x-text="table.capacity"></span> Adult</span>
-                                </p>
-                                <p class="text-[#963D20] text-xl font-semibold" x-text="'IDR ' + table.price.toLocaleString('id-ID')"></p>
-                                <p class="text-[#8a7a6a] mt-0.5">Non-member: <span x-text="'IDR ' + table.nonmember.toLocaleString('id-ID')"></span></p>
-                                <div class="mt-3">
-                                    <span x-show="selectedTable === idx" class="inline-flex items-center gap-1.5 bg-[#963D20] text-[#EBE1D5] font-medium tracking-wide px-4 py-2 transition-colors">
-                                        ✓ Selected
-                                    </span>
-                                    <span x-show="selectedTable !== idx" class="inline-flex items-center gap-1.5 border border-[#963D20] text-[#963D20] font-medium tracking-wide px-4 py-2 transition-colors hover:bg-[#963D20] hover:text-[#EBE1D5]">
-                                        Select
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-
-                {{-- No table selected message --}}
-                <div x-show="selectedTable === null" class="text-center text-[#8a7a6a] py-8 border-t border-[#963D20]">
-                    <p class="text-lg">Please select a table above to continue with your reservation.</p>
+                <div>
+                    <p class="text-2xl font-semibold lg:text-right">{{ $eventName ?? 'Event' }}</p>
+                    <p class="lg:text-right">{{ $eventDate ?? '' }}</p>
                 </div>
             </div>
 
-            <div x-data x-show="$store.eventTable.selected" x-transition class="flex flex-col lg:flex-row gap-12 mt-12">
+            <div class="flex flex-col lg:flex-row gap-12 mt-12">
                 <div class="lg:w-1/2">
                     <div class="grid grid-cols-2 gap-x-6 gap-y-6">
 
@@ -347,48 +283,4 @@
             </div>
         </div>
     </main>
-    @push('scripts')
-    <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.store('eventTable', { selected: false, venue: '', zone: '', price: 0 });
-        });
-
-        function tableSelector() {
-            return {
-                activeVenue: 0,
-                selectedTable: null,
-                venues: ['Copacabana', 'Surf Side', 'Sultan', 'Backstage'],
-                tables: [
-                    [
-                        { zone: 'Left Side A', capacity: 3, price: 4000000, nonmember: 15000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                        { zone: 'Right Side A', capacity: 6, price: 6000000, nonmember: 15000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                        { zone: 'Back', capacity: 12, price: 10000000, nonmember: 15000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                    ],
-                    [
-                        { zone: 'Front Row', capacity: 4, price: 5000000, nonmember: 12000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                        { zone: 'VIP Section', capacity: 8, price: 8000000, nonmember: 18000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                    ],
-                    [
-                        { zone: 'Main Hall', capacity: 10, price: 7000000, nonmember: 14000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                        { zone: 'Balcony', capacity: 6, price: 9000000, nonmember: 16000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                    ],
-                    [
-                        { zone: 'Lounge A', capacity: 5, price: 5500000, nonmember: 13000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                        { zone: 'Lounge B', capacity: 8, price: 7500000, nonmember: 15000000, img: '{{ asset("assets/image/pool1.png") }}' },
-                    ],
-                ],
-                init() {
-                    this.$watch('selectedTable', (val) => {
-                        if (val !== null) {
-                            const t = this.tables[this.activeVenue][val];
-                            Alpine.store('eventTable', { selected: true, venue: this.venues[this.activeVenue], zone: t.zone, price: t.price });
-                        } else {
-                            Alpine.store('eventTable').selected = false;
-                        }
-                    });
-                },
-            };
-        }
-    </script>
-    @endpush
 </x-layouts.app>

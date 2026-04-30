@@ -14,7 +14,7 @@ $navItems = [
 ['label' => 'Friends', 'href' => route('explore.friends')],
 ['label' => 'Group', 'href' => route('explore.group')],
 ]],
-['label' => "What's On", 'href' => route('whatson'), 'active' => request()->routeIs('whatson'), 'children' => [
+['label' => "Event", 'href' => route('whatson'), 'active' => request()->routeIs('whatson'), 'children' => [
 ['label' => 'Event Highlight', 'href' => route('whatson') . '#event-highlight'],
 ['label' => 'BBQ Grill', 'href' => route('whatson') . '#bbq-grill'],
 ['label' => 'Bar Takeover', 'href' => route('whatson') . '#bar-takeover'],
