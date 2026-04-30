@@ -5,7 +5,8 @@
                 contentH: 0,
                 scrollY: 0,
                 init() {
-                    this.contentH = this.$refs.content.scrollHeight;
+                    this.$nextTick(() => this.contentH = this.$refs.content.scrollHeight);
+                    window.addEventListener('load', () => this.contentH = this.$refs.content.scrollHeight);
                     window.addEventListener('scroll', () => this.scrollY = window.scrollY, { passive: true });
                 }
             }"
@@ -284,7 +285,7 @@
                 title="Live BBQ Grill"
                 subtitle="Fired Up Flavor"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
-                image="assets/image/cardAct.png"
+                image="assets/image/whatson3.png"
                 link="/dining" />
             <x-feature-card
                 id="bar-takeover"
@@ -293,17 +294,52 @@
                 title="Bar Takeover"
                 subtitle="Raised by Spirits"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
-                image="assets/image/cardAct.png"
+                image="assets/image/whatson1.png"
                 link="/dining" />
             <x-feature-card
                 id="parade"
                 color="#333333"
                 text="#FFFFFF"
-                title="Parade"
-                subtitle="Raised by Spirits"
+                title="Entertainment Parade"
+                subtitle="Spectacle in Motion"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad Lorem ipsum dolor sit amet,"
                 image="assets/image/cardAct.png"
                 link="/dining" />
         </section>
     </main>
+
+    @push('scripts')
+    <script>
+        function scrollToFakeScrollTarget(hash) {
+            const el = document.querySelector(hash);
+            const wrapper = document.getElementById('section-one-wrapper');
+            const content = document.getElementById('section-one');
+            if (!el || !content || !content.contains(el)) return;
+            const inner = content.firstElementChild;
+            const elRect = el.getBoundingClientRect();
+            const innerRect = inner.getBoundingClientRect();
+            const offset = elRect.top - innerRect.top;
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href*="#event-highlight"]');
+            if (!a) return;
+            const url = new URL(a.href, location.origin);
+            if (url.pathname === location.pathname && url.hash) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollToFakeScrollTarget(url.hash);
+                history.replaceState(null, '', url.hash);
+            }
+        }, true);
+
+        if (window.location.hash === '#event-highlight') {
+            window.addEventListener('load', () => setTimeout(() => scrollToFakeScrollTarget('#event-highlight'), 400));
+        }
+    </script>
+    @endpush
 </x-layouts.app>

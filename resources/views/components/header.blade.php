@@ -161,7 +161,7 @@ $navItems = [
             @endforeach
         </nav>
 
-        <a href="{{ route('reserve') }}" class="nav-link-solo text-xs lg:text-sm transition-colors duration-300"
+        <a href="{{ route('reserve') }}" class="nav-link-solo text-xs lg:text-sm transition-colors duration-300 {{ request()->is('reserve*') ? 'invisible' : '' }}"
             :class="dark && '!text-[#963D20] hover:!text-[#7a3018]'">
             Reserve
         </a>
