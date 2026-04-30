@@ -93,6 +93,15 @@ class PageController
     {
         return view('pages.booking');
     }
+
+    public function eventReserve(): View
+    {
+        return view('pages.event-reserve', [
+            'eventName' => request('event', 'Event'),
+            'eventDate' => request('date', ''),
+            'eventImage' => request('image', 'event1.png'),
+        ]);
+    }
     public function thankyou(): View
     {
         return view('pages.thankyou');

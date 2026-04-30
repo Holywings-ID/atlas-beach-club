@@ -22,6 +22,7 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/support/terms', 'supportTerms')->name('support.terms');
     Route::get('/reserve', 'reserve')->name('reserve');
     Route::get('/reserve/booking', 'booking')->name('booking');
+    Route::get('/reserve/event', 'eventReserve')->name('event.reserve');
     Route::get('/reserve', 'reserve')->name('reserve');
     Route::get('/thankyou', 'thankyou')->name('thankyou');
 });
